@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACSMマニュアル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes blink-slow { 
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.1; }
+        }
+        @keyframes blink-fast { 
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.1; }
+        }
+        .blink-slow { animation: blink-slow 1s step-end infinite; }
+        .blink-fast { animation: blink-fast 0.5s step-end infinite; }
+        .led { transition: all 0.3s ease-in-out; }
+        .nav-item { transition: all 0.2s ease-in-out; }
+        .nav-item.active { background-color: #2563eb; color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
+        .nav-item:not(.active):hover { background-color: #e5e7eb; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+        .interactive-led-bar { display: flex; gap: 8px; padding: 12px; background-color: #374151; border-radius: 8px; border: 2px solid #4b5563; }
+        .interactive-led { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #9ca3af; background-color: #1f2937; position: relative; cursor: pointer; }
+        .interactive-led.separator { background-color: transparent; border-color: transparent; cursor: default; }
+        .interactive-led .led-label { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 10px; color: #d1d5db; width: 100%; text-align: center; }
+        .remote-led-label { font-size: 10px; color: #d1d5db; text-align: center; margin-left: 8px;}
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .control-btn { transition: all 0.2s ease-in-out; }
+        .control-btn.active { background-color: #60a5fa; color: white; border-color: #2563eb; box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+        img.placeholder { object-fit: cover; background-color: #e2e8f0; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <div id="app" class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
+        <header class="mb-6 pb-4 border-b border-gray-300">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル</h1>
+            <p class="text-gray-600 mt-1">Version 2.9 対応</p>
+        </header>
+
+        <nav class="flex flex-wrap gap-2 mb-6">
+            <button data-target="overview" class="nav-item active text-sm md:text-base font-semibold px-4 py-2 rounded-md">概要</button>
+            <button data-target="installation" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">取付方法</button>
+            <button data-target="usage" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">使い方</button>
+            <button data-target="indicator" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">インジケータ</button>
+            <button data-target="preview" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">プレビューモード</button>
+            <button data-target="remote" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">リモコン</button>
+            <button data-target="technical" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">技術的な仕組み</button>
+            <button data-target="support" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">サポート</button>
+        </nav>
+
+        <main>
+            <section id="overview-content" class="content-section active space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">はじめに</h2>
+                    <p>このマニュアルは、教習用バイクの安全装置「ACSMシステム」を運用する指導員の方を対象としています。ACSM本体および指導員用リモコンの正しい使用方法、設置方法、LED表示の意味、トラブル発生時の対処法について解説します。ご使用前に必ず本マニュアルをお読みいただき、システムの機能を十分にご理解の上、安全な教習活動にお役立てください。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">製品の概要</h2>
+                    <p>ACSMは、教習中のバイクの安全性を高めるための後付け電子制御システムです。主に以下の2つの主要な安全機能を備えています。</p>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">高回転暴走防止機能</h3>
+                                <p class="text-gray-700">万が一、運転操作のミスによりエンジン回転数が異常に上昇した場合、設定されたエンジン停止回転数を超えると自動的にエンジンを停止させ、車両の暴走を防ぎます。</p>
+                            </div>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded-lg border border-red-200 flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <svg class="w-8 h-8 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.043A5.25 5.25 0 017.5 14.25a5.25 5.25 0 01-1.043.793m1.043-.793A5.25 5.25 0 007.5 14.25c0-2.899 2.35-5.25 5.25-5.25s5.25 2.351 5.25 5.25-2.35 5.25-5.25 5.25a5.25 5.25 0 01-3.793-1.543m3.793-1.543A5.25 5.25 0 0012.75 14.25a5.25 5.25 0 004.536-2.543m-4.536 2.543a5.25 5.25 0 01-4.536-2.543" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.364l-1.591 1.591M21 12h-2.25m-.364 6.364l-1.591-1.591M12 18.75V21m-6.364-.364l1.591-1.591M3 12h2.25m.364-6.364l1.591 1.591" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">遠隔緊急停止機能</h3>
+                                <p class="text-gray-700">指導員が持つ専用リモコンから、危険と判断した場合に遠隔操作で教習車のエンジンを即座に停止させることができます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">初回使用前の初期設定</h2>
+                    <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg space-y-3">
+                        <h3 class="font-bold text-red-800">【重要】必ずお読みください</h3>
+                        <p class="text-red-700">安全のため、本製品を初めて車両に取り付けて使用する前に、必ず以下の初期設定がされていることを確認してください。設定が不適切な場合、システムが正しく機能しない可能性があります。</p>
+                        <ul class="list-disc list-inside text-red-700 space-y-1 mt-2">
+                            <li><strong>エンジン停止回転数:</strong> 4000 RPM (調整ボリュームを最も左に回した状態)</li>
+                            <li><strong>無線チャンネル:</strong> CH 1 (青色)</li>
+                        </ul>
+                         <p class="text-sm mt-3 text-red-700">※設定方法の詳細は「使い方」および「プレビューモード」の項目をご参照ください。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">商品構成</h2>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-4 rounded-lg border">
+                            <h3 class="font-bold text-lg mb-2">ACSM本体</h3>
+                            <p class="text-sm text-gray-600 mb-3">エンジン回転数を監視・制御するメインユニットです。</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="acsm_main_front.jpg" alt="ACSM Main Unit" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">ACSM本体（表面）</p>
+                                </div>
+                                <div>
+                                    <img src="acsm_main_internal.jpg" alt="ACSM Main Unit (Internal)" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">内部（エンジン停止回転数設定ボリューム、通信チャンネルスイッチ）</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border">
+                            <h3 class="font-bold text-lg mb-2">リモコン</h3>
+                            <p class="text-sm text-gray-600 mb-3">遠隔からエンジンを緊急停止させるための無線端末です。</p>
+                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="remote_controller.jpg" alt="Remote Control" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">指導員用リモコン</p>
+                                </div>
+                                <div>
+                                    <img src="remote_controller_parts.jpg" alt="Remote Control Parts" class="w-full h-auto rounded-lg placeholder">
+                                     <p class="text-sm text-center mt-2 text-gray-600">リモコン各部（電源スイッチ、緊急停止ボタン、チャンネル切替ボタン）</p>
+                                </div>
+                             </div>
+                        </div>
+                         <div class="bg-gray-50 p-4 rounded-lg border">
+                            <h3 class="font-bold text-lg mb-2">インジケータ</h3>
+                            <p class="text-sm text-gray-600 mb-3">8個のLEDでシステムの動作状態を知らせ、機能のON/OFFを切り替えます。</p>
+                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="indicator_leds.jpg" alt="Indicator" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ（LED表示部）</p>
+                                </div>
+                                <div>
+                                    <img src="indicator_switch.jpg" alt="Indicator (Switch)" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ（有効/無効スイッチ）</p>
+                                </div>
+                             </div>
+                        </div>
+                         <div class="bg-gray-50 p-4 rounded-lg border">
+                            <h3 class="font-bold text-lg mb-2">車種別専用ハーネス</h3>
+                            <p class="text-sm text-gray-600 mb-3">取り付けを簡便化するための専用ハーネスです。車種によって内容が異なります。</p>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">CB400用</h4>
+                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                                         <div>
+                                            <img src="harness_cb400_main.jpg" alt="CB400 Main Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">メインハーネス</p>
+                                                <p class="text-xs text-gray-600">(電源、イグニッションコイル接続用)</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="harness_cb400_sidestand.jpg" alt="CB400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(サイドスタンドセンサー接続用)</p>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">NX400用</h4>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                        <div>
+                                            <img src="harness_nx400_power.jpg" alt="NX400 Power Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">電源ハーネス</p>
+                                                <p class="text-xs text-gray-600">(ライセンスライト接続用)</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="harness_nx400_ckp.jpg" alt="NX400 CKP Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">CKPハーネス</p>
+                                                <p class="text-xs text-gray-600">(クランクセンサー接続用)</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="harness_nx400_sidestand.jpg" alt="NX400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(サイドスタンドセンサー接続用)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="installation-content" class="content-section space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">取付方法</h2>
+                    <p class="mb-4">システムの設置・配線は、専門知識を持つ整備士または指定の業者が行ってください。ここでは、車種別のハーネス接続について説明します。</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <h3 class="text-xl font-bold">設置に関する重要注意事項</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Card 1: Case Handling -->
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-200 flex items-start space-x-3">
+                                <div class="flex-shrink-0 pt-1">
+                                    <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-red-800">ケースの取り扱い</h4>
+                                    <p class="text-sm text-red-700 mt-1">ケースは3Dプリンタ製です。過度な力を加えたり、強く締め付けると破損の原因になります。</p>
+                                </div>
+                            </div>
+                    
+                            <!-- Card 2: Water Resistance -->
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-200 flex items-start space-x-3">
+                                <div class="flex-shrink-0 pt-1">
+                                    <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-red-800">防滴性能について</h4>
+                                    <p class="text-sm text-red-700 mt-1">本製品は防滴構造です。高圧洗浄機や水没は故障の原因になりますので避けてください。</p>
+                                </div>
+                            </div>
+                    
+                            <!-- Card 3: Screw Tightening -->
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-200 flex items-start space-x-3">
+                                <div class="flex-shrink-0 pt-1">
+                                    <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.75 5.25l-2.472 2.472a3.375 3.375 0 004.773 4.773z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-red-800">ネジの締め付け</h4>
+                                    <p class="text-sm text-red-700 mt-1">トルク管理を適切に行い、特に樹脂部品を固定する際の締めすぎにご注意ください。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 border-b pb-2">1. ACSM本体の設置</h3>
+                            <p class="mb-4">ACSM本体はシート下などの雨水や振動の影響を受けにくい場所に設置してください。本体の固定には市販の結束バンドやステー、クッション材などを使用することを推奨します。</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="install_main_1.jpg" alt="ACSM Main Unit Installation Example 1" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">本体設置例 1</p>
+                                </div>
+                                <div>
+                                    <img src="install_main_2.jpg" alt="ACSM Main Unit Installation Example 2" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">本体設置例 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 border-b pb-2">2. インジケータの設置</h3>
+                            <p class="mb-4">インジケータは運転者から見やすい位置に固定してください。</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="install_indicator_1.jpg" alt="ACSM Indicator Installation Example 1" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例 1</p>
+                                </div>
+                                <div>
+                                    <img src="install_indicator_2.jpg" alt="ACSM Indicator Installation Example 2" class="w-full h-auto rounded-lg placeholder">
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例 2</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                             <h3 class="text-xl font-bold mb-3 border-b pb-2">3. ハーネスの接続</h3>
+                             <div class="space-y-6">
+                                 <div>
+                                     <h4 class="font-semibold text-lg">CB400の場合</h4>
+                                     <ul class="list-disc list-inside ml-4 text-gray-700 my-2">
+                                         <li>メインハーネス（電源、イグニッションコイル）を接続します。</li>
+                                         <li>サイドスタンドハーネスを接続します。</li>
+                                     </ul>
+                                     <div class="grid grid-cols-2 gap-4">
+                                         <div>
+                                            <img src="connect_cb400_1.jpg" alt="CB400 Connection 1" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 1</p>
+                                        </div>
+                                        <div>
+                                            <img src="connect_cb400_2.jpg" alt="CB400 Connection 2" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 2</p>
+                                        </div>
+                                        <div>
+                                            <img src="connect_cb400_3.jpg" alt="CB400 Connection 3" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 3</p>
+                                        </div>
+                                        <div>
+                                            <img src="connect_cb400_4.jpg" alt="CB400 Connection 4" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 4</p>
+                                        </div>
+                                     </div>
+                                 </div>
+                                 <div>
+                                     <h4 class="font-semibold text-lg">NX400の場合</h4>
+                                     <ul class="list-disc list-inside ml-4 text-gray-700 my-2">
+                                        <li>電源ハーネスを接続します。</li>
+                                        <li>CKP（クランクポジションセンサー）ハーネスを接続します。</li>
+                                        <li>サイドスタンドハーネスを接続します。</li>
+                                     </ul>
+                                     <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <img src="connect_nx400_1.jpg" alt="NX400 Connection 1" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 1</p>
+                                        </div>
+                                        <div>
+                                            <img src="connect_nx400_2.jpg" alt="NX400 Connection 2" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 2</p>
+                                        </div>
+                                        <div>
+                                            <img src="connect_nx400_3.jpg" alt="NX400 Connection 3" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 3</p>
+                                        </div>
+                                        <div>
+                                            <img src="connect_nx400_4.jpg" alt="NX400 Connection 4" class="w-full h-auto rounded-lg placeholder">
+                                            <p class="text-sm text-center mt-2 text-gray-600">接続説明 4</p>
+                                        </div>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="usage-content" class="content-section space-y-4">
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>起動と自動判定</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">キーをONに:</b> バイクのイグニッションキーをONにすると、ACSM本体とインジケータが起動します。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンをONに:</b> 指導員はリモコンの電源をONにします。起動後1秒間、バッテリー状態がLEDに表示されます。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
+                                <div class="pt-0.5"><b class="font-semibold">エンジンを始動:</b> バイクのエンジンを始動します。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">4</div>
+                                <div class="pt-0.5"><b class="font-semibold">自動判定の開始:</b> インジケータのLED1,2,3が白色で点滅し、エンジン種別の自動判定を開始します（約3～5秒）。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">5</div>
+                                <div class="pt-0.5"><b class="font-semibold">判定完了:</b> 判定が完了すると、LEDは緑色の点滅（監視中）に変わり、LED5に検出したセンサーモードの色が表示されます。</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                            <p class="text-sm">💡 各LED表示の詳しい意味は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで確認できます。</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>高回転暴走防止機能</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">回転数の設定:</b> ACSM本体の調整ボリュームを回し、LED6の色や<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">プレビューモード</a>を見ながらエンジン停止回転数を設定します。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
+                                <div class="pt-0.5"><b class="font-semibold">自動停止の作動:</b> インジケータの有効/無効スイッチがONの状態で、エンジン回転数が設定値を超えると、システムが自動でエンジンを停止します。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
+                                <div class="pt-0.5"><b class="font-semibold">作動後の表示:</b> インジケータのLED1,2,3が赤色の点滅（保護中）になります。</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                            <p class="text-sm">💡 「保護中」を含む各LED表示の詳しい意味は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで確認できます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>遠隔緊急停止機能</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4 mb-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">ボタンを長押し:</b> リモコンの緊急停止ボタンを押し続けます。LEDが白色に点灯し、300ms間隔で停止信号が自動で送信されます。<br><span class="text-sm text-gray-600">ポイント: 通信を確実にするため、リトライするごとに電波の送信出力を自動的に上げて送信します。</span></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
+                                <div class="pt-0.5"><b class="font-semibold">応答を確認:</b> 本体が信号を受信するとリモコンに応答信号を返し、リモコンのLEDが赤色（または青色）に1秒間点灯します。これが停止成功の合図です。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
+                                <div class="pt-0.5"><b class="font-semibold">作動後の表示:</b> 本体インジケータは赤色の点滅（保護中）になります。</div>
+                            </div>
+                        </div>
+                         <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mb-4">
+                            <p class="font-bold text-yellow-800">【重要】緊急停止ボタンは、リモコンLEDの表示が変わるまで必ず押し続けてください。すぐに離すと信号が届かない場合があります。</p>
+                        </div>
+                        <div class="p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg space-y-1">
+                            <p class="text-sm">💡 リモコンのLED表示の詳細は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=remote]').click()">リモコン</a>のページで確認できます。</p>
+                            <p class="text-sm">💡 本体インジケータの表示は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで確認できます。</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>保護状態からの復帰</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p>高回転防止または遠隔緊急停止が作動し「保護中（赤点滅）」になった場合、安全のためエンジンは再始動できません。復帰するには以下の操作をしてください。</p>
+                        <div class="space-y-4 mt-2">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">キーを再投入:</b> 一度バイクのイグニッションキーをOFFにし、再度ONにしてください。</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                            <p class="text-sm">💡 「保護中」の状態（赤点滅）については、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで視覚的に確認できます。</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>無線チャンネルの切り替え</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="mb-2">周囲の電波環境などにより通信が不安定な場合、チャンネルを変更します。</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンの操作:</b> チャンネル切替ボタンを0.5秒以上長押しすると、次のチャンネルに切り替わります。設定はリモコンの電源を切っても保存されます。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
+                                <div class="pt-0.5"><b class="font-semibold">本体の操作:</b> ACSM本体のチャンネルスイッチを、リモコンと同じチャンネルの色に合わせてください。</div>
+                            </div>
+                        </div>
+                         <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mt-4">
+                            <p class="font-bold text-yellow-800">【注意】本体とリモコンのチャンネルが一致していないと通信できません。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>通信テストモード</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                         <p class="mb-2">教習開始前などに、エンジンを停止させることなくリモコンと本体の通信が正常に行えるかを確認する機能です。</p>
+                         <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">システムを無効に:</b> インジケータの有効/無効スイッチをOFFにします。インジケータのLED1,2,3が消灯し、安全機能が無効状態になったことを確認します。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンを操作:</b> システムが無効の状態で、リモコンの緊急停止ボタンを長押しします。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
+                                <div class="pt-0.5"><b class="font-semibold">結果を確認:</b> リモコンのLEDが青色に1秒間点灯すれば、通信は正常です。これは、本体がリモコンからの信号を正しく受信したことを示します。この操作ではエンジンは停止しません。</div>
+                            </div>
+                        </div>
+                         <div class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg mt-4">
+                            <p class="font-bold text-blue-800">このテストモードは、教習エリアの電波状況を確認したり、リモコンの動作確認を行ったりするのに便利です。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="indicator-content" class="content-section space-y-6">
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">インジケータシミュレーター</h2>
+                    <p class="mb-4">下のボタンをクリックすると、対応するLEDが点灯／点滅し、機能の説明が表示されます。</p>
+                     <div class="flex flex-col lg:flex-row gap-6">
+                         <div id="indicator-controls" class="w-full lg:w-1/3 space-y-4">
+                        </div>
+                         <div class="w-full lg:w-2/3">
+                             <div class="sticky top-6">
+                                 <p class="text-center mb-2 text-sm text-gray-500">（配線側） ⇔ （スイッチ側）</p>
+                                <div id="indicator-led-bar" class="interactive-led-bar justify-center"></div>
+                                <div id="indicator-info-panel" class="mt-4 p-4 bg-gray-100 rounded-lg min-h-[150px]">
+                                    <h4 id="indicator-info-title" class="font-bold text-lg text-gray-900 mb-2"></h4>
+                                    <p id="indicator-info-desc"></p>
+                                </div>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+            </section>
+
+            <section id="preview-content" class="content-section space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">プレビューモード</h2>
+                    <p class="mb-4">プレビューモードは、エンジンを実際に高回転まで回すことなく、設定したエンジン停止回転数がどのくらいかを視覚的に確認するための機能です。下のスライダーを動かして、エンジン停止回転数を変更した際のLEDのレベルメーター表示を確認できます。</p>
+
+                    <div class="flex flex-col lg:flex-row gap-6 items-start">
+                        <div class="w-full lg:w-1/3">
+                             <label for="rpm-slider" class="block mb-2 font-semibold">調整ボリューム (4000-8000 RPM)</label>
+                             <input id="rpm-slider" type="range" min="4000" max="8000" value="6000" step="100" class="w-full">
+                             <div class="text-center font-semibold mt-2" id="rpm-slider-value">6000 RPM</div>
+                        </div>
+                        <div class="w-full lg:w-2/3">
+                            <div class="mt-4">
+                                <p class="text-center mb-2 text-sm text-gray-500">（配線側） ⇔ （スイッチ側）</p>
+                                <div id="preview-led-bar" class="interactive-led-bar justify-center"></div>
+                                <div id="preview-info-panel" class="mt-4 p-4 bg-gray-100 rounded-lg min-h-[100px]">
+                                    <h4 id="preview-info-title" class="font-bold text-lg text-gray-900 mb-2"></h4>
+                                    <p id="preview-info-desc"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mt-6 space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 border-b pb-2">操作方法</h3>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li>バイクのイグニッションをONにします。</li>
+                                <li>ACSM本体の蓋を開け、調整ボリュームをゆっくり回します。</li>
+                                <li>インジケータのLED1〜8が、設定中のエンジン停止回転数に応じてレベルメーターのように点灯します。（シミュレーターのスライダーがこれに相当します）</li>
+                                <li>各LEDは500 RPMの範囲を表し、その範囲内では輝度が変化します。</li>
+                            </ol>
+                        </div>
+
+                        <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mt-4">
+                            <p class="font-bold text-yellow-800">【重要】プレビューモードは設定確認用です。設定後は必ずエンジンを始動し、自動判定が完了して「監視中（緑点滅）」になることを確認してください。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="remote-content" class="content-section space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">リモコンシミュレーター</h2>
+                    <p class="mb-4">下のボタンをクリックすると、リモコンのLED表示がシミュレートされ、各状態の説明が表示されます。</p>
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div id="remote-controls" class="w-full lg:w-1/3 space-y-4">
+                        </div>
+                        <div class="w-full lg:w-2/3">
+                             <div class="sticky top-6 flex flex-col items-center">
+                                 <div class="p-4 bg-gray-700 rounded-lg">
+                                     <div class="flex items-center mb-4">
+                                         <div id="remote-led-2" class="interactive-led"></div>
+                                         <span class="remote-led-label">LED 2 (チャンネル)</span>
+                                     </div>
+                                     <div class="flex items-center">
+                                         <div id="remote-led-1" class="interactive-led"></div>
+                                         <span class="remote-led-label">LED 1 (状態)</span>
+                                     </div>
+                                 </div>
+                                <div id="remote-info-panel" class="w-full mt-4 p-4 bg-gray-100 rounded-lg min-h-[150px]">
+                                    <h4 id="remote-info-title" class="font-bold text-lg text-gray-900 mb-2"></h4>
+                                    <p id="remote-info-desc"></p>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-sm text-gray-500 px-6 mt-4">
+                    <p><b>補足:</b> このページの点滅シミュレーションは説明のためであり、実際のリモコンではより短い点灯の「フラッシュ」で表現されます。</p>
+                </div>
+            </section>
+
+            <section id="technical-content" class="content-section space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">エンジン停止の仕組み</h2>
+                    <p class="mb-4 text-gray-600">ACSMシステムは、車両にもともと備わっているサイドスタンドの安全装置を利用してエンジンを停止させます。この方法は、車両の純正システムを利用するため、エンジンに負担をかけることなく安全に停止させることができます。</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                            <p class="mt-2 text-sm font-semibold">1. 停止信号を検出</p>
+                            <p class="text-xs text-gray-500">(高回転 or リモコン)</p>
+                        </div>
+                        <div class="text-gray-300 transform rotate-90 md:rotate-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg></div>
+                            <p class="mt-2 text-sm font-semibold">2. サイドスタンド信号を擬似生成</p>
+                            <p class="text-xs text-gray-500">(ACSM内部リレー作動)</p>
+                        </div>
+                        <div class="text-gray-300 transform rotate-90 md:rotate-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01" /></svg></div>
+                            <p class="mt-2 text-sm font-semibold">3. ECUが点火をカット</p>
+                            <p class="text-xs text-gray-500">(車両の安全機能)</p>
+                        </div>
+                         <div class="text-gray-300 transform rotate-90 md:rotate-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
+                            <p class="mt-2 text-sm font-semibold">4. エンジンが安全に停止</p>
+                            <p class="text-xs text-gray-500">(完了)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">エンジン回転数の検出方法</h2>
+                    <p class="mb-6 text-gray-600">ACSMは、エンジンの点火サイクルまたはクランクシャフトの回転に同期した電気信号を読み取ることで、正確なエンジン回転数を測定します。検出方法は主に2種類あり、車両の構造に合わせて適切な方式を選択します。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg border">
+                             <div class="flex items-center mb-3">
+                                <svg class="w-8 h-8 text-gray-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+                                <h3 class="font-bold text-lg">イグニッションコイル方式</h3>
+                            </div>
+                            <p class="text-gray-700">イグニッションコイルの一次側（エンジンのコンピューターから信号が送られてくる側）の電圧変化を検出します。プラグが点火するたびに発生する電気信号をカウントすることで、エンジン回転数を算出します。比較的アクセスしやすい配線から信号を取得できるという利点があります。（CB400などで採用）</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border">
+                             <div class="flex items-center mb-3">
+                                <svg class="w-8 h-8 text-gray-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                                <h3 class="font-bold text-lg">クランクセンサー（CKP）方式</h3>
+                            </div>
+                            <p class="text-gray-700">クランクシャフトの回転を監視しているクランクセンサーの信号線を直接読み取ります。エンジンの回転と完全に同期した非常に正確な電気信号が得られるため、高精度な回転数測定が可能です。近年のFI車で多く採用されています。（NX400などで採用）</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">専用ハーネスがない車両への取付（参考）</h2>
+                    <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg space-y-2 mb-6">
+                        <h3 class="font-bold text-red-800">【警告】</h3>
+                        <p class="text-red-700">以下の作業は、車両の電気系統に関する高度な知識と技術を要します。配線を誤ると、車両のコンピューターなどを破損させ、重大な故障につながる危険があります。<b>必ず専門知識を持つ整備士が、車両のサービスマニュアルを参照しながら行ってください。</b></p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">取付の基本方針</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">1</span> <div><b class="font-semibold">電源の確保:</b> キーONで12Vが供給されるアクセサリー電源（ACC）と、バッテリーマイナス（アース）に接続します。</div></li>
+                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">2</span> <div><b class="font-semibold">エンジン回転信号の取得:</b> 上記の「イグニッションコイル」または「クランクセンサー」の信号線を探し、ACSMの入力線に接続します。</div></li>
+                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">3</span> <div><b class="font-semibold">エンジン停止の配線:</b> サイドスタンドの安全装置（サイドスタンドスイッチ）の回路にACSMを割り込ませます。</div></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">作業のポイント</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">配線の特定:</b> サービスマニュアルの配線図とテスターを用いて、接続すべき配線を正確に特定します。</div></li>
+                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">確実な接続:</b> エレクトロタップは接触不良の原因となりやすいため、可能な限りハンダ付けでの接続を推奨します。</div></li>
+                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">適切な絶縁と保護:</b> 接続部は熱収縮チューブなどで確実に絶縁し、配線はコルゲートチューブで保護します。</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="support-content" class="content-section space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-4">トラブルシューティング</h2>
+                    <div class="space-y-4">
+                        <details class="p-4 border border-gray-200 rounded-lg">
+                            <summary class="font-semibold cursor-pointer">リモコンLEDがチャンネル色で点滅している</summary>
+                            <div class="mt-3 text-gray-700">
+                                <p class="font-semibold">考えられる原因:</p>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>本体とリモコンのチャンネルが違う</li>
+                                    <li>バイクとの距離が遠すぎる</li>
+                                    <li>バイクの電源が入っていない</li>
+                                </ul>
+                                <p class="font-semibold mt-2">対処法:</p>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>本体とリモコンのチャンネルを合わせてください。</li>
+                                    <li>バイクに近づいて通信が回復するか確認してください。</li>
+                                    <li>バイクのイグニッションキーがONになっているか確認してください。</li>
+                                </ul>
+                            </div>
+                        </details>
+                         <details class="p-4 border border-gray-200 rounded-lg">
+                            <summary class="font-semibold cursor-pointer">エンジン停止後、復帰できない</summary>
+                            <div class="mt-3 text-gray-700">
+                                <p><b class="font-semibold">原因:</b> 保護状態になっています。</p>
+                                <p><b class="font-semibold">対処法:</b> バイクのイグニッションキーをOFFにし、5秒ほど待ってから再度ONにしてください。</p>
+                            </div>
+                        </details>
+                         <details class="p-4 border border-gray-200 rounded-lg">
+                            <summary class="font-semibold cursor-pointer">緊急停止ボタンを押しても反応しない</summary>
+                             <div class="mt-3 text-gray-700">
+                                <p class="font-semibold">考えられる原因:</p>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>ボタンをすぐに離してしまった</li>
+                                    <li>通信範囲外または電波障害</li>
+                                </ul>
+                                <p class="font-semibold mt-2">対処法:</p>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>リモコンLEDの表示が変わるまでボタンを押し続けてください。</li>
+                                    <li>バイクに近づき、障害物のない場所で操作してください。</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="p-4 border border-gray-200 rounded-lg">
+                            <summary class="font-semibold cursor-pointer">本体LEDが黄色で点滅している</summary>
+                            <div class="mt-3 text-gray-700">
+                                <p><b class="font-semibold">原因:</b> エンジンがストールしました。</p>
+                                <p><b class="font-semibold">対処法:</b> 正常な動作です。エンジンを再始動してください。</p>
+                            </div>
+                        </details>
+                         <details class="p-4 border border-gray-200 rounded-lg">
+                            <summary class="font-semibold cursor-pointer">リモコンの点滅が速い</summary>
+                             <div class="mt-3 text-gray-700">
+                                <p><b class="font-semibold">原因:</b> 電池残量が低下しています。</p>
+                                <p><b class="font-semibold">対処法:</b> 新品の単3電池に交換してください。</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-4">仕様一覧</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">ACSM本体</h3>
+                             <table class="w-full text-left">
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr><td class="py-2 font-semibold">電源電圧</td><td class="py-2">DC 12V (バイクバッテリーから供給)</td></tr>
+                                    <tr><td class="py-2 font-semibold">エンジン回転数測定範囲</td><td class="py-2">0～12,000 RPM</td></tr>
+                                    <tr><td class="py-2 font-semibold">エンジン停止回転数設定範囲</td><td class="py-2">4,000～8,000 RPM</td></tr>
+                                    <tr><td class="py-2 font-semibold">通信方式</td><td class="py-2">長距離無線通信 (920MHz帯)</td></tr>
+                                    <tr><td class="py-2 font-semibold">動作温度</td><td class="py-2">-10℃ ～ +50℃</td></tr>
+                                    <tr><td class="py-2 font-semibold">防水性能</td><td class="py-2">防滴構造（IPX4相当、水没不可）</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         <div>
+                            <h3 class="text-xl font-bold mb-2">リモコン</h3>
+                             <table class="w-full text-left">
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr><td class="py-2 font-semibold">電源</td><td class="py-2">単3形充電池（エネループなど） × 1本</td></tr>
+                                    <tr><td class="py-2 font-semibold">電池寿命</td><td class="py-2">約50時間（使用状況により変動します）</td></tr>
+                                    <tr><td class="py-2 font-semibold">緊急停止ボタン長押し</td><td class="py-2">100ms</td></tr>
+                                    <tr><td class="py-2 font-semibold">チャンネル切替ボタン長押し</td><td class="py-2">500ms</td></tr>
+                                    <tr><td class="py-2 font-semibold">緊急停止信号送信間隔</td><td class="py-2">300ms</td></tr>
+                                    <tr><td class="py-2 font-semibold">防水性能</td><td class="py-2">防滴構造（IPX4相当、水没不可）</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navItems = document.querySelectorAll('.nav-item');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        const indicatorLedBar = document.getElementById('indicator-led-bar');
+        const indicatorInfoTitle = document.getElementById('indicator-info-title');
+        const indicatorInfoDesc = document.getElementById('indicator-info-desc');
+        const indicatorControlsContainer = document.getElementById('indicator-controls');
+
+        const remoteLed1 = document.getElementById('remote-led-1');
+        const remoteLed2 = document.getElementById('remote-led-2');
+        const remoteInfoTitle = document.getElementById('remote-info-title');
+        const remoteInfoDesc = document.getElementById('remote-info-desc');
+        const remoteControlsContainer = document.getElementById('remote-controls');
+
+        const previewLedBar = document.getElementById('preview-led-bar');
+        const previewInfoTitle = document.getElementById('preview-info-title');
+        const previewInfoDesc = document.getElementById('preview-info-desc');
+        const rpmSlider = document.getElementById('rpm-slider');
+        const rpmSliderValue = document.getElementById('rpm-slider-value');
+        
+        let indicatorLeds = [];
+        let previewLeds = [];
+        let remoteBlinkTimer = null;
+        let currentIndicatorState = new Array(8).fill({ color: '#1f2937', blink: null, shadow: false });
+        let activeControlGroups = {};
+        let currentRemoteChannel = 3;
+
+        const colorMap = {
+            off: '#1f2937', white: '#ffffff', green: '#22c55e', yellow: '#eab308',
+            red: '#ef4444', blue: '#3b82f6', cyan: '#22d3ee', magenta: '#d946ef', orange: '#f97316'
+        };
+        
+        const channelColors = {
+            1: colorMap.blue, 2: colorMap.cyan, 3: colorMap.green, 4: colorMap.yellow,
+            5: colorMap.orange, 6: colorMap.red, 7: colorMap.magenta, 8: colorMap.white
+        };
+        
+        const channelNames = {
+            1: "青", 2: "シアン", 3: "緑", 4: "黄", 5: "オレンジ", 6: "赤", 7: "マゼンタ", 8: "白"
+        };
+
+        const getRpmColor = (rpm) => {
+            rpm = Math.max(4000, Math.min(rpm, 8000));
+            if (rpm <= 4500) { // Blue to Cyan
+                const ratio = (rpm - 4000) / 500.0;
+                return interpolateColor(colorMap.blue, colorMap.cyan, ratio);
+            } else if (rpm <= 5000) { // Cyan to Green
+                const ratio = (rpm - 4500) / 500.0;
+                return interpolateColor(colorMap.cyan, colorMap.green, ratio);
+            } else if (rpm <= 5500) { // Green to Yellow
+                const ratio = (rpm - 5000) / 500.0;
+                return interpolateColor(colorMap.green, colorMap.yellow, ratio);
+            } else if (rpm <= 6000) { // Yellow to Orange
+                const ratio = (rpm - 5500) / 500.0;
+                return interpolateColor(colorMap.yellow, colorMap.orange, ratio);
+            } else if (rpm <= 6500) { // Orange to Red
+                const ratio = (rpm - 6000) / 500.0;
+                return interpolateColor(colorMap.orange, colorMap.red, ratio);
+            } else if (rpm <= 7000) { // Red to Magenta
+                const ratio = (rpm - 6500) / 500.0;
+                return interpolateColor(colorMap.red, colorMap.magenta, ratio);
+            } else { // Magenta to White
+                const ratio = (rpm - 7000) / 1000.0;
+                return interpolateColor(colorMap.magenta, colorMap.white, ratio);
+            }
+        };
+
+        const interpolateColor = (color1, color2, factor) => {
+            const r1 = parseInt(color1.substring(1, 3), 16), g1 = parseInt(color1.substring(3, 5), 16), b1 = parseInt(color1.substring(5, 7), 16);
+            const r2 = parseInt(color2.substring(1, 3), 16), g2 = parseInt(color2.substring(3, 5), 16), b2 = parseInt(color2.substring(5, 7), 16);
+            const r = Math.round(r1 + factor * (r2 - r1)), g = Math.round(g1 + factor * (g2 - g1)), b = Math.round(b1 + factor * (b2 - b1));
+            return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        };
+
+        const indicatorData = {
+            state: {
+                title: 'システム状態',
+                controls: {
+                    idle: { name: '待機中', desc: 'エンジン始動待ちの状態です。', leds: [{ i:0, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    stabilizing: { name: '安定待ち', desc: 'エンジン始動直後、信号が安定するのを待っています。', leds: [{ i:0, c:'white' }, { i:1, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    detecting: { name: '判定中', desc: 'エンジンの信号特性を自動で判定しています。（約3～5秒）', leds: [{ i:0, c:'white' }, { i:1, c:'white' }, { i:2, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    running: { name: '監視中', desc: '正常にエンジン回転数を監視している状態です。', leds: [{ i:0, c:'green', b:'slow' }, { i:1, c:'green', b:'slow' }, { i:2, c:'green', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    stalled: { name: 'ストール', desc: '走行中にエンジンが停止したことを示します。', leds: [{ i:0, c:'yellow', b:'slow' }, { i:1, c:'yellow', b:'slow' }, { i:2, c:'yellow', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    protected: { name: '保護中', desc: '高回転またはリモコン操作によりエンジンが停止されました。', leds: [{ i:0, c:'red', b:'slow' }, { i:1, c:'red', b:'slow' }, { i:2, c:'red', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    disabled: { name: '無効', desc: 'スイッチがOFFです。LED1～3のみ消灯します。', leds: [], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                }
+            },
+            sensor: {
+                title: 'センサーモード (LED5)',
+                controls: {
+                    off: { name: '消灯', desc: 'エンジン始動前、または判定中の状態です。', ledIndex: 4, color: colorMap.off },
+                    ckp: { name: 'CKP', desc: 'クランクポジションセンサー。ほとんどの車種に対応します。', ledIndex: 4, color: colorMap.yellow },
+                    cb400: { name: 'CB400', desc: '点火信号から検出する方式です。', ledIndex: 4, color: colorMap.blue },
+                    nx400: { name: 'NX400', desc: '点火信号から検出する方式です。', ledIndex: 4, color: colorMap.green },
+                }
+            },
+            rpm: {
+                title: 'エンジン停止回転数 (LED6)',
+                controls: {
+                    4000: { name: '4000 RPM', desc: 'エンジン停止回転数を4000 RPMに設定します。', ledIndex: 5, color: getRpmColor(4000) },
+                    5000: { name: '5000 RPM', desc: 'エンジン停止回転数を5000 RPMに設定します。', ledIndex: 5, color: getRpmColor(5000) },
+                    6000: { name: '6000 RPM', desc: 'エンジン停止回転数を6000 RPMに設定します。', ledIndex: 5, color: getRpmColor(6000) },
+                    7000: { name: '7000 RPM', desc: 'エンジン停止回転数を7000 RPMに設定します。', ledIndex: 5, color: getRpmColor(7000) },
+                    8000: { name: '8000 RPM', desc: 'エンジン停止回転数を8000 RPMに設定します。', ledIndex: 5, color: getRpmColor(8000) },
+                }
+            },
+            channel: {
+                title: '通信チャンネル (LED8)',
+                controls: {
+                    1: { name: 'CH 1', desc: '通信チャンネルを1に設定します。', ledIndex: 7, color: channelColors[1] },
+                    2: { name: 'CH 2', desc: '通信チャンネルを2に設定します。', ledIndex: 7, color: channelColors[2] },
+                    3: { name: 'CH 3', desc: '通信チャンネルを3に設定します。', ledIndex: 7, color: channelColors[3] },
+                    4: { name: 'CH 4', desc: '通信チャンネルを4に設定します。', ledIndex: 7, color: channelColors[4] },
+                    5: { name: 'CH 5', desc: '通信チャンネルを5に設定します。', ledIndex: 7, color: channelColors[5] },
+                    6: { name: 'CH 6', desc: '通信チャンネルを6に設定します。', ledIndex: 7, color: channelColors[6] },
+                    7: { name: 'CH 7', desc: '通信チャンネルを7に設定します。', ledIndex: 7, color: channelColors[7] },
+                    8: { name: 'CH 8', desc: '通信チャンネルを8に設定します。', ledIndex: 7, color: channelColors[8] },
+                }
+            }
+        };
+        
+        const remoteData = {
+            groups: {
+                startup: {
+                    title: '起動時',
+                    controls: {
+                        ok: { name: 'バッテリー正常', desc: '電源ON後1秒間、電池残量が十分なことを示します。<br>※LED1とLED2が同じ色で点灯します。', led1:{c:'green'}, led2:{c:'green'}},
+                        warn: { name: 'バッテリー注意', desc: '電源ON後1秒間、電池残量が中程度です。<br>※LED1とLED2が同じ色で点灯します。', led1:{c:'orange'}, led2:{c:'orange'}},
+                        low: { name: 'バッテリー低下', desc: '電源ON後1秒間、電池交換が必要です。<br>※LED1とLED2が同じ色で点灯します。', led1:{c:'red'}, led2:{c:'red'}},
+                    }
+                },
+                normal: {
+                    title: '通常時',
+                    controls: {
+                        ok_enabled: { name: '通信正常 (有効)', desc: '本体と正常に通信しており、安全機能がONの状態です。', led1:{c:'green', b:'slow'}, led2:{channel: true, b:'slow'}},
+                        ok_disabled: { name: '通信正常 (無効)', desc: '本体と通信中ですが、安全機能がOFFです。', led1:{c:'blue', b:'slow'}, led2:{channel: true, b:'slow'}},
+                        ok_protected: { name: '通信正常 (保護中)', desc: '本体が保護状態（エンジン停止後）です。', led1:{c:'red', b:'slow'}, led2:{channel: true, b:'slow'}},
+                        lost: { name: '通信断絶', desc: '5秒以上本体からの信号が途絶えています。LED1は消灯し、LED2がチャンネル色で点滅します。', led1:{c:'off'}, led2:{channel: true, b:'slow'}},
+                    }
+                },
+                emergency: {
+                    title: '緊急停止時',
+                    controls: {
+                        sending: { name: '送信中', desc: '緊急停止ボタンを押している間、信号を送信しています。', led1:{c:'white'}, led2:{c:'white'}},
+                        success_normal: { name: '成功 (通常)', desc: '本体が信号を受信し、エンジンを停止させました。(1秒間点灯)', led1:{c:'red'}, led2:{c:'red'}},
+                        success_test: { name: '成功 (テスト)', desc: '本体が無効状態で信号を受信しました。エンジンは停止しません。(1秒間点灯)', led1:{c:'blue'}, led2:{c:'blue'}},
+                    }
+                }
+            }
+        };
+
+        function setupNavigation() {
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const targetId = item.dataset.target;
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    item.classList.add('active');
+                    contentSections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === `${targetId}-content`) { section.classList.add('active'); }
+                    });
+                });
+            });
+        }
+        
+        function setupIndicatorSimulator() {
+            if (!indicatorControlsContainer) return;
+            for (let i = 0; i < 8; i++) {
+                const led = document.createElement('div');
+                led.className = 'interactive-led';
+                if (i === 3 || i === 6) led.classList.add('separator');
+                const label = document.createElement('div');
+                label.className = 'led-label';
+                label.textContent = `LED${i + 1}`;
+                led.appendChild(label);
+                indicatorLedBar.appendChild(led);
+                indicatorLeds.push(led);
+            }
+            
+            Object.keys(indicatorData).forEach(groupKey => {
+                const group = indicatorData[groupKey];
+                const groupContainer = document.createElement('div');
+                const title = document.createElement('h3');
+                title.className = 'font-bold mb-2';
+                title.textContent = group.title;
+                groupContainer.appendChild(title);
+                
+                const buttonsContainer = document.createElement('div');
+                buttonsContainer.className = 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2';
+                buttonsContainer.dataset.group = groupKey;
+                
+                Object.keys(group.controls).forEach(controlKey => {
+                    const control = group.controls[controlKey];
+                    const button = document.createElement('button');
+                    button.textContent = control.name;
+                    button.className = 'control-btn w-full text-left p-2 rounded-md bg-gray-200 hover:bg-gray-300 border-2 border-transparent';
+                    button.dataset.key = controlKey;
+                    button.addEventListener('click', (e) => handleIndicatorControl(groupKey, controlKey, e.currentTarget));
+                    buttonsContainer.appendChild(button);
+                });
+                
+                groupContainer.appendChild(buttonsContainer);
+                indicatorControlsContainer.appendChild(groupContainer);
+            });
+            handleIndicatorControl('state', 'idle', document.querySelector('[data-group="state"] [data-key="idle"]'));
+            handleIndicatorControl('sensor', 'ckp', document.querySelector('[data-group="sensor"] [data-key="ckp"]'));
+            handleIndicatorControl('rpm', '6000', document.querySelector('[data-group="rpm"] [data-key="6000"]'));
+            handleIndicatorControl('channel', '1', document.querySelector('[data-group="channel"] [data-key="1"]'));
+        }
+
+        function handleIndicatorControl(groupKey, controlKey, button) {
+            const controlData = indicatorData[groupKey].controls[controlKey];
+            activeControlGroups[groupKey] = controlKey;
+
+            document.querySelectorAll(`[data-group="${groupKey}"] .control-btn`).forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            if (groupKey === 'state') {
+                 [0,1,2].forEach(i => currentIndicatorState[i] = { color: colorMap.off, blink: null });
+                 controlData.leds.forEach(ledInfo => {
+                    currentIndicatorState[ledInfo.i] = { color: colorMap[ledInfo.c], blink: ledInfo.b };
+                 });
+                 const fixed_sensor_key = (controlKey === 'idle' || controlKey === 'stabilizing' || controlKey === 'detecting') ? 'off' : 'ckp';
+                
+                 currentIndicatorState[4] = { color: indicatorData.sensor.controls[fixed_sensor_key].color, blink: null };
+                 activeControlGroups['sensor'] = fixed_sensor_key;
+                 document.querySelectorAll('[data-group="sensor"] .control-btn').forEach(b => b.classList.remove('active'));
+                 const sensorButton = document.querySelector(`[data-group="sensor"] [data-key="${fixed_sensor_key}"]`);
+                 if(sensorButton) sensorButton.classList.add('active');
+
+            } else {
+                currentIndicatorState[controlData.ledIndex] = { color: controlData.color, blink: null };
+            }
+
+            if(groupKey === 'rpm') {
+                rpmSlider.value = controlKey;
+                updatePreviewView();
+            }
+            
+            renderIndicatorLeds();
+            updateIndicatorInfoPanel(controlData.name, controlData.desc);
+        }
+
+        function renderIndicatorLeds() {
+             indicatorLeds.forEach((led, i) => {
+                const state = currentIndicatorState[i] || { color: colorMap.off, blink: null };
+                led.style.backgroundColor = state.color;
+                led.style.boxShadow = state.color !== colorMap.off ? `0 0 12px ${state.color}` : 'none';
+                led.classList.remove('blink-slow', 'blink-fast');
+                if (state.blink) {
+                    led.classList.add(`blink-${state.blink}`);
+                }
+            });
+        }
+        
+        function updateIndicatorInfoPanel(title, desc) {
+            indicatorInfoTitle.textContent = title;
+            indicatorInfoDesc.innerHTML = desc;
+        }
+
+        function setupRemoteSimulator() {
+            if (!remoteControlsContainer) return;
+            Object.keys(remoteData.groups).forEach(groupKey => {
+                const group = remoteData.groups[groupKey];
+                const groupContainer = document.createElement('div');
+                const title = document.createElement('h3');
+                title.className = 'font-bold mb-2';
+                title.textContent = group.title;
+                groupContainer.appendChild(title);
+
+                const buttonsContainer = document.createElement('div');
+                buttonsContainer.className = 'grid grid-cols-2 gap-2';
+                
+                Object.keys(group.controls).forEach(controlKey => {
+                    const control = group.controls[controlKey];
+                    const button = document.createElement('button');
+                    button.textContent = control.name;
+                    button.className = 'w-full text-left p-2 rounded-md bg-gray-200 hover:bg-gray-300 transition-colors';
+                    button.addEventListener('click', () => updateRemoteView(controlKey, control));
+                    buttonsContainer.appendChild(button);
+                });
+                groupContainer.appendChild(buttonsContainer);
+                remoteControlsContainer.appendChild(groupContainer);
+            });
+            updateRemoteView('ok_enabled', remoteData.groups.normal.controls.ok_enabled);
+        }
+
+        function updateRemoteView(controlKey, state) {
+            if (remoteBlinkTimer) clearInterval(remoteBlinkTimer);
+
+            const getColorFunc = (info) => {
+                if (!info) return colorMap.off;
+                if (info.channel) return channelColors[currentRemoteChannel];
+                return colorMap[info.c] || info.c || colorMap.off;
+            };
+            
+            const ledInfos = [state.led1, state.led2];
+            
+            const applyState = (led, color) => {
+                led.style.backgroundColor = color;
+                led.style.boxShadow = color !== colorMap.off ? `0 0 12px ${color}` : 'none';
+            };
+
+            [remoteLed1, remoteLed2].forEach(led => led.classList.remove('blink-slow', 'blink-fast'));
+
+            if ((state.led1 && state.led1.b) || (state.led2 && state.led2.b)) {
+                let on = true;
+                const blinkSpeed1 = state.led1 ? state.led1.b : null;
+                const blinkSpeed2 = state.led2 ? state.led2.b : null;
+                const period = (blinkSpeed1 === 'slow' || blinkSpeed2 === 'slow') ? 1000 : 500;
+                
+                const color1 = getColorFunc(ledInfos[0]);
+                const color2 = getColorFunc(ledInfos[1]);
+                
+                applyState(remoteLed1, blinkSpeed1 ? color1 : colorMap.off);
+                applyState(remoteLed2, blinkSpeed2 ? color2 : colorMap.off);
+                
+                if(blinkSpeed1 || blinkSpeed2) {
+                    remoteBlinkTimer = setInterval(() => {
+                        on = !on;
+                        if(blinkSpeed1) applyState(remoteLed1, on ? color1 : colorMap.off);
+                        if(blinkSpeed2) applyState(remoteLed2, on ? color2 : colorMap.off);
+                    }, period);
+                }
+
+            } else {
+                applyState(remoteLed1, getColorFunc(ledInfos[0]));
+                applyState(remoteLed2, getColorFunc(ledInfos[1]));
+            }
+
+            let descText = state.desc;
+            const channelInfo = `※LED2はチャンネル色(CH:${currentRemoteChannel} ${channelNames[currentRemoteChannel]})で`;
+            if (controlKey.startsWith('ok_')) {
+                 descText += `<br>${channelInfo}点滅します。`;
+            } else if (controlKey === 'lost') {
+                 descText += `<br>${channelInfo}点滅します。`;
+            }
+
+            remoteInfoTitle.textContent = state.name;
+            remoteInfoDesc.innerHTML = descText;
+        }
+
+        function setupPreviewSimulator() {
+            if (!previewLedBar || !rpmSlider) return;
+            for (let i = 0; i < 8; i++) {
+                const led = document.createElement('div');
+                led.className = 'interactive-led';
+                 if (i === 3 || i === 6) led.classList.add('separator');
+                const label = document.createElement('div');
+                label.className = 'led-label';
+                label.textContent = `LED${i + 1}`;
+                led.appendChild(label);
+                previewLedBar.appendChild(led);
+                previewLeds.push(led);
+            }
+            rpmSlider.addEventListener('input', updatePreviewView);
+            updatePreviewView();
+        }
+
+        function updatePreviewView() {
+            if (!rpmSlider || !previewLedBar) return;
+            const settingRpm = parseInt(rpmSlider.value);
+            rpmSliderValue.textContent = `${settingRpm} RPM`;
+
+            if (settingRpm < 4000) {
+                 previewLeds.forEach((led, i) => {
+                    led.style.backgroundColor = colorMap.off;
+                    led.style.boxShadow = 'none';
+                 });
+                 previewLeds[0].style.backgroundColor = interpolateColor(colorMap.off, colorMap.blue, 0.2); // Dim blue
+                 previewInfoTitle.textContent = `設定中のエンジン停止回転数: ${settingRpm} RPM`;
+                 previewInfoDesc.textContent = '4000 RPM未満です。LED1が青色でうっすら点灯します。';
+                 return;
+            }
+            
+            let activeLedIndex;
+            let rangeOffset;
+            let brightnessLevel;
+
+            if (settingRpm >= 8000) {
+                activeLedIndex = 7;
+                rangeOffset = 499; // Force max brightness for all LEDs up to the last one
+                brightnessLevel = 5;
+            } else {
+                activeLedIndex = Math.floor((settingRpm - 4000) / 500);
+                rangeOffset = (settingRpm - 4000) % 500;
+                brightnessLevel = Math.floor(rangeOffset / 100) + 1;
+            }
+
+            previewLeds.forEach((led, i) => {
+                let color = colorMap.off;
+                let boxShadow = 'none';
+
+                if (i <= activeLedIndex) {
+                    let ledRpm;
+                    let brightnessFactor = 1.0;
+
+                    if (i < activeLedIndex) {
+                        ledRpm = 4000 + (i * 500) + 250; // Center of the range
+                    } else { // i === activeLedIndex
+                        ledRpm = settingRpm;
+                        brightnessFactor = brightnessLevel * 0.2;
+                    }
+                    
+                    const baseColor = getRpmColor(ledRpm);
+                    color = interpolateColor(colorMap.off, baseColor, brightnessFactor);
+                    boxShadow = `0 0 12px ${baseColor}`;
+                }
+                
+                led.style.backgroundColor = color;
+                led.style.boxShadow = boxShadow;
+            });
+            
+            previewInfoTitle.textContent = `設定中のエンジン停止回転数: ${settingRpm} RPM`;
+            if (settingRpm >= 8000) {
+                 previewInfoDesc.innerHTML = `LED8が100%の輝度で点灯しています。`;
+            } else {
+                 previewInfoDesc.innerHTML = `LED${activeLedIndex + 1}が${brightnessLevel * 20}%の輝度で点灯しています。`;
+            }
+        }
+
+        function setupAccordions() {
+            const toggles = document.querySelectorAll('.accordion-toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('span:last-child');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        }
+
+        setupNavigation();
+        setupIndicatorSimulator();
+        setupRemoteSimulator();
+        setupAccordions();
+        setupPreviewSimulator();
+    });
+</script>
+
+</body>
+</html>
+
