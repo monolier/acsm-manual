@@ -37,7 +37,7 @@
 
     <div id="app" class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
         <header class="mb-6 pb-4 border-b border-gray-300">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.0</span></h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.1</span></h1>
         </header>
 
         <nav class="flex flex-wrap gap-2 mb-6">
@@ -56,7 +56,16 @@
             <section id="overview-content" class="content-section active space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h2 class="text-2xl font-bold mb-4">はじめに</h2>
-                    <p>このマニュアルは、教習用バイクの安全装置「ACSMシステム」を運用する指導員の方を対象としています。ACSM本体および指導員用リモコンの正しい使用方法、設置方法、LED表示の意味、トラブル発生時の対処法について解説します。ご使用前に必ず本マニュアルをお読みいただき、システムの機能を十分にご理解の上、安全な教習活動にお役立てください。</p>
+                    <div class="space-y-4 text-gray-700">
+                        <p>このマニュアルは、教習用バイクの安全装置「ACSMシステム」を運用する指導員の方を対象としています。内容は以下の通りです。</p>
+                        <ul class="list-disc list-inside space-y-2 pl-4">
+                            <li>ACSM本体および指導員用リモコンの正しい使用方法</li>
+                            <li>車両への設置方法</li>
+                            <li>インジケータ（LED）表示の意味</li>
+                            <li>トラブル発生時の対処法</li>
+                        </ul>
+                        <p>ご使用前に必ず本マニュアルをお読みいただき、システムの機能を十分にご理解の上、安全な教習活動にお役立てください。</p>
+                    </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h2 class="text-2xl font-bold mb-4">製品の概要</h2>
@@ -399,29 +408,25 @@
             <section id="usage-content" class="content-section space-y-4">
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>起動と自動判定</span>
+                        <span>バイク本体の起動と自動判定</span>
                         <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
                         <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">キーをONに:</b> バイクのイグニッションキーをONにすると、ACSM本体とインジケータが起動します。</div>
+                                <div class="pt-0.5"><b class="font-semibold">回転数の設定:</b> ACSM本体の調整ボリュームを回し、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">プレビューモード</a>を見ながらエンジン停止回転数を設定します。<br><span class="text-sm text-gray-500 ml-1">※出荷時は4000rpmに設定されています。</span></div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">リモコンをONに:</b> 指導員はリモコンの電源をONにします。起動後1秒間、バッテリー状態がLEDに表示されます。</div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
                                 <div class="pt-0.5"><b class="font-semibold">エンジンを始動:</b> バイクのエンジンを始動します。</div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">4</div>
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
                                 <div class="pt-0.5"><b class="font-semibold">自動判定の開始:</b> インジケータのLED1,2,3が白色で点滅し、エンジン種別の自動判定を開始します（約3～5秒）。</div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">5</div>
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">4</div>
                                 <div class="pt-0.5"><b class="font-semibold">判定完了:</b> 判定が完了すると、LEDは緑色の点滅（監視中）に変わり、LED5に検出したセンサーモードの色が表示されます。</div>
                             </div>
                         </div>
@@ -439,7 +444,7 @@
                         <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">回転数の設定:</b> ACSM本体の調整ボリュームを回し、LED6の色や<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">プレビューモード</a>を見ながらエンジン停止回転数を設定します。</div>
+                                <div class="pt-0.5"><b class="font-semibold">回転数の設定:</b> ACSM本体の調整ボリュームを回し、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">プレビューモード</a>を見ながらエンジン停止回転数を設定します。<br><span class="text-xs text-gray-500 ml-1">※出荷時は4000rpmに設定されています。</span></div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
@@ -457,6 +462,76 @@
                 </div>
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>保護状態からの復帰</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p>高回転防止または遠隔緊急停止が作動し「保護中（赤点滅）」になった場合、安全のためエンジンは再始動できません。復帰するには以下の操作をしてください。</p>
+                        <div class="space-y-4 mt-2">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">キーを再投入:</b> 一度バイクのイグニッションキーをOFFにし、再度ONにしてください。</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                            <p class="text-sm">💡 「保護中」の状態（赤点滅）については、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで視覚的に確認できます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center my-2">
+                    <div class="w-full h-px bg-gray-300"></div>
+                    <svg class="w-6 h-6 text-gray-400 mx-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    </svg>
+                    <div class="w-full h-px bg-gray-300"></div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>指導員用リモコンの準備</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンの電源ON:</b> 指導員はリモコンの電源をONにします。起動後1秒間、バッテリー状態がLEDに表示されます。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
+                                <div class="pt-0.5"><b class="font-semibold">通信の確認:</b> バイク本体とリモコンの通信が正常に確立されると、リモコンのLED1が緑色にフラッシュします。</div>
+                            </div>
+                        </div>
+                         <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                            <p class="text-sm">💡 リモコンのLED表示の詳細は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=remote]').click()">リモコン</a>のページで確認できます。</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
+                        <span>無線チャンネルの切り替え</span>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">
+                        <p class="mb-2">複数ACSMを使用する場合は異なるチャンネルを割り当ててください<br><span class="text-sm text-gray-500">※出荷時はCH1が設定されています。</span></p>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンの操作:</b> チャンネル切替ボタンを0.5秒以上長押しすると、次のチャンネルに切り替わります。設定はリモコンの電源を切っても保存されます。</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
+                                <div class="pt-0.5"><b class="font-semibold">本体の操作:</b> ACSM本体のチャンネルスイッチを、リモコンと同じチャンネルの色に合わせてください。</div>
+                            </div>
+                        </div>
+                         <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mt-4">
+                            <p class="font-bold text-yellow-800">【注意】本体とリモコンのチャンネルが一致していないと通信できません。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
                         <span>遠隔緊急停止機能</span>
                         <span class="transform transition-transform duration-300">▼</span>
                     </button>
@@ -464,7 +539,7 @@
                         <div class="space-y-4 mb-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">ボタンを長押し:</b> リモコンの緊急停止ボタンを押し続けます。LEDが白色に点灯し、300ms間隔で停止信号が自動で送信されます。<br><span class="text-sm text-gray-600">ポイント: 通信を確実にするため、リトライするごとに電波の送信出力を自動的に上げて送信します。</span></div>
+                                <div class="pt-0.5"><b class="font-semibold">ボタンを長押し:</b> リモコンの緊急停止ボタンを押し続けます。LEDが白色に点灯し、300ms間隔で停止信号が自動で送信されます。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
@@ -484,46 +559,15 @@
                         </div>
                     </div>
                 </div>
-                 <div class="bg-white rounded-lg shadow-md">
-                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>保護状態からの復帰</span>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="accordion-content px-6 pb-6">
-                        <p>高回転防止または遠隔緊急停止が作動し「保護中（赤点滅）」になった場合、安全のためエンジンは再始動できません。復帰するには以下の操作をしてください。</p>
-                        <div class="space-y-4 mt-2">
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">キーを再投入:</b> 一度バイクのイグニッションキーをOFFにし、再度ONにしてください。</div>
-                            </div>
-                        </div>
-                        <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
-                            <p class="text-sm">💡 「保護中」の状態（赤点滅）については、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで視覚的に確認できます。</p>
-                        </div>
-                    </div>
+
+                <div class="flex items-center justify-center my-2">
+                    <div class="w-full h-px bg-gray-300"></div>
+                    <svg class="w-6 h-6 text-gray-400 mx-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                    </svg>
+                    <div class="w-full h-px bg-gray-300"></div>
                 </div>
-                 <div class="bg-white rounded-lg shadow-md">
-                    <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>無線チャンネルの切り替え</span>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="accordion-content px-6 pb-6">
-                        <p class="mb-2">周囲の電波環境などにより通信が不安定な場合、チャンネルを変更します。</p>
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">リモコンの操作:</b> チャンネル切替ボタンを0.5秒以上長押しすると、次のチャンネルに切り替わります。設定はリモコンの電源を切っても保存されます。</div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">本体の操作:</b> ACSM本体のチャンネルスイッチを、リモコンと同じチャンネルの色に合わせてください。</div>
-                            </div>
-                        </div>
-                         <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mt-4">
-                            <p class="font-bold text-yellow-800">【注意】本体とリモコンのチャンネルが一致していないと通信できません。</p>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
                         <span>通信テストモード</span>
@@ -836,8 +880,19 @@
                             </thead>
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
-                                    <td class="px-4 py-2">1.0</td>
-                                    <td class="px-4 py-2">2025年9月16日</td>
+                                    <td class="px-4 py-2 align-top">1.1</td>
+                                    <td class="px-4 py-2 align-top">2025年9月16日</td>
+                                    <td class="px-4 py-2">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>「概要」セクションの視認性を向上。</li>
+                                            <li>「取付方法」セクションの車種別手順を更新。</li>
+                                            <li>「使い方」セクションの構成を見直し、説明を追記・修正。</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 align-top">1.0</td>
+                                    <td class="px-4 py-2 align-top">2025年9月16日</td>
                                     <td class="px-4 py-2">新規作成</td>
                                 </tr>
                             </tbody>
@@ -1299,5 +1354,14 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
