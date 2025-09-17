@@ -37,7 +37,7 @@
 
     <div id="app" class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
         <header class="mb-6 pb-4 border-b border-gray-300">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.1</span></h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.2</span></h1>
         </header>
 
         <nav class="flex flex-wrap gap-2 mb-6">
@@ -47,6 +47,7 @@
             <button data-target="indicator" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">インジケータ</button>
             <button data-target="preview" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">プレビューモード</button>
             <button data-target="remote" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">リモコン</button>
+            <button data-target="price" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">価格</button>
             <button data-target="technical" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">技術的な仕組み</button>
             <button data-target="support" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">サポート</button>
             <button data-target="history" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">改訂履歴</button>
@@ -415,7 +416,7 @@
                         <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">回転数の設定:</b> ACSM本体の調整ボリュームを回し、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">プレビューモード</a>を見ながらエンジン停止回転数を設定します。<br><span class="text-sm text-gray-500 ml-1">※出荷時は4000rpmに設定されています。</span></div>
+                                <div class="pt-0.5"><b class="font-semibold">キーをONに:</b> バイクのイグニッションキーをONにすると、ACSM本体とインジケータが起動します。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
@@ -688,6 +689,116 @@
                     <p><b>補足:</b> このページの点滅シミュレーションは説明のためであり、実際のリモコンではより短い点灯の「フラッシュ」で表現されます。</p>
                 </div>
             </section>
+            
+            <section id="price-content" class="content-section space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">価格のご案内</h2>
+                    <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg space-y-2 mb-6">
+                        <h3 class="font-bold text-yellow-800">【販売元のパルプランニング様へ】</h3>
+                        <p class="text-yellow-700">以下の価格はすべて仮のものです。実際の販売価格に修正してください。</p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 border-b pb-2">セット商品</h3>
+                             <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Full Set Card -->
+                                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                                    <h4 class="text-lg font-bold text-gray-900 mb-3">フルセット（推奨）</h4>
+                                    <p class="text-gray-700 mb-4">全機能が利用可能な標準パッケージです。</p>
+                                    <ul class="list-disc list-inside space-y-1 mb-4">
+                                        <li>ACSM本体</li>
+                                        <li>専用リモコン</li>
+                                        <li>インジケータ</li>
+                                        <li>車種別ハーネス一式</li>
+                                    </ul>
+                                    <p class="text-2xl font-bold text-red-600">価格: 〇〇,〇〇〇円 <span class="text-sm font-normal text-gray-600">(税別)</span></p>
+                                </div>
+                                <!-- Basic Set Card -->
+                                <div class="bg-gray-50 p-6 rounded-lg border">
+                                    <h4 class="text-lg font-bold text-gray-900 mb-3">ベーシックセット</h4>
+                                    <p class="text-gray-700 mb-4">遠隔停止機能（リモコン）を除いた、コストを抑えたパッケージです。</p>
+                                     <ul class="list-disc list-inside space-y-1 mb-4">
+                                        <li>ACSM本体</li>
+                                        <li>インジケータ</li>
+                                        <li>車種別ハーネス一式</li>
+                                    </ul>
+                                     <p class="text-2xl font-bold text-red-600">価格: 〇〇,〇〇〇円 <span class="text-sm font-normal text-gray-600">(税別)</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 border-b pb-2">保守・交換用パーツ</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left mt-4">
+                                    <thead class="bg-gray-100">
+                                        <tr>
+                                            <th class="px-4 py-2">品名</th>
+                                            <th class="px-4 py-2">対応車種</th>
+                                            <th class="px-4 py-2">価格（税別）</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr class="bg-gray-50 font-semibold"><td colspan="3" class="px-4 py-2">主要部品</td></tr>
+                                        <tr>
+                                            <td class="px-4 py-2">ACSM本体</td>
+                                            <td class="px-4 py-2">全車種共通</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇〇,〇〇〇円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">専用リモコン</td>
+                                            <td class="px-4 py-2">全車種共通</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇〇,〇〇〇円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">インジケータ</td>
+                                            <td class="px-4 py-2">全車種共通</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇〇,〇〇〇円</td>
+                                        </tr>
+                                        <tr class="bg-gray-50 font-semibold"><td colspan="3" class="px-4 py-2">CB400用ハーネス</td></tr>
+                                        <tr>
+                                            <td class="px-4 py-2">メインハーネス</td>
+                                            <td class="px-4 py-2">CB400</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇,〇〇〇円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">サイドスタンドハーネス</td>
+                                            <td class="px-4 py-2">CB400</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇,〇〇〇円</td>
+                                        </tr>
+                                        <tr class="bg-gray-50 font-semibold"><td colspan="3" class="px-4 py-2">NX400用ハーネス</td></tr>
+                                        <tr>
+                                            <td class="px-4 py-2">電源ハーネス</td>
+                                            <td class="px-4 py-2">NX400</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇,〇〇〇円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">サイドスタンドハーネス</td>
+                                            <td class="px-4 py-2">NX400</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇,〇〇〇円</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="px-4 py-2">CKPハーネス</td>
+                                            <td class="px-4 py-2">NX400</td>
+                                            <td class="px-4 py-2 font-bold text-red-600">〇,〇〇〇円</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 border-b pb-2">販売条件・その他</h3>
+                            <ul class="list-disc list-inside space-y-2 mt-4">
+                                <li>価格は全て税別表示です。</li>
+                                <li>標準納期はご注文後2週間程度です（在庫状況により変動します）。</li>
+                                <li>保証期間はご購入後1年間です（通常使用における故障が対象です）。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section id="technical-content" class="content-section space-y-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -952,6 +1063,15 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-2 align-top">1.2</td>
+                                    <td class="px-4 py-2 align-top">2025年9月17日</td>
+                                    <td class="px-4 py-2">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>「価格」ページを新設し、ナビゲーションに追加。</li>
+                                        </ul>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.1</td>
                                     <td class="px-4 py-2 align-top">2025年9月16日</td>
@@ -1428,25 +1548,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
