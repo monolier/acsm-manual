@@ -6,6 +6,14 @@
     <title>ACSMマニュアル</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        html { scroll-behavior: smooth; }
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px; }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; z-index: 10000; }
+        .lightbox-close:hover { color: #ccc; }
+        .clickable-img { cursor: zoom-in; transition: opacity 0.2s; }
+        .clickable-img:hover { opacity: 0.85; }
         @keyframes blink-slow { 
             0%, 100% { opacity: 1; }
             50% { opacity: 0.1; }
@@ -31,13 +39,45 @@
         .control-btn { transition: all 0.2s ease-in-out; }
         .control-btn.active { background-color: #60a5fa; color: white; border-color: #2563eb; box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
         img.placeholder { object-fit: cover; background-color: #e2e8f0; }
+        .img-placeholder { width: 100%; min-height: 12rem; border-radius: 0.5rem; background-color: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.875rem; text-align: center; padding: 0.5rem; }
     </style>
+    <script>
+        function handleImgError(img) {
+            img.onerror = null;
+            img.style.display = 'none';
+            const placeholder = document.createElement('div');
+            placeholder.className = 'img-placeholder';
+            placeholder.textContent = img.alt || '画像';
+            img.parentNode.insertBefore(placeholder, img.nextSibling);
+        }
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
 
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
     <div id="app" class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
         <header class="mb-6 pb-4 border-b border-gray-300">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.3</span></h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.4</span></h1>
         </header>
 
         <nav class="flex flex-wrap gap-2 mb-6">
@@ -116,11 +156,11 @@
                             <p class="text-sm text-gray-600 mb-3">エンジン回転数を監視・制御するメインユニットです。</p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <img src="acsm_main_front.jpg" alt="ACSM Main Unit" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="acsm_main_front.jpg" alt="ACSM Main Unit" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">ACSM本体（表面）</p>
                                 </div>
                                 <div>
-                                    <img src="acsm_main_internal.jpg" alt="ACSM Main Unit (Internal)" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="acsm_main_internal.jpg" alt="ACSM Main Unit (Internal)" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">内部（エンジン停止回転数設定ボリューム、通信チャンネルスイッチ）</p>
                                 </div>
                             </div>
@@ -130,15 +170,15 @@
                             <p class="text-sm text-gray-600 mb-3">遠隔からエンジンを緊急停止させるための無線端末です。</p>
                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
-                                    <img src="remote_controller.jpg" alt="Remote Control" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="remote_controller.jpg" alt="Remote Control" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">指導員用リモコン</p>
                                 </div>
                                 <div>
-                                    <img src="remote_controller_parts.jpg" alt="Remote Control Parts" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="remote_controller_parts.jpg" alt="Remote Control Parts" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                      <p class="text-sm text-center mt-2 text-gray-600">リモコン各部</p>
                                 </div>
                                 <div>
-                                    <img src="remote_controller_battery.jpg" alt="Remote Control Battery" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="remote_controller_battery.jpg" alt="Remote Control Battery" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">アームバンド固定</p>
                                 </div>
                              </div>
@@ -148,11 +188,11 @@
                             <p class="text-sm text-gray-600 mb-3">8個のLEDでシステムの動作状態を知らせ、機能のON/OFFを切り替えます。</p>
                              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <img src="indicator_leds.jpg" alt="Indicator" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="indicator_leds.jpg" alt="Indicator" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">インジケータ（LED表示部）</p>
                                 </div>
                                 <div>
-                                    <img src="indicator_switch.jpg" alt="Indicator (Switch)" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="indicator_switch.jpg" alt="Indicator (Switch)" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">インジケータ（有効/無効スイッチ）</p>
                                 </div>
                              </div>
@@ -165,14 +205,14 @@
                                     <h4 class="font-semibold text-gray-700">CB400用</h4>
                                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
                                          <div>
-                                            <img src="harness_cb400_main.jpg" alt="CB400 Main Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <img src="harness_cb400_main.jpg" alt="CB400 Main Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
                                                 <p class="font-semibold">メインハーネス</p>
                                                 <p class="text-xs text-gray-600">(電源、イグニッションコイル接続用)</p>
                                             </div>
                                         </div>
                                         <div>
-                                            <img src="harness_cb400_sidestand.jpg" alt="CB400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <img src="harness_cb400_sidestand.jpg" alt="CB400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
                                                 <p class="font-semibold">サイドスタンドハーネス</p>
                                                 <p class="text-xs text-gray-600">(サイドスタンドセンサー接続用)</p>
@@ -184,24 +224,50 @@
                                     <h4 class="font-semibold text-gray-700">NX400用</h4>
                                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                         <div>
-                                            <img src="harness_nx400_power.jpg" alt="NX400 Power Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <img src="harness_nx400_power.jpg" alt="NX400 Power Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
                                                 <p class="font-semibold">電源ハーネス</p>
                                                 <p class="text-xs text-gray-600">(ライセンスライト接続用)</p>
                                             </div>
                                         </div>
                                         <div>
-                                            <img src="harness_nx400_ckp.jpg" alt="NX400 CKP Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <img src="harness_nx400_ckp.jpg" alt="NX400 CKP Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
                                                 <p class="font-semibold">CKPハーネス</p>
                                                 <p class="text-xs text-gray-600">(クランクセンサー接続用)</p>
                                             </div>
                                         </div>
                                         <div>
-                                            <img src="harness_nx400_sidestand.jpg" alt="NX400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder">
+                                            <img src="harness_nx400_sidestand.jpg" alt="NX400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
                                                 <p class="font-semibold">サイドスタンドハーネス</p>
                                                 <p class="text-xs text-gray-600">(サイドスタンドセンサー接続用)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">GROM用</h4>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                        <div>
+                                            <img src="harness_grom_power.jpg" alt="GROM Power Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">電源ハーネス</p>
+                                                <p class="text-xs text-gray-600">(GROM専用)</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="harness_nx400_ckp.jpg" alt="CKP Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">CKPハーネス</p>
+                                                <p class="text-xs text-gray-600">(NX400と共通)</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="harness_grom_sidestand.jpg" alt="GROM Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(GROM専用)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -224,6 +290,24 @@
                             </svg>
                             <span>取付マニュアル（PDF）</span>
                         </a>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border mb-6">
+                        <h3 class="font-bold text-lg mb-3">車種別取付手順へジャンプ</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#install-cb400" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                CB400
+                            </a>
+                            <a href="#install-nx400" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                NX400
+                            </a>
+                            <a href="#install-grom" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                GROM
+                            </a>
+                        </div>
                     </div>
                     
                     <div class="space-y-4 mb-8">
@@ -274,14 +358,18 @@
                         <div>
                             <h3 class="text-xl font-bold mb-3 border-b pb-2">1. ACSM本体の設置</h3>
                             <p class="mb-4">ACSM本体はシート下などの雨水や振動の影響を受けにくい場所に設置してください。本体の固定には市販の結束バンドやステー、クッション材などを使用することを推奨します。本体は必ずネジ部が上向きになるように設置してください。</p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
-                                    <img src="install_main_1.jpg" alt="ACSM Main Unit Installation Example 1" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="install_main_1.jpg" alt="ACSM Main Unit Installation Example 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">本体設置例１ NX400</p>
                                 </div>
                                 <div>
-                                    <img src="install_main_2.jpg" alt="ACSM Main Unit Installation Example 2" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="install_main_2.jpg" alt="ACSM Main Unit Installation Example 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">本体設置例２ CB400</p>
+                                </div>
+                                <div>
+                                    <img src="install_main_3.jpg" alt="ACSM Main Unit Installation Example 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                    <p class="text-sm text-center mt-2 text-gray-600">本体設置例３ GROM</p>
                                 </div>
                             </div>
                         </div>
@@ -291,15 +379,15 @@
                             <p class="mb-4">インジケータは運転者から見やすい位置に固定してください。</p>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
-                                    <img src="install_indicator_1.jpg" alt="ACSM Indicator Installation Example 1" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="install_indicator_1.jpg" alt="ACSM Indicator Installation Example 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例１ ハンドル周り</p>
                                 </div>
                                 <div>
-                                    <img src="install_indicator_2.jpg" alt="ACSM Indicator Installation Example 2" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="install_indicator_2.jpg" alt="ACSM Indicator Installation Example 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例２ リア周り</p>
                                 </div>
                                 <div>
-                                    <img src="install_indicator_3.jpg" alt="ACSM Indicator Installation Example 3" class="w-full h-auto rounded-lg placeholder">
+                                    <img src="install_indicator_3.jpg" alt="ACSM Indicator Installation Example 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                     <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例３ 結束バンド固定穴</p>
                                 </div>
                             </div>
@@ -308,7 +396,7 @@
                         <div>
                              <h3 class="text-xl font-bold mb-3 border-b pb-2">3. ハーネスの接続</h3>
                              <div class="space-y-8">
-                                 <div class="border border-gray-300 rounded-lg shadow-sm overflow-hidden">
+                                 <div id="install-cb400" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
                                      <h4 class="font-bold text-lg bg-slate-700 text-white p-3">CB400の場合</h4>
                                      <div class="p-4 space-y-4">
                                          <div>
@@ -317,11 +405,11 @@
                                              </ul>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                  <div>
-                                                    <img src="connect_cb400_1.jpg" alt="CB400 Connection 1" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_cb400_1.jpg" alt="CB400 Connection 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">黒の4pinコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_cb400_2.jpg" alt="CB400 Connection 2" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_cb400_2.jpg" alt="CB400 Connection 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">メインハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
@@ -333,11 +421,11 @@
                                              <p class="text-sm text-gray-600 mt-2">サイドスタンドコネクタはレギュレータの裏、またはタンク下部にある可能性があります。サービスマニュアルを確認の上、コネクタを探してください。</p>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_cb400_3.jpg" alt="CB400 Connection 3" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_cb400_3.jpg" alt="CB400 Connection 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_cb400_4.jpg" alt="CB400 Connection 4" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_cb400_4.jpg" alt="CB400 Connection 4" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
@@ -347,13 +435,13 @@
                                                 <li>本体にハーネスを接続します。</li>
                                              </ul>
                                              <div class="mt-2 max-w-md">
-                                                <img src="connect_harness_to_unit_cb400.jpg" alt="Harness Connection" class="w-full h-auto rounded-lg placeholder">
+                                                <img src="connect_harness_to_unit_cb400.jpg" alt="Harness Connection" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                 <p class="text-sm text-center mt-2 text-gray-600">本体にハーネスを接続します。</p>
                                              </div>
                                          </div>
                                      </div>
                                  </div>
-                                 <div class="border border-gray-300 rounded-lg shadow-sm overflow-hidden">
+                                 <div id="install-nx400" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
                                      <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NX400の場合</h4>
                                      <div class="p-4 space-y-4">
                                          <div>
@@ -362,11 +450,11 @@
                                              </ul>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_nx400_1.jpg" alt="NX400 Connection 1" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_nx400_1.jpg" alt="NX400 Connection 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">ライセンスライトコネクタ（白）を取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_nx400_2.jpg" alt="NX400 Connection 2" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_nx400_2.jpg" alt="NX400 Connection 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">電源ハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
@@ -377,11 +465,11 @@
                                              </ul>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_nx400_3.jpg" alt="NX400 Connection 3" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_nx400_3.jpg" alt="NX400 Connection 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_nx400_4.jpg" alt="NX400 Connection 4" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_nx400_4.jpg" alt="NX400 Connection 4" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">CKPハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
@@ -392,11 +480,79 @@
                                              </ul>
                                               <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_nx400_5.jpg" alt="NX400 Connection 5" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_nx400_5.jpg" alt="NX400 Connection 5" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタ（線：緑、緑/白）を取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_nx400_6.jpg" alt="NX400 Connection 6" class="w-full h-auto rounded-lg placeholder">
+                                                    <img src="connect_nx400_6.jpg" alt="NX400 Connection 6" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>本体にハーネスを接続します。</li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="install-grom" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">GROMの場合</h4>
+                                     <div class="p-4 space-y-4">
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>電源ハーネスを接続します。</li>
+                                             </ul>
+                                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                                <div>
+                                                    <img src="connect_grom_1.jpg" alt="GROM電源コネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタの場所（バッテリー横）</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_grom_2.jpg" alt="GROM電源コネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタを取り外します。</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_grom_3.jpg" alt="GROM電源ハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源ハーネスを間に接続します。</p>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>CKP（クランクポジションセンサー）ハーネスを接続します。</li>
+                                             </ul>
+                                             <p class="text-sm text-gray-600 mt-1 ml-5">※CKPハーネスはNX400と共通です。</p>
+                                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                                <div>
+                                                    <img src="connect_grom_4.jpg" alt="GROM CKPコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタの場所</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_grom_5.jpg" alt="GROM CKPコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタを取り外します。</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_grom_6.jpg" alt="GROM CKPハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPハーネスを間に接続します。</p>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>サイドスタンドハーネスを接続します。</li>
+                                             </ul>
+                                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                                <div>
+                                                    <img src="connect_grom_7.jpg" alt="GROMサイドスタンドコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタの場所</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_grom_8.jpg" alt="GROMサイドスタンドコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタを取り外します。</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_grom_9.jpg" alt="GROMサイドスタンドハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                     <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
@@ -415,6 +571,13 @@
             </section>
             
             <section id="usage-content" class="content-section space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">使い方説明動画</h2>
+                    <p class="text-gray-700 mb-4">ACSMシステムの基本的な使い方を動画でご紹介します。</p>
+                    <div class="relative w-full" style="padding-bottom: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/dg78uPUHtPE" title="ACSM使い方説明動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
                         <span>バイク本体の起動と自動判定</span>
@@ -889,6 +1052,13 @@
                             </div>
                         </details>
                         <details class="p-4 border border-gray-200 rounded-lg">
+                            <summary class="font-semibold cursor-pointer">【NX400】ACSMが作動しているのにエンジンが止まらない</summary>
+                             <div class="mt-3 text-gray-700">
+                                <p><b class="font-semibold">原因:</b> サイドスタンドコネクタ内部の端子が歪んでいる可能性があります。コネクタは正常に刺さっているように見えても、端子の曲がりにより導通しないことがあります。</p>
+                                <p class="mt-2"><b class="font-semibold">対処法:</b> サイドスタンドハーネスのコネクタを取り外し、内部の端子に曲がりや歪みがないか確認してください。端子が曲がっている場合は、慎重に修正するか、ハーネスを交換してください。</p>
+                            </div>
+                        </details>
+                        <details class="p-4 border border-gray-200 rounded-lg">
                             <summary class="font-semibold cursor-pointer">【CB400】メーターや表示灯が点灯しなくなった</summary>
                              <div class="mt-3 text-gray-700">
                                 <p><b class="font-semibold">対処法:</b> バイク側のヒューズを確認してください。ヒューズが切れている場合は、ハーネスが不良である可能性があります。</p>
@@ -942,7 +1112,7 @@
                         <p class="font-semibold mt-2">住所:</p>
                         <p>〒399-4601<br>長野県上伊那郡箕輪町中箕輪13275-1</p>
                         <p class="font-semibold mt-2">連絡先メールアドレス:</p>
-                        <a href="mailto:info@monolier.jp" class="text-blue-600 hover:underline">info@monolier.jp</a>
+                        <a href="/cdn-cgi/l/email-protection#523b3c343d123f3d3c3d3e3b37207c3822" class="text-blue-600 hover:underline"><span class="__cf_email__" data-cfemail="aac3c4ccc5eac7c5c4c5c6c3cfd884c0da">[email&#160;protected]</span></a>
                         <p class="text-sm text-gray-600 mt-2">※原則として、お問い合わせはメールにてお願いいたします。</p>
                     </div>
                 </div>
@@ -961,6 +1131,19 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-2 align-top">1.4</td>
+                                    <td class="px-4 py-2 align-top">2025年12月4日</td>
+                                    <td class="px-4 py-2">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>GROM対応：取付手順、専用ハーネス情報を追加</li>
+                                            <li>「取付方法」ページに車種別ジャンプリンクを追加</li>
+                                            <li>「使い方」ページに説明動画を追加</li>
+                                            <li>画像クリックで拡大表示するライトボックス機能を追加</li>
+                                            <li>トラブルシューティングにNX400のサイドスタンドコネクタ端子歪み事例を追加</li>
+                                        </ul>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.3</td>
                                     <td class="px-4 py-2 align-top">2025年10月20日</td>
@@ -996,7 +1179,7 @@
         </main>
     </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     document.addEventListener('DOMContentLoaded', function () {
         const navItems = document.querySelectorAll('.nav-item');
         const contentSections = document.querySelectorAll('.content-section');
@@ -1431,22 +1614,17 @@
                     } else {
                         content.style.maxHeight = content.scrollHeight + 'px';
                         icon.style.transform = 'rotate(180deg)';
-                    }
-                });
+                    }                });
             });
         }
 
         setupNavigation();
         setupIndicatorSimulator();
         setupRemoteSimulator();
-        setupAccordions();
         setupPreviewSimulator();
+        setupAccordions();
     });
 </script>
 
 </body>
 </html>
-
-
-
-
