@@ -77,7 +77,7 @@
 
     <div id="app" class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
         <header class="mb-6 pb-4 border-b border-gray-300">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.4</span></h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.5</span></h1>
         </header>
 
         <nav class="flex flex-wrap gap-2 mb-6">
@@ -272,6 +272,40 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">DIO用</h4>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                        <div>
+                                            <img src="harness_dio_power.jpg" alt="DIO Power Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">電源ハーネス</p>
+                                                <p class="text-xs text-gray-600">(DIO専用)</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="harness_dio_ckp.jpg" alt="DIO CKP Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">CKPハーネス</p>
+                                                <p class="text-xs text-gray-600">(DIO専用)</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="harness_dio_sidestand.jpg" alt="DIO Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                            <div class="text-center mt-2">
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(DIO専用)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">NC750（旧型~2020）用</h4>
+                                    <p class="text-sm text-gray-500 mt-1 italic">※準備中です。詳細は後日追加されます。</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">NC750（新型2021~）用</h4>
+                                    <p class="text-sm text-gray-500 mt-1 italic">※準備中です。詳細は後日追加されます。</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -306,6 +340,18 @@
                             <a href="#install-grom" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                                 GROM
+                            </a>
+                            <a href="#install-dio" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                DIO
+                            </a>
+                            <a href="#install-nc750-old" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                NC750 (旧型~2020)
+                            </a>
+                            <a href="#install-nc750-new" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                NC750 (新型2021~)
                             </a>
                         </div>
                     </div>
@@ -561,6 +607,91 @@
                                              <ul class="list-disc list-inside text-gray-700">
                                                 <li>本体にハーネスを接続します。</li>
                                              </ul>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="install-dio" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">DIOの場合</h4>
+                                     <div class="p-4 space-y-4">
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>電源ハーネスを接続します。</li>
+                                             </ul>
+                                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                                <div>
+                                                    <img src="connect_dio_1.jpg" alt="DIO電源コネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタの場所</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_dio_2.jpg" alt="DIO電源コネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタを取り外します。</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_dio_3.jpg" alt="DIO電源ハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源ハーネスを間に接続します。</p>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>CKP（クランクポジションセンサー）ハーネスを接続します。</li>
+                                             </ul>
+                                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                                <div>
+                                                    <img src="connect_dio_4.jpg" alt="DIO CKPコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタの場所</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_dio_5.jpg" alt="DIO CKPコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタを取り外します。</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_dio_6.jpg" alt="DIO CKPハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPハーネスを間に接続します。</p>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>サイドスタンドハーネスを接続します。</li>
+                                             </ul>
+                                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                                                <div>
+                                                    <img src="connect_dio_7.jpg" alt="DIOサイドスタンドコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタの場所</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_dio_8.jpg" alt="DIOサイドスタンドコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタを取り外します。</p>
+                                                </div>
+                                                <div>
+                                                    <img src="connect_dio_9.jpg" alt="DIOサイドスタンドハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
+                                                </div>
+                                             </div>
+                                         </div>
+                                         <div>
+                                             <ul class="list-disc list-inside text-gray-700">
+                                                <li>本体にハーネスを接続します。</li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="install-nc750-old" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NC750（旧型~2020）の場合</h4>
+                                     <div class="p-4 space-y-4">
+                                         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                                             <p class="text-yellow-800 font-semibold">※準備中です。取付手順の詳細は後日追加されます。</p>
+                                             <p class="text-sm text-yellow-700 mt-1">検出方式: イグニッションコイル（IGN）方式</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="install-nc750-new" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NC750（新型2021~）の場合</h4>
+                                     <div class="p-4 space-y-4">
+                                         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                                             <p class="text-yellow-800 font-semibold">※準備中です。取付手順の詳細は後日追加されます。</p>
+                                             <p class="text-sm text-yellow-700 mt-1">検出方式: クランクセンサー（CKP）方式</p>
                                          </div>
                                      </div>
                                  </div>
@@ -1034,8 +1165,9 @@
                         <details class="p-4 border border-gray-200 rounded-lg">
                             <summary class="font-semibold cursor-pointer">本体LEDが黄色で点滅している</summary>
                             <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">原因:</b> エンジンがストールしました。</p>
+                                <p><b class="font-semibold">原因:</b> エンジンがストールしました。（CKP方式の車種のみ発生します）</p>
                                 <p><b class="font-semibold">対処法:</b> 正常な動作です。エンジンを再始動してください。</p>
+                                <p class="text-sm text-gray-500 mt-1">※CB400・NC750（旧型）はイグニッションコイル（IGN）方式のため、この状態にはなりません。</p>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
@@ -1131,6 +1263,18 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-2 align-top">1.5</td>
+                                    <td class="px-4 py-2 align-top">2025年2月9日</td>
+                                    <td class="px-4 py-2">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>DIO対応：取付手順、専用ハーネス情報を追加</li>
+                                            <li>NC750（旧型~2020）/ NC750（新型2021~）の専用枠を追加（準備中）</li>
+                                            <li>CB400 / NC750（旧型）のエンスト検知非対応に関する注記を追加</li>
+                                            <li>トラブルシューティングの黄色LED説明をCKP車種限定に修正</li>
+                                        </ul>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.4</td>
                                     <td class="px-4 py-2 align-top">2025年12月4日</td>
@@ -1263,7 +1407,7 @@
                     stabilizing: { name: '安定待ち', desc: 'エンジン始動直後、信号が安定するのを待っています。', leds: [{ i:0, c:'white' }, { i:1, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
                     detecting: { name: '判定中', desc: 'エンジンの信号特性を自動で判定しています。（約3～5秒）', leds: [{ i:0, c:'white' }, { i:1, c:'white' }, { i:2, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
                     running: { name: '監視中', desc: '正常にエンジン回転数を監視している状態です。', leds: [{ i:0, c:'green', b:'slow' }, { i:1, c:'green', b:'slow' }, { i:2, c:'green', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
-                    stalled: { name: 'ストール', desc: '走行中にエンジンが停止したことを示します。', leds: [{ i:0, c:'yellow', b:'slow' }, { i:1, c:'yellow', b:'slow' }, { i:2, c:'yellow', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    stalled: { name: 'ストール', desc: '走行中にエンジンが停止したことを示します。（CKP方式の車種のみ。CB400/NC750旧型はこの状態になりません）', leds: [{ i:0, c:'yellow', b:'slow' }, { i:1, c:'yellow', b:'slow' }, { i:2, c:'yellow', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
                     protected: { name: '保護中', desc: '高回転またはリモコン操作によりエンジンが停止されました。', leds: [{ i:0, c:'red', b:'slow' }, { i:1, c:'red', b:'slow' }, { i:2, c:'red', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
                     disabled: { name: '無効', desc: 'スイッチがOFFです。LED1～3のみ消灯します。', leds: [], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
                 }
