@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACSMÃ£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«</title>
+    <title>ACSMマニュアル</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
@@ -47,7 +47,7 @@
             img.style.display = 'none';
             const placeholder = document.createElement('div');
             placeholder.className = 'img-placeholder';
-            placeholder.textContent = img.alt || 'Ã§ÂÂ»Ã¥ÂÂ';
+            placeholder.textContent = img.alt || '画像';
             img.parentNode.insertBefore(placeholder, img.nextSibling);
         }
         function openLightbox(img) {
@@ -77,39 +77,39 @@
 
     <div id="app" class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
         <header class="mb-6 pb-4 border-b border-gray-300">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMÃ£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ« <span class="text-2xl font-normal text-gray-500">Rev. 1.5</span></h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.5</span></h1>
         </header>
 
         <nav class="flex flex-wrap gap-2 mb-6">
-            <button data-target="overview" class="nav-item active text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã¦Â¦ÂÃ¨Â¦Â</button>
-            <button data-target="installation" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã¥ÂÂÃ¤Â»ÂÃ¦ÂÂ¹Ã¦Â³Â</button>
-            <button data-target="usage" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã¤Â½Â¿Ã£ÂÂÃ¦ÂÂ¹</button>
-            <button data-target="indicator" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿</button>
-            <button data-target="preview" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</button>
-            <button data-target="remote" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³</button>
-            <button data-target="technical" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã¦ÂÂÃ¨Â¡ÂÃ§ÂÂÃ£ÂÂªÃ¤Â»ÂÃ§ÂµÂÃ£ÂÂ¿</button>
-            <button data-target="support" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã£ÂÂµÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ</button>
-            <button data-target="history" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">Ã¦ÂÂ¹Ã¨Â¨ÂÃ¥Â±Â¥Ã¦Â­Â´</button>
+            <button data-target="overview" class="nav-item active text-sm md:text-base font-semibold px-4 py-2 rounded-md">概要</button>
+            <button data-target="installation" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">取付方法</button>
+            <button data-target="usage" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">使い方</button>
+            <button data-target="indicator" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">インジケータ</button>
+            <button data-target="preview" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">プレビューモード</button>
+            <button data-target="remote" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">リモコン</button>
+            <button data-target="technical" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">技術的な仕組み</button>
+            <button data-target="support" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">サポート</button>
+            <button data-target="history" class="nav-item text-sm md:text-base font-semibold px-4 py-2 rounded-md">改訂履歴</button>
         </nav>
 
         <main>
             <section id="overview-content" class="content-section active space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂ«</h2>
+                    <h2 class="text-2xl font-bold mb-4">はじめに</h2>
                     <div class="space-y-4 text-gray-700">
-                        <p>Ã£ÂÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã£ÂÂ¯Ã£ÂÂÃ¦ÂÂÃ§Â¿ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¨Â£ÂÃ§Â½Â®Ã£ÂÂACSMÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂÃ¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¡Ã£ÂÂ®Ã¦ÂÂ¹Ã£ÂÂÃ¥Â¯Â¾Ã¨Â±Â¡Ã£ÂÂ¨Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥Â®Â¹Ã£ÂÂ¯Ã¤Â»Â¥Ã¤Â¸ÂÃ£ÂÂ®Ã©ÂÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ</p>
+                        <p>このマニュアルは、教習用バイクの安全装置「ACSMシステム」を運用する指導員の方を対象としています。内容は以下の通りです。</p>
                         <ul class="list-disc list-inside space-y-2 pl-4">
-                            <li>ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ³Ã¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¡Ã§ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã¦Â­Â£Ã£ÂÂÃ£ÂÂÃ¤Â½Â¿Ã§ÂÂ¨Ã¦ÂÂ¹Ã¦Â³Â</li>
-                            <li>Ã¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ¸Ã£ÂÂ®Ã¨Â¨Â­Ã§Â½Â®Ã¦ÂÂ¹Ã¦Â³Â</li>
-                            <li>Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã¯Â¼ÂLEDÃ¯Â¼ÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂ®Ã¦ÂÂÃ¥ÂÂ³</li>
-                            <li>Ã£ÂÂÃ£ÂÂ©Ã£ÂÂÃ£ÂÂ«Ã§ÂÂºÃ§ÂÂÃ¦ÂÂÃ£ÂÂ®Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â</li>
+                            <li>ACSM本体および指導員用リモコンの正しい使用方法</li>
+                            <li>車両への設置方法</li>
+                            <li>インジケータ（LED）表示の意味</li>
+                            <li>トラブル発生時の対処法</li>
                         </ul>
-                        <p>Ã£ÂÂÃ¤Â½Â¿Ã§ÂÂ¨Ã¥ÂÂÃ£ÂÂ«Ã¥Â¿ÂÃ£ÂÂÃ¦ÂÂ¬Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ¨ÂªÂ­Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂ®Ã¦Â©ÂÃ¨ÂÂ½Ã£ÂÂÃ¥ÂÂÃ¥ÂÂÃ£ÂÂ«Ã£ÂÂÃ§ÂÂÃ¨Â§Â£Ã£ÂÂ®Ã¤Â¸ÂÃ£ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂªÃ¦ÂÂÃ§Â¿ÂÃ¦Â´Â»Ã¥ÂÂÃ£ÂÂ«Ã£ÂÂÃ¥Â½Â¹Ã§Â«ÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                        <p>ご使用前に必ず本マニュアルをお読みいただき、システムの機能を十分にご理解の上、安全な教習活動にお役立てください。</p>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã¨Â£Â½Ã¥ÂÂÃ£ÂÂ®Ã¦Â¦ÂÃ¨Â¦Â</h2>
-                    <p>ACSMÃ£ÂÂ¯Ã£ÂÂÃ¦ÂÂÃ§Â¿ÂÃ¤Â¸Â­Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¦ÂÂ§Ã£ÂÂÃ©Â«ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥Â¾ÂÃ¤Â»ÂÃ£ÂÂÃ©ÂÂ»Ã¥Â­ÂÃ¥ÂÂ¶Ã¥Â¾Â¡Ã£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¤Â¸Â»Ã£ÂÂ«Ã¤Â»Â¥Ã¤Â¸ÂÃ£ÂÂ®2Ã£ÂÂ¤Ã£ÂÂ®Ã¤Â¸Â»Ã¨Â¦ÂÃ£ÂÂªÃ¥Â®ÂÃ¥ÂÂ¨Ã¦Â©ÂÃ¨ÂÂ½Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4">製品の概要</h2>
+                    <p>ACSMは、教習中のバイクの安全性を高めるための後付け電子制御システムです。主に以下の2つの主要な安全機能を備えています。</p>
                     <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 flex items-start space-x-4">
                             <div class="flex-shrink-0">
@@ -118,8 +118,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 mb-2">Ã©Â«ÂÃ¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ´Ã¨ÂµÂ°Ã©ÂÂ²Ã¦Â­Â¢Ã¦Â©ÂÃ¨ÂÂ½</h3>
-                                <p class="text-gray-700">Ã¤Â¸ÂÃ£ÂÂÃ¤Â¸ÂÃ£ÂÂÃ©ÂÂÃ¨Â»Â¢Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ§ÂÂ°Ã¥Â¸Â¸Ã£ÂÂ«Ã¤Â¸ÂÃ¦ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ¨Â¶ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã¨ÂÂªÃ¥ÂÂÃ§ÂÂÃ£ÂÂ«Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ®Ã¦ÂÂ´Ã¨ÂµÂ°Ã£ÂÂÃ©ÂÂ²Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">高回転暴走防止機能</h3>
+                                <p class="text-gray-700">万が一、運転操作のミスによりエンジン回転数が異常に上昇した場合、設定されたエンジン停止回転数を超えると自動的にエンジンを停止させ、車両の暴走を防ぎます。</p>
                             </div>
                         </div>
                         <div class="bg-red-50 p-6 rounded-lg border border-red-200 flex items-start space-x-4">
@@ -130,181 +130,181 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 mb-2">Ã©ÂÂ Ã©ÂÂÃ§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã¦Â©ÂÃ¨ÂÂ½</h3>
-                                <p class="text-gray-700">Ã¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¡Ã£ÂÂÃ¦ÂÂÃ£ÂÂ¤Ã¥Â°ÂÃ§ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂ±Ã©ÂÂºÃ£ÂÂ¨Ã¥ÂÂ¤Ã¦ÂÂ­Ã£ÂÂÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂ«Ã©ÂÂ Ã©ÂÂÃ¦ÂÂÃ¤Â½ÂÃ£ÂÂ§Ã¦ÂÂÃ§Â¿ÂÃ¨Â»ÂÃ£ÂÂ®Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂ³Ã¥ÂºÂ§Ã£ÂÂ«Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">遠隔緊急停止機能</h3>
+                                <p class="text-gray-700">指導員が持つ専用リモコンから、危険と判断した場合に遠隔操作で教習車のエンジンを即座に停止させることができます。</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã¥ÂÂÃ¥ÂÂÃ¤Â½Â¿Ã§ÂÂ¨Ã¥ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¦ÂÂÃ¨Â¨Â­Ã¥Â®Â</h2>
+                    <h2 class="text-2xl font-bold mb-4">初回使用前の初期設定</h2>
                     <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg space-y-3">
-                        <h3 class="font-bold text-red-800">Ã£ÂÂÃ©ÂÂÃ¨Â¦ÂÃ£ÂÂÃ¥Â¿ÂÃ£ÂÂÃ£ÂÂÃ¨ÂªÂ­Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</h3>
-                        <p class="text-red-700">Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¦ÂÂ¬Ã¨Â£Â½Ã¥ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ«Ã¥ÂÂÃ£ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂ¦Ã¤Â½Â¿Ã§ÂÂ¨Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂ«Ã£ÂÂÃ¥Â¿ÂÃ£ÂÂÃ¤Â»Â¥Ã¤Â¸ÂÃ£ÂÂ®Ã¥ÂÂÃ¦ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ¤Â¸ÂÃ©ÂÂ©Ã¥ÂÂÃ£ÂÂªÃ¥Â Â´Ã¥ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ¦Â­Â£Ã£ÂÂÃ£ÂÂÃ¦Â©ÂÃ¨ÂÂ½Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã¦ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                        <h3 class="font-bold text-red-800">【重要】必ずお読みください</h3>
+                        <p class="text-red-700">安全のため、本製品を初めて車両に取り付けて使用する前に、必ず以下の初期設定がされていることを確認してください。設定が不適切な場合、システムが正しく機能しない可能性があります。</p>
                         <ul class="list-disc list-inside text-red-700 space-y-1 mt-2">
-                            <li><strong>Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°:</strong> 4000 RPM (Ã¨ÂªÂ¿Ã¦ÂÂ´Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂÃ¦ÂÂÃ£ÂÂÃ¥Â·Â¦Ã£ÂÂ«Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂ)</li>
-                            <li><strong>Ã§ÂÂ¡Ã§Â·ÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«:</strong> CH 1 (Ã©ÂÂÃ¨ÂÂ²)</li>
+                            <li><strong>エンジン停止回転数:</strong> 4000 RPM (調整ボリュームを最も左に回した状態)</li>
+                            <li><strong>無線チャンネル:</strong> CH 1 (青色)</li>
                         </ul>
-                         <p class="text-sm mt-3 text-red-700">Ã¢ÂÂ»Ã¨Â¨Â­Ã¥Â®ÂÃ¦ÂÂ¹Ã¦Â³ÂÃ£ÂÂ®Ã¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯Ã£ÂÂÃ¤Â½Â¿Ã£ÂÂÃ¦ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã©Â ÂÃ§ÂÂ®Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ§ÂÂ§Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                         <p class="text-sm mt-3 text-red-700">※設定方法の詳細は「使い方」および「プレビューモード」の項目をご参照ください。</p>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã¥ÂÂÃ¥ÂÂÃ¦Â§ÂÃ¦ÂÂ</h2>
+                    <h2 class="text-2xl font-bold mb-4">商品構成</h2>
                     <div class="space-y-6">
                         <div class="bg-gray-50 p-4 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-2">ACSMÃ¦ÂÂ¬Ã¤Â½Â</h3>
-                            <p class="text-sm text-gray-600 mb-3">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ§ÂÂ£Ã¨Â¦ÂÃ£ÂÂ»Ã¥ÂÂ¶Ã¥Â¾Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ</p>
+                            <h3 class="font-bold text-lg mb-2">ACSM本体</h3>
+                            <p class="text-sm text-gray-600 mb-3">エンジン回転数を監視・制御するメインユニットです。</p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <img src="acsm_main_front.jpg" alt="ACSM Main Unit" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ¯Â¼ÂÃ¨Â¡Â¨Ã©ÂÂ¢Ã¯Â¼Â</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">ACSM本体（表面）</p>
                                 </div>
                                 <div>
                                     <img src="acsm_main_internal.jpg" alt="ACSM Main Unit (Internal)" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã¥ÂÂÃ©ÂÂ¨Ã¯Â¼ÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂÃ©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">内部（エンジン停止回転数設定ボリューム、通信チャンネルスイッチ）</p>
                                 </div>
                             </div>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-2">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³</h3>
-                            <p class="text-sm text-gray-600 mb-3">Ã©ÂÂ Ã©ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã§ÂÂ¡Ã§Â·ÂÃ§Â«Â¯Ã¦ÂÂ«Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ</p>
+                            <h3 class="font-bold text-lg mb-2">リモコン</h3>
+                            <p class="text-sm text-gray-600 mb-3">遠隔からエンジンを緊急停止させるための無線端末です。</p>
                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
                                     <img src="remote_controller.jpg" alt="Remote Control" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¡Ã§ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">指導員用リモコン</p>
                                 </div>
                                 <div>
                                     <img src="remote_controller_parts.jpg" alt="Remote Control Parts" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                     <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã¥ÂÂÃ©ÂÂ¨</p>
+                                     <p class="text-sm text-center mt-2 text-gray-600">リモコン各部</p>
                                 </div>
                                 <div>
                                     <img src="remote_controller_battery.jpg" alt="Remote Control Battery" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ¥ÂÂºÃ¥Â®Â</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">アームバンド固定</p>
                                 </div>
                              </div>
                         </div>
                          <div class="bg-gray-50 p-4 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-2">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿</h3>
-                            <p class="text-sm text-gray-600 mb-3">8Ã¥ÂÂÃ£ÂÂ®LEDÃ£ÂÂ§Ã£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂ®Ã¥ÂÂÃ¤Â½ÂÃ§ÂÂ¶Ã¦ÂÂÃ£ÂÂÃ§ÂÂ¥Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¦Â©ÂÃ¨ÂÂ½Ã£ÂÂ®ON/OFFÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ¦ÂÂ¿Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <h3 class="font-bold text-lg mb-2">インジケータ</h3>
+                            <p class="text-sm text-gray-600 mb-3">8個のLEDでシステムの動作状態を知らせ、機能のON/OFFを切り替えます。</p>
                              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <img src="indicator_leds.jpg" alt="Indicator" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã¯Â¼ÂLEDÃ¨Â¡Â¨Ã§Â¤ÂºÃ©ÂÂ¨Ã¯Â¼Â</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ（LED表示部）</p>
                                 </div>
                                 <div>
                                     <img src="indicator_switch.jpg" alt="Indicator (Switch)" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã¯Â¼ÂÃ¦ÂÂÃ¥ÂÂ¹/Ã§ÂÂ¡Ã¥ÂÂ¹Ã£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ（有効/無効スイッチ）</p>
                                 </div>
                              </div>
                         </div>
                          <div class="bg-gray-50 p-4 rounded-lg border">
-                            <h3 class="font-bold text-lg mb-2">Ã¨Â»ÂÃ§Â¨Â®Ã¥ÂÂ¥Ã¥Â°ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</h3>
-                            <p class="text-sm text-gray-600 mb-3">Ã¥ÂÂÃ£ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂÃ§Â°Â¡Ã¤Â¾Â¿Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥Â°ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¨Â»ÂÃ§Â¨Â®Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã¥ÂÂÃ¥Â®Â¹Ã£ÂÂÃ§ÂÂ°Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <h3 class="font-bold text-lg mb-2">車種別専用ハーネス</h3>
+                            <p class="text-sm text-gray-600 mb-3">取り付けを簡便化するための専用ハーネスです。車種によって内容が異なります。</p>
                             <div class="space-y-4">
                                 <div>
-                                    <h4 class="font-semibold text-gray-700">CB400Ã§ÂÂ¨</h4>
+                                    <h4 class="font-semibold text-gray-700">CB400用</h4>
                                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
                                          <div>
                                             <img src="harness_cb400_main.jpg" alt="CB400 Main Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¤Ã£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">メインハーネス</p>
+                                                <p class="text-xs text-gray-600">(電源、イグニッションコイル接続用)</p>
                                             </div>
                                         </div>
                                         <div>
                                             <img src="harness_cb400_sidestand.jpg" alt="CB400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¦ÂÂ¥Ã§Â¶ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(サイドスタンドセンサー接続用)</p>
                                             </div>
                                         </div>
                                      </div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-700">NX400Ã§ÂÂ¨</h4>
+                                    <h4 class="font-semibold text-gray-700">NX400用</h4>
                                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                         <div>
                                             <img src="harness_nx400_power.jpg" alt="NX400 Power Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(Ã£ÂÂ©Ã£ÂÂ¤Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂ¹Ã£ÂÂ©Ã£ÂÂ¤Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">電源ハーネス</p>
+                                                <p class="text-xs text-gray-600">(ライセンスライト接続用)</p>
                                             </div>
                                         </div>
                                         <div>
                                             <img src="harness_nx400_ckp.jpg" alt="NX400 CKP Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(Ã£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¦ÂÂ¥Ã§Â¶ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">CKPハーネス</p>
+                                                <p class="text-xs text-gray-600">(クランクセンサー接続用)</p>
                                             </div>
                                         </div>
                                         <div>
                                             <img src="harness_nx400_sidestand.jpg" alt="NX400 Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¦ÂÂ¥Ã§Â¶ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(サイドスタンドセンサー接続用)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-700">GROMÃ§ÂÂ¨</h4>
+                                    <h4 class="font-semibold text-gray-700">GROM用</h4>
                                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                         <div>
                                             <img src="harness_grom_power.jpg" alt="GROM Power Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(GROMÃ¥Â°ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">電源ハーネス</p>
+                                                <p class="text-xs text-gray-600">(GROM専用)</p>
                                             </div>
                                         </div>
                                         <div>
                                             <img src="harness_nx400_ckp.jpg" alt="CKP Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(NX400Ã£ÂÂ¨Ã¥ÂÂ±Ã©ÂÂ)</p>
+                                                <p class="font-semibold">CKPハーネス</p>
+                                                <p class="text-xs text-gray-600">(NX400と共通)</p>
                                             </div>
                                         </div>
                                         <div>
                                             <img src="harness_grom_sidestand.jpg" alt="GROM Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(GROMÃ¥Â°ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(GROM専用)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-700">DIOÃ§ÂÂ¨</h4>
+                                    <h4 class="font-semibold text-gray-700">DIO用</h4>
                                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                         <div>
                                             <img src="harness_dio_power.jpg" alt="DIO Power Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(DIOÃ¥Â°ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">電源ハーネス</p>
+                                                <p class="text-xs text-gray-600">(DIO専用)</p>
                                             </div>
                                         </div>
                                         <div>
                                             <img src="harness_dio_ckp.jpg" alt="DIO CKP Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(DIOÃ¥Â°ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">CKPハーネス</p>
+                                                <p class="text-xs text-gray-600">(DIO専用)</p>
                                             </div>
                                         </div>
                                         <div>
                                             <img src="harness_dio_sidestand.jpg" alt="DIO Side Stand Harness" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                             <div class="text-center mt-2">
-                                                <p class="font-semibold">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹</p>
-                                                <p class="text-xs text-gray-600">(DIOÃ¥Â°ÂÃ§ÂÂ¨)</p>
+                                                <p class="font-semibold">サイドスタンドハーネス</p>
+                                                <p class="text-xs text-gray-600">(DIO専用)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-700">NC750Ã¯Â¼ÂÃ¦ÂÂ§Ã¥ÂÂ~2020Ã¯Â¼ÂÃ§ÂÂ¨</h4>
-                                    <p class="text-sm text-gray-500 mt-1 italic">Ã¢ÂÂ»Ã¦ÂºÂÃ¥ÂÂÃ¤Â¸Â­Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯Ã¥Â¾ÂÃ¦ÂÂ¥Ã¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                    <h4 class="font-semibold text-gray-700">NC750（旧型~2020）用</h4>
+                                    <p class="text-sm text-gray-500 mt-1 italic">※準備中です。詳細は後日追加されます。</p>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-700">NC750Ã¯Â¼ÂÃ¦ÂÂ°Ã¥ÂÂ2021~Ã¯Â¼ÂÃ§ÂÂ¨</h4>
-                                    <p class="text-sm text-gray-500 mt-1 italic">Ã¢ÂÂ»Ã¦ÂºÂÃ¥ÂÂÃ¤Â¸Â­Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯Ã¥Â¾ÂÃ¦ÂÂ¥Ã¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                    <h4 class="font-semibold text-gray-700">NC750（新型2021~）用</h4>
+                                    <p class="text-sm text-gray-500 mt-1 italic">※準備中です。詳細は後日追加されます。</p>
                                 </div>
                             </div>
                         </div>
@@ -314,20 +314,20 @@
 
             <section id="installation-content" class="content-section space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã¥ÂÂÃ¤Â»ÂÃ¦ÂÂ¹Ã¦Â³Â</h2>
-                    <p class="mb-4">Ã£ÂÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂ¯Ã£ÂÂÃ¨Â»ÂÃ§Â¨Â®Ã¥ÂÂ¥Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂ«Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ¦Ã¨ÂªÂ¬Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4">取付方法</h2>
+                    <p class="mb-4">ここでは、車種別のハーネス接続について説明します。</p>
 
                     <div class="my-6">
-                        <a href="ACSM Ã¥ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«.pdf" download="ACSM Ã¥ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«.pdf" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <a href="ACSM 取付マニュアル.pdf" download="ACSM 取付マニュアル.pdf" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
-                            <span>Ã¥ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã¯Â¼ÂPDFÃ¯Â¼Â</span>
+                            <span>取付マニュアル（PDF）</span>
                         </a>
                     </div>
 
                     <div class="bg-gray-50 p-4 rounded-lg border mb-6">
-                        <h3 class="font-bold text-lg mb-3">Ã¨Â»ÂÃ§Â¨Â®Ã¥ÂÂ¥Ã¥ÂÂÃ¤Â»ÂÃ¦ÂÂÃ©Â ÂÃ£ÂÂ¸Ã£ÂÂ¸Ã£ÂÂ£Ã£ÂÂ³Ã£ÂÂ</h3>
+                        <h3 class="font-bold text-lg mb-3">車種別取付手順へジャンプ</h3>
                         <div class="flex flex-wrap gap-3">
                             <a href="#install-cb400" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
@@ -347,17 +347,17 @@
                             </a>
                             <a href="#install-nc750-old" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-                                NC750 (Ã¦ÂÂ§Ã¥ÂÂ~2020)
+                                NC750 (旧型~2020)
                             </a>
                             <a href="#install-nc750-new" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-                                NC750 (Ã¦ÂÂ°Ã¥ÂÂ2021~)
+                                NC750 (新型2021~)
                             </a>
                         </div>
                     </div>
                     
                     <div class="space-y-4 mb-8">
-                        <h3 class="text-xl font-bold">Ã¨Â¨Â­Ã§Â½Â®Ã£ÂÂ«Ã©ÂÂ¢Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ¨Â¦ÂÃ¦Â³Â¨Ã¦ÂÂÃ¤ÂºÂÃ©Â Â</h3>
+                        <h3 class="text-xl font-bold">設置に関する重要注意事項</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <!-- Card 1: Case Handling -->
                             <div class="bg-red-50 p-4 rounded-lg border border-red-200 flex items-start space-x-3">
@@ -367,8 +367,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-red-800">Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¹Ã£ÂÂ®Ã¥ÂÂÃ£ÂÂÃ¦ÂÂ±Ã£ÂÂ</h4>
-                                    <p class="text-sm text-red-700 mt-1">Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¹Ã£ÂÂ¯3DÃ£ÂÂÃ£ÂÂªÃ£ÂÂ³Ã£ÂÂ¿Ã¨Â£Â½Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ¥ÂºÂ¦Ã£ÂÂªÃ¥ÂÂÃ£ÂÂÃ¥ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â¼Â·Ã£ÂÂÃ§Â·Â Ã£ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã§Â Â´Ã¦ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¥ÂÂ Ã£ÂÂ«Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                    <h4 class="font-semibold text-red-800">ケースの取り扱い</h4>
+                                    <p class="text-sm text-red-700 mt-1">ケースは3Dプリンタ製です。過度な力を加えたり、強く締め付けると破損の原因になります。</p>
                                 </div>
                             </div>
                     
@@ -380,8 +380,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-red-800">Ã©ÂÂ²Ã¦Â»Â´Ã¦ÂÂ§Ã¨ÂÂ½Ã£ÂÂ«Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ¦</h4>
-                                    <p class="text-sm text-red-700 mt-1">Ã¦ÂÂ¬Ã¨Â£Â½Ã¥ÂÂÃ£ÂÂ¯Ã©ÂÂ²Ã¦Â»Â´Ã¦Â§ÂÃ©ÂÂ Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ©Â«ÂÃ¥ÂÂ§Ã¦Â´ÂÃ¦ÂµÂÃ¦Â©ÂÃ£ÂÂÃ¦Â°Â´Ã¦Â²Â¡Ã£ÂÂ¯Ã¦ÂÂÃ©ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¥ÂÂ Ã£ÂÂ«Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ®Ã£ÂÂ§Ã©ÂÂ¿Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                    <h4 class="font-semibold text-red-800">防滴性能について</h4>
+                                    <p class="text-sm text-red-700 mt-1">本製品は防滴構造です。高圧洗浄機や水没は故障の原因になりますので避けてください。</p>
                                 </div>
                             </div>
                     
@@ -393,8 +393,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-red-800">Ã¥ÂÂÃ¤Â»ÂÃ¨Â³ÂÃ¦Â Â¼</h4>
-                                    <p class="text-sm text-red-700 mt-1">CB400/NX400Ã£ÂÂ¯Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã£ÂÂÃ§ÂÂÃ¨Â§Â£Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¦ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â»Â¥Ã¥Â¤ÂÃ£ÂÂ®Ã¨Â»ÂÃ§Â¨Â®Ã£ÂÂ¯Ã¥Â°ÂÃ©ÂÂÃ£ÂÂ®Ã¦ÂÂ´Ã¥ÂÂÃ¥Â£Â«Ã£ÂÂ®Ã¥ÂÂ©Ã¥ÂÂÃ£ÂÂÃ¥Â¾ÂÃ£ÂÂ¦Ã¥ÂÂÃ¤Â»ÂÃ£ÂÂÃ¨Â¡ÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                    <h4 class="font-semibold text-red-800">取付資格</h4>
+                                    <p class="text-sm text-red-700 mt-1">CB400/NX400はサービスマニュアルを理解できる方が、それ以外の車種は専門の整備士の助力を得て取付を行ってください。</p>
                                 </div>
                             </div>
                         </div>
@@ -402,296 +402,300 @@
 
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-xl font-bold mb-3 border-b pb-2">1. ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã¨Â¨Â­Ã§Â½Â®</h3>
-                            <p class="mb-4">ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ¼Ã£ÂÂÃ¤Â¸ÂÃ£ÂÂªÃ£ÂÂ©Ã£ÂÂ®Ã©ÂÂ¨Ã¦Â°Â´Ã£ÂÂÃ¦ÂÂ¯Ã¥ÂÂÃ£ÂÂ®Ã¥Â½Â±Ã©ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂÃ¥Â Â´Ã¦ÂÂÃ£ÂÂ«Ã¨Â¨Â­Ã§Â½Â®Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã¥ÂÂºÃ¥Â®ÂÃ£ÂÂ«Ã£ÂÂ¯Ã¥Â¸ÂÃ¨Â²Â©Ã£ÂÂ®Ã§ÂµÂÃ¦ÂÂÃ£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã¦ÂÂÃ£ÂÂªÃ£ÂÂ©Ã£ÂÂÃ¤Â½Â¿Ã§ÂÂ¨Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ¦ÂÂ¨Ã¥Â¥Â¨Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¯Ã¥Â¿ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¸Ã©ÂÂ¨Ã£ÂÂÃ¤Â¸ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ«Ã¨Â¨Â­Ã§Â½Â®Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                            <h3 class="text-xl font-bold mb-3 border-b pb-2">1. ACSM本体の設置</h3>
+                            <p class="mb-4">ACSM本体はシート下などの雨水や振動の影響を受けにくい場所に設置してください。本体の固定には市販の結束バンドやステー、クッション材などを使用することを推奨します。本体は必ずネジ部が上向きになるように設置してください。</p>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
                                     <img src="install_main_1.jpg" alt="ACSM Main Unit Installation Example 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã¦ÂÂ¬Ã¤Â½ÂÃ¨Â¨Â­Ã§Â½Â®Ã¤Â¾ÂÃ¯Â¼Â NX400</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">本体設置例１ NX400</p>
                                 </div>
                                 <div>
                                     <img src="install_main_2.jpg" alt="ACSM Main Unit Installation Example 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã¦ÂÂ¬Ã¤Â½ÂÃ¨Â¨Â­Ã§Â½Â®Ã¤Â¾ÂÃ¯Â¼Â CB400</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">本体設置例２ CB400</p>
                                 </div>
                                 <div>
                                     <img src="install_main_3.jpg" alt="ACSM Main Unit Installation Example 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã¦ÂÂ¬Ã¤Â½ÂÃ¨Â¨Â­Ã§Â½Â®Ã¤Â¾ÂÃ¯Â¼Â GROM</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">本体設置例３ GROM</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div>
-                            <h3 class="text-xl font-bold mb-3 border-b pb-2">2. Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®Ã¨Â¨Â­Ã§Â½Â®</h3>
-                            <p class="mb-4">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¯Ã©ÂÂÃ¨Â»Â¢Ã¨ÂÂÃ£ÂÂÃ£ÂÂÃ¨Â¦ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â½ÂÃ§Â½Â®Ã£ÂÂ«Ã¥ÂÂºÃ¥Â®ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                            <h3 class="text-xl font-bold mb-3 border-b pb-2">2. インジケータの設置</h3>
+                            <p class="mb-4">インジケータは運転者から見やすい位置に固定してください。</p>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
                                     <img src="install_indicator_1.jpg" alt="ACSM Indicator Installation Example 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã¨Â¨Â­Ã§Â½Â®Ã¤Â¾ÂÃ¯Â¼Â Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã¥ÂÂ¨Ã£ÂÂ</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例１ ハンドル周り</p>
                                 </div>
                                 <div>
                                     <img src="install_indicator_2.jpg" alt="ACSM Indicator Installation Example 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã¨Â¨Â­Ã§Â½Â®Ã¤Â¾ÂÃ¯Â¼Â Ã£ÂÂªÃ£ÂÂ¢Ã¥ÂÂ¨Ã£ÂÂ</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例２ リア周り</p>
                                 </div>
                                 <div>
                                     <img src="install_indicator_3.jpg" alt="ACSM Indicator Installation Example 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã¨Â¨Â­Ã§Â½Â®Ã¤Â¾ÂÃ¯Â¼Â Ã§ÂµÂÃ¦ÂÂÃ£ÂÂÃ£ÂÂ³Ã£ÂÂÃ¥ÂÂºÃ¥Â®ÂÃ§Â©Â´</p>
+                                    <p class="text-sm text-center mt-2 text-gray-600">インジケータ設置例３ 結束バンド固定穴</p>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                             <h3 class="text-xl font-bold mb-3 border-b pb-2">3. Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ®Ã¦ÂÂ¥Ã§Â¶Â</h3>
+                             <h3 class="text-xl font-bold mb-3 border-b pb-2">3. ハーネスの接続</h3>
                              <div class="space-y-8">
                                  <div id="install-cb400" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
-                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">CB400Ã£ÂÂ®Ã¥Â Â´Ã¥ÂÂ</h4>
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">CB400の場合</h4>
                                      <div class="p-4 space-y-4">
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                 <li>Ã£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¯Â¼ÂÃ©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¤Ã£ÂÂ«Ã¯Â¼ÂÃ£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                 <li>メインハーネス（電源、イグニッションコイル）を接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                  <div>
                                                     <img src="connect_cb400_1.jpg" alt="CB400 Connection 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©Â»ÂÃ£ÂÂ®4pinÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">黒の4pinコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
                                                     <img src="connect_cb400_2.jpg" alt="CB400 Connection 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">メインハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>サイドスタンドハーネスを接続します。</li>
                                              </ul>
-                                             <p class="text-sm text-gray-600 mt-2">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ¯Ã£ÂÂ¬Ã£ÂÂ®Ã£ÂÂ¥Ã£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®Ã¨Â£ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂ¯Ã¤Â¸ÂÃ©ÂÂ¨Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã¦ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ®Ã¤Â¸ÂÃ£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¦ÂÂ¢Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                             <p class="text-sm text-gray-600 mt-2">サイドスタンドコネクタはレギュレータの裏、またはタンク下部にある可能性があります。サービスマニュアルを確認の上、コネクタを探してください。</p>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
                                                     <img src="connect_cb400_3.jpg" alt="CB400 Connection 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
                                                     <img src="connect_cb400_4.jpg" alt="CB400 Connection 4" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>本体にハーネスを接続します。</li>
                                              </ul>
                                              <div class="mt-2 max-w-md">
                                                 <img src="connect_harness_to_unit_cb400.jpg" alt="Harness Connection" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                <p class="text-sm text-center mt-2 text-gray-600">Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                <p class="text-sm text-center mt-2 text-gray-600">本体にハーネスを接続します。</p>
                                              </div>
                                          </div>
                                      </div>
                                  </div>
                                  <div id="install-nx400" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
-                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NX400Ã£ÂÂ®Ã¥Â Â´Ã¥ÂÂ</h4>
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NX400の場合</h4>
                                      <div class="p-4 space-y-4">
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>電源ハーネスを接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
                                                     <img src="connect_nx400_1.jpg" alt="NX400 Connection 1" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂ©Ã£ÂÂ¤Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂ¹Ã£ÂÂ©Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã¯Â¼ÂÃ§ÂÂ½Ã¯Â¼ÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">ライセンスライトコネクタ（白）を取り外します。</p>
                                                 </div>
                                                 <div>
                                                     <img src="connect_nx400_2.jpg" alt="NX400 Connection 2" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源ハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>CKPÃ¯Â¼ÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂ¸Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¯Â¼ÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>CKP（クランクポジションセンサー）ハーネスを接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
                                                     <img src="connect_nx400_3.jpg" alt="NX400 Connection 3" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
                                                     <img src="connect_nx400_4.jpg" alt="NX400 Connection 4" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>サイドスタンドハーネスを接続します。</li>
                                              </ul>
                                               <div class="grid grid-cols-2 gap-4 mt-2">
                                                 <div>
                                                     <img src="connect_nx400_5.jpg" alt="NX400 Connection 5" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã¯Â¼ÂÃ§Â·ÂÃ¯Â¼ÂÃ§Â·ÂÃ£ÂÂÃ§Â·Â/Ã§ÂÂ½Ã¯Â¼ÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタ（線：緑、緑/白）を取り外します。</p>
                                                 </div>
                                                 <div>
                                                     <img src="connect_nx400_6.jpg" alt="NX400 Connection 6" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>本体にハーネスを接続します。</li>
                                              </ul>
                                          </div>
                                      </div>
                                  </div>
                                  <div id="install-grom" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
-                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">GROMÃ£ÂÂ®Ã¥Â Â´Ã¥ÂÂ</h4>
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">GROMの場合</h4>
                                      <div class="p-4 space-y-4">
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>電源ハーネスを接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_grom_1.jpg" alt="GROMÃ©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂÃ¯Â¼ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¼Ã¦Â¨ÂªÃ¯Â¼Â</p>
+                                                    <img src="connect_grom_1.jpg" alt="GROM電源コネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタの場所（バッテリー横）</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_grom_2.jpg" alt="GROMÃ©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_grom_2.jpg" alt="GROM電源コネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_grom_3.jpg" alt="GROMÃ©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂ¥Ã§Â¶Â" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_grom_3.jpg" alt="GROM電源ハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源ハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>CKPÃ¯Â¼ÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂ¸Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¯Â¼ÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>CKP（クランクポジションセンサー）ハーネスを接続します。</li>
                                              </ul>
-                                             <p class="text-sm text-gray-600 mt-1 ml-5">Ã¢ÂÂ»CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯NX400Ã£ÂÂ¨Ã¥ÂÂ±Ã©ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ</p>
+                                             <p class="text-sm text-gray-600 mt-1 ml-5">※CKPハーネスはNX400と共通です。</p>
                                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_grom_4.jpg" alt="GROM CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ</p>
+                                                    <img src="connect_grom_4.jpg" alt="GROM CKPコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタの場所</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_grom_5.jpg" alt="GROM CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_grom_5.jpg" alt="GROM CKPコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_grom_6.jpg" alt="GROM CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂ¥Ã§Â¶Â" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_grom_6.jpg" alt="GROM CKPハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>サイドスタンドハーネスを接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_grom_7.jpg" alt="GROMÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ</p>
+                                                    <img src="connect_grom_7.jpg" alt="GROMサイドスタンドコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタの場所</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_grom_8.jpg" alt="GROMÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_grom_8.jpg" alt="GROMサイドスタンドコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_grom_9.jpg" alt="GROMÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂ¥Ã§Â¶Â" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_grom_9.jpg" alt="GROMサイドスタンドハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>本体にハーネスを接続します。</li>
                                              </ul>
                                          </div>
                                      </div>
                                  </div>
                                  <div id="install-dio" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
-                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">DIOÃ£ÂÂ®Ã¥Â Â´Ã¥ÂÂ</h4>
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">DIOの場合</h4>
                                      <div class="p-4 space-y-4">
+                                         <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg">
+                                             <p class="font-bold text-yellow-800">【注意】年式による違いについて</p>
+                                             <p class="text-sm text-yellow-700 mt-1">以下の写真は8BJ-JK03型（2022年～）での取付例です。年式・型式によりコネクタの位置や形状が異なる場合があります。必ずお手持ちの車両のサービスマニュアルを確認の上、取り付けを行ってください。</p>
+                                         </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>電源ハーネスを接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_dio_1.jpg" alt="DIOÃ©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ</p>
+                                                    <img src="Dio/dio_power_location.jpg" alt="DIO電源コネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタの場所</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_dio_2.jpg" alt="DIOÃ©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_dio_2.jpg" alt="DIO電源コネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源コネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_dio_3.jpg" alt="DIOÃ©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂ¥Ã§Â¶Â" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="Dio/dio_power_connected.jpg" alt="DIO電源ハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">電源ハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>CKPÃ¯Â¼ÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂ¸Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¯Â¼ÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>CKP（クランクポジションセンサー）ハーネスを接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_dio_4.jpg" alt="DIO CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ</p>
+                                                    <img src="Dio/dio_ckp_location.jpg" alt="DIO CKPコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタの場所</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_dio_5.jpg" alt="DIO CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_dio_5.jpg" alt="DIO CKPコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_dio_6.jpg" alt="DIO CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂ¥Ã§Â¶Â" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_dio_6.jpg" alt="DIO CKPハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">CKPハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>サイドスタンドハーネスを接続します。</li>
                                              </ul>
                                              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
                                                 <div>
-                                                    <img src="connect_dio_7.jpg" alt="DIOÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¥Â Â´Ã¦ÂÂ</p>
+                                                    <img src="connect_dio_7.jpg" alt="DIOサイドスタンドコネクタの場所" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタの場所</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_dio_8.jpg" alt="DIOÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂ" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_dio_8.jpg" alt="DIOサイドスタンドコネクタを外した状態" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドコネクタを取り外します。</p>
                                                 </div>
                                                 <div>
-                                                    <img src="connect_dio_9.jpg" alt="DIOÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂ¥Ã§Â¶Â" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
-                                                    <p class="text-sm text-center mt-2 text-gray-600">Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                                    <img src="connect_dio_9.jpg" alt="DIOサイドスタンドハーネス接続" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
+                                                    <p class="text-sm text-center mt-2 text-gray-600">サイドスタンドハーネスを間に接続します。</p>
                                                 </div>
                                              </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
-                                                <li>Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                                <li>本体にハーネスを接続します。</li>
                                              </ul>
                                          </div>
                                      </div>
                                  </div>
                                  <div id="install-nc750-old" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
-                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NC750Ã¯Â¼ÂÃ¦ÂÂ§Ã¥ÂÂ~2020Ã¯Â¼ÂÃ£ÂÂ®Ã¥Â Â´Ã¥ÂÂ</h4>
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NC750（旧型~2020）の場合</h4>
                                      <div class="p-4 space-y-4">
                                          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
-                                             <p class="text-yellow-800 font-semibold">Ã¢ÂÂ»Ã¦ÂºÂÃ¥ÂÂÃ¤Â¸Â­Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¤Â»ÂÃ¦ÂÂÃ©Â ÂÃ£ÂÂ®Ã¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯Ã¥Â¾ÂÃ¦ÂÂ¥Ã¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
-                                             <p class="text-sm text-yellow-700 mt-1">Ã¦Â¤ÂÃ¥ÂÂºÃ¦ÂÂ¹Ã¥Â¼Â: Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¤Ã£ÂÂ«Ã¯Â¼ÂIGNÃ¯Â¼ÂÃ¦ÂÂ¹Ã¥Â¼Â</p>
+                                             <p class="text-yellow-800 font-semibold">※準備中です。取付手順の詳細は後日追加されます。</p>
+                                             <p class="text-sm text-yellow-700 mt-1">検出方式: イグニッションコイル（IGN）方式</p>
                                          </div>
                                      </div>
                                  </div>
                                  <div id="install-nc750-new" class="border border-gray-300 rounded-lg shadow-sm overflow-hidden scroll-mt-4">
-                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NC750Ã¯Â¼ÂÃ¦ÂÂ°Ã¥ÂÂ2021~Ã¯Â¼ÂÃ£ÂÂ®Ã¥Â Â´Ã¥ÂÂ</h4>
+                                     <h4 class="font-bold text-lg bg-slate-700 text-white p-3">NC750（新型2021~）の場合</h4>
                                      <div class="p-4 space-y-4">
                                          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
-                                             <p class="text-yellow-800 font-semibold">Ã¢ÂÂ»Ã¦ÂºÂÃ¥ÂÂÃ¤Â¸Â­Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¤Â»ÂÃ¦ÂÂÃ©Â ÂÃ£ÂÂ®Ã¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯Ã¥Â¾ÂÃ¦ÂÂ¥Ã¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
-                                             <p class="text-sm text-yellow-700 mt-1">Ã¦Â¤ÂÃ¥ÂÂºÃ¦ÂÂ¹Ã¥Â¼Â: Ã£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¯Â¼ÂCKPÃ¯Â¼ÂÃ¦ÂÂ¹Ã¥Â¼Â</p>
+                                             <p class="text-yellow-800 font-semibold">※準備中です。取付手順の詳細は後日追加されます。</p>
+                                             <p class="text-sm text-yellow-700 mt-1">検出方式: クランクセンサー（CKP）方式</p>
                                          </div>
                                      </div>
                                  </div>
@@ -703,81 +707,81 @@
             
             <section id="usage-content" class="content-section space-y-4">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã¤Â½Â¿Ã£ÂÂÃ¦ÂÂ¹Ã¨ÂªÂ¬Ã¦ÂÂÃ¥ÂÂÃ§ÂÂ»</h2>
-                    <p class="text-gray-700 mb-4">ACSMÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂ®Ã¥ÂÂºÃ¦ÂÂ¬Ã§ÂÂÃ£ÂÂªÃ¤Â½Â¿Ã£ÂÂÃ¦ÂÂ¹Ã£ÂÂÃ¥ÂÂÃ§ÂÂ»Ã£ÂÂ§Ã£ÂÂÃ§Â´Â¹Ã¤Â»ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4">使い方説明動画</h2>
+                    <p class="text-gray-700 mb-4">ACSMシステムの基本的な使い方を動画でご紹介します。</p>
                     <div class="relative w-full" style="padding-bottom: 56.25%;">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/dg78uPUHtPE" title="ACSMÃ¤Â½Â¿Ã£ÂÂÃ¦ÂÂ¹Ã¨ÂªÂ¬Ã¦ÂÂÃ¥ÂÂÃ§ÂÂ»" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/dg78uPUHtPE" title="ACSM使い方説明動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã¨ÂµÂ·Ã¥ÂÂÃ£ÂÂ¨Ã¨ÂÂªÃ¥ÂÂÃ¥ÂÂ¤Ã¥Â®Â</span>
-                        <span class="transform transition-transform duration-300">Ã¢ÂÂ¼</span>
+                        <span>バイク本体の起動と自動判定</span>
+                        <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
                         <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ®Ã¨Â¨Â­Ã¥Â®Â:</b> ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã¨ÂªÂ¿Ã¦ÂÂ´Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</a>Ã£ÂÂÃ¨Â¦ÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ<br><span class="text-sm text-gray-500 ml-1">Ã¢ÂÂ»Ã¥ÂÂºÃ¨ÂÂ·Ã¦ÂÂÃ£ÂÂ¯4000rpmÃ£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</span></div>
+                                <div class="pt-0.5"><b class="font-semibold">回転数の設定:</b> ACSM本体の調整ボリュームを回し、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">プレビューモード</a>を見ながらエンジン停止回転数を設定します。<br><span class="text-sm text-gray-500 ml-1">※出荷時は4000rpmに設定されています。</span></div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥Â§ÂÃ¥ÂÂ:</b> Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥Â§ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">エンジンを始動:</b> バイクのエンジンを始動します。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¨ÂÂªÃ¥ÂÂÃ¥ÂÂ¤Ã¥Â®ÂÃ£ÂÂ®Ã©ÂÂÃ¥Â§Â:</b> Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®LED1,2,3Ã£ÂÂÃ§ÂÂ½Ã¨ÂÂ²Ã£ÂÂ§Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã§Â¨Â®Ã¥ÂÂ¥Ã£ÂÂ®Ã¨ÂÂªÃ¥ÂÂÃ¥ÂÂ¤Ã¥Â®ÂÃ£ÂÂÃ©ÂÂÃ¥Â§ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ¯Â¼ÂÃ§Â´Â3Ã¯Â½Â5Ã§Â§ÂÃ¯Â¼ÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">自動判定の開始:</b> インジケータのLED1,2,3が白色で点滅し、エンジン種別の自動判定を開始します（約3～5秒）。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">4</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¥ÂÂ¤Ã¥Â®ÂÃ¥Â®ÂÃ¤ÂºÂ:</b> Ã¥ÂÂ¤Ã¥Â®ÂÃ£ÂÂÃ¥Â®ÂÃ¤ÂºÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂLEDÃ£ÂÂ¯Ã§Â·ÂÃ¨ÂÂ²Ã£ÂÂ®Ã§ÂÂ¹Ã¦Â»ÂÃ¯Â¼ÂÃ§ÂÂ£Ã¨Â¦ÂÃ¤Â¸Â­Ã¯Â¼ÂÃ£ÂÂ«Ã¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂLED5Ã£ÂÂ«Ã¦Â¤ÂÃ¥ÂÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ®Ã¨ÂÂ²Ã£ÂÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">判定完了:</b> 判定が完了すると、LEDは緑色の点滅（監視中）に変わり、LED5に検出したセンサーモードの色が表示されます。</div>
                             </div>
                         </div>
                         <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
-                            <p class="text-sm">Ã°ÂÂÂ¡ Ã¥ÂÂLEDÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂ®Ã¨Â©Â³Ã£ÂÂÃ£ÂÂÃ¦ÂÂÃ¥ÂÂ³Ã£ÂÂ¯Ã£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿</a>Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ§Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <p class="text-sm">💡 各LED表示の詳しい意味は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで確認できます。</p>
                         </div>
                     </div>
                 </div>
                  <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>Ã©Â«ÂÃ¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ´Ã¨ÂµÂ°Ã©ÂÂ²Ã¦Â­Â¢Ã¦Â©ÂÃ¨ÂÂ½</span>
-                        <span class="transform transition-transform duration-300">Ã¢ÂÂ¼</span>
+                        <span>高回転暴走防止機能</span>
+                        <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
                         <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ®Ã¨Â¨Â­Ã¥Â®Â:</b> ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã¨ÂªÂ¿Ã¦ÂÂ´Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</a>Ã£ÂÂÃ¨Â¦ÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ<br><span class="text-xs text-gray-500 ml-1">Ã¢ÂÂ»Ã¥ÂÂºÃ¨ÂÂ·Ã¦ÂÂÃ£ÂÂ¯4000rpmÃ£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</span></div>
+                                <div class="pt-0.5"><b class="font-semibold">回転数の設定:</b> ACSM本体の調整ボリュームを回し、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=preview]').click()">プレビューモード</a>を見ながらエンジン停止回転数を設定します。<br><span class="text-xs text-gray-500 ml-1">※出荷時は4000rpmに設定されています。</span></div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¨ÂÂªÃ¥ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂ®Ã¤Â½ÂÃ¥ÂÂ:</b> Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®Ã¦ÂÂÃ¥ÂÂ¹/Ã§ÂÂ¡Ã¥ÂÂ¹Ã£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ£ÂÂONÃ£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ¥ÂÂ¤Ã£ÂÂÃ¨Â¶ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ¨ÂÂªÃ¥ÂÂÃ£ÂÂ§Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">自動停止の作動:</b> インジケータの有効/無効スイッチがONの状態で、エンジン回転数が設定値を超えると、システムが自動でエンジンを停止します。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¤Â½ÂÃ¥ÂÂÃ¥Â¾ÂÃ£ÂÂ®Ã¨Â¡Â¨Ã§Â¤Âº:</b> Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®LED1,2,3Ã£ÂÂÃ¨ÂµÂ¤Ã¨ÂÂ²Ã£ÂÂ®Ã§ÂÂ¹Ã¦Â»ÂÃ¯Â¼ÂÃ¤Â¿ÂÃ¨Â­Â·Ã¤Â¸Â­Ã¯Â¼ÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">作動後の表示:</b> インジケータのLED1,2,3が赤色の点滅（保護中）になります。</div>
                             </div>
                         </div>
                         <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
-                            <p class="text-sm">Ã°ÂÂÂ¡ Ã£ÂÂÃ¤Â¿ÂÃ¨Â­Â·Ã¤Â¸Â­Ã£ÂÂÃ£ÂÂÃ¥ÂÂ«Ã£ÂÂÃ¥ÂÂLEDÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂ®Ã¨Â©Â³Ã£ÂÂÃ£ÂÂÃ¦ÂÂÃ¥ÂÂ³Ã£ÂÂ¯Ã£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿</a>Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ§Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <p class="text-sm">💡 「保護中」を含む各LED表示の詳しい意味は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで確認できます。</p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>Ã¤Â¿ÂÃ¨Â­Â·Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥Â¾Â©Ã¥Â¸Â°</span>
-                        <span class="transform transition-transform duration-300">Ã¢ÂÂ¼</span>
+                        <span>保護状態からの復帰</span>
+                        <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                        <p>Ã©Â«ÂÃ¥ÂÂÃ¨Â»Â¢Ã©ÂÂ²Ã¦Â­Â¢Ã£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã©ÂÂ Ã©ÂÂÃ§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ¤Â½ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â¿ÂÃ¨Â­Â·Ã¤Â¸Â­Ã¯Â¼ÂÃ¨ÂµÂ¤Ã§ÂÂ¹Ã¦Â»ÂÃ¯Â¼ÂÃ£ÂÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂ£Ã£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ¯Ã¥ÂÂÃ¥Â§ÂÃ¥ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â¾Â©Ã¥Â¸Â°Ã£ÂÂÃ£ÂÂÃ£ÂÂ«Ã£ÂÂ¯Ã¤Â»Â¥Ã¤Â¸ÂÃ£ÂÂ®Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                        <p>高回転防止または遠隔緊急停止が作動し「保護中（赤点滅）」になった場合、安全のためエンジンは再始動できません。復帰するには以下の操作をしてください。</p>
                         <div class="space-y-4 mt-2">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã£ÂÂ­Ã£ÂÂ¼Ã£ÂÂÃ¥ÂÂÃ¦ÂÂÃ¥ÂÂ¥:</b> Ã¤Â¸ÂÃ¥ÂºÂ¦Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ­Ã£ÂÂ¼Ã£ÂÂOFFÃ£ÂÂ«Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥ÂºÂ¦ONÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">キーを再投入:</b> 一度バイクのイグニッションキーをOFFにし、再度ONにしてください。</div>
                             </div>
                         </div>
                         <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
-                            <p class="text-sm">Ã°ÂÂÂ¡ Ã£ÂÂÃ¤Â¿ÂÃ¨Â­Â·Ã¤Â¸Â­Ã£ÂÂÃ£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ¯Â¼ÂÃ¨ÂµÂ¤Ã§ÂÂ¹Ã¦Â»ÂÃ¯Â¼ÂÃ£ÂÂ«Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂ¯Ã£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿</a>Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ§Ã¨Â¦ÂÃ¨Â¦ÂÃ§ÂÂÃ£ÂÂ«Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <p class="text-sm">💡 「保護中」の状態（赤点滅）については、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで視覚的に確認できます。</p>
                         </div>
                     </div>
                 </div>
@@ -792,73 +796,73 @@
 
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>Ã¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¡Ã§ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã¦ÂºÂÃ¥ÂÂ</span>
-                        <span class="transform transition-transform duration-300">Ã¢ÂÂ¼</span>
+                        <span>指導員用リモコンの準備</span>
+                        <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
                         <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã©ÂÂ»Ã¦ÂºÂON:</b> Ã¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¡Ã£ÂÂ¯Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂONÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¨ÂµÂ·Ã¥ÂÂÃ¥Â¾Â1Ã§Â§ÂÃ©ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¼Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂLEDÃ£ÂÂ«Ã¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンの電源ON:</b> 指導員はリモコンの電源をONにします。起動後1秒間、バッテリー状態がLEDに表示されます。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂ®Ã§Â¢ÂºÃ¨ÂªÂ:</b> Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ¦Â­Â£Ã¥Â¸Â¸Ã£ÂÂ«Ã§Â¢ÂºÃ§Â«ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®LED1Ã£ÂÂÃ§Â·ÂÃ¨ÂÂ²Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ©Ã£ÂÂÃ£ÂÂ·Ã£ÂÂ¥Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">通信の確認:</b> バイク本体とリモコンの通信が正常に確立されると、リモコンのLED1が緑色にフラッシュします。</div>
                             </div>
                         </div>
                          <div class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
-                            <p class="text-sm">Ã°ÂÂÂ¡ Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®LEDÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂ®Ã¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯Ã£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=remote]').click()">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³</a>Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ§Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <p class="text-sm">💡 リモコンのLED表示の詳細は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=remote]').click()">リモコン</a>のページで確認できます。</p>
                         </div>
                     </div>
                 </div>
                  <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>Ã§ÂÂ¡Ã§Â·ÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ®Ã¥ÂÂÃ£ÂÂÃ¦ÂÂ¿Ã£ÂÂ</span>
-                        <span class="transform transition-transform duration-300">Ã¢ÂÂ¼</span>
+                        <span>無線チャンネルの切り替え</span>
+                        <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                        <p class="mb-2">Ã¨Â¤ÂÃ¦ÂÂ°ACSMÃ£ÂÂÃ¤Â½Â¿Ã§ÂÂ¨Ã£ÂÂÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂ¯Ã§ÂÂ°Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂÃ¥ÂÂ²Ã£ÂÂÃ¥Â½ÂÃ£ÂÂ¦Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ<br><span class="text-sm text-gray-500">Ã¢ÂÂ»Ã¥ÂÂºÃ¨ÂÂ·Ã¦ÂÂÃ£ÂÂ¯CH1Ã£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</span></p>
+                        <p class="mb-2">複数ACSMを使用する場合は異なるチャンネルを割り当ててください<br><span class="text-sm text-gray-500">※出荷時はCH1が設定されています。</span></p>
                         <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã¦ÂÂÃ¤Â½Â:</b> Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã¥ÂÂÃ¦ÂÂ¿Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂ0.5Ã§Â§ÂÃ¤Â»Â¥Ã¤Â¸ÂÃ©ÂÂ·Ã¦ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ¦Â¬Â¡Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ«Ã¥ÂÂÃ£ÂÂÃ¦ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂ¯Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ¤Â¿ÂÃ¥Â­ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンの操作:</b> チャンネル切替ボタンを0.5秒以上長押しすると、次のチャンネルに切り替わります。設定はリモコンの電源を切っても保存されます。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã¦ÂÂÃ¤Â½Â:</b> ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¨Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ®Ã¨ÂÂ²Ã£ÂÂ«Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">本体の操作:</b> ACSM本体のチャンネルスイッチを、リモコンと同じチャンネルの色に合わせてください。</div>
                             </div>
                         </div>
                          <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mt-4">
-                            <p class="font-bold text-yellow-800">Ã£ÂÂÃ¦Â³Â¨Ã¦ÂÂÃ£ÂÂÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂÃ¤Â¸ÂÃ¨ÂÂ´Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂ¨Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                            <p class="font-bold text-yellow-800">【注意】本体とリモコンのチャンネルが一致していないと通信できません。</p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>Ã©ÂÂ Ã©ÂÂÃ§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã¦Â©ÂÃ¨ÂÂ½</span>
-                        <span class="transform transition-transform duration-300">Ã¢ÂÂ¼</span>
+                        <span>遠隔緊急停止機能</span>
+                        <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
                         <div class="space-y-4 mb-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ©ÂÂ·Ã¦ÂÂ¼Ã£ÂÂ:</b> Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ¦ÂÂ¼Ã£ÂÂÃ§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂLEDÃ£ÂÂÃ§ÂÂ½Ã¨ÂÂ²Ã£ÂÂ«Ã§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ300msÃ©ÂÂÃ©ÂÂÃ£ÂÂ§Ã¥ÂÂÃ¦Â­Â¢Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¨ÂÂªÃ¥ÂÂÃ£ÂÂ§Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">ボタンを長押し:</b> リモコンの緊急停止ボタンを押し続けます。LEDが白色に点灯し、300ms間隔で停止信号が自動で送信されます。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¥Â¿ÂÃ§Â­ÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂ:</b> Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¥ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ«Ã¥Â¿ÂÃ§Â­ÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¨Â¿ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®LEDÃ£ÂÂÃ¨ÂµÂ¤Ã¨ÂÂ²Ã¯Â¼ÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã©ÂÂÃ¨ÂÂ²Ã¯Â¼ÂÃ£ÂÂ«1Ã§Â§ÂÃ©ÂÂÃ§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã¦ÂÂÃ¥ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¥ÂÂ³Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">応答を確認:</b> 本体が信号を受信するとリモコンに応答信号を返し、リモコンのLEDが赤色（または青色）に1秒間点灯します。これが停止成功の合図です。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã¤Â½ÂÃ¥ÂÂÃ¥Â¾ÂÃ£ÂÂ®Ã¨Â¡Â¨Ã§Â¤Âº:</b> Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¯Ã¨ÂµÂ¤Ã¨ÂÂ²Ã£ÂÂ®Ã§ÂÂ¹Ã¦Â»ÂÃ¯Â¼ÂÃ¤Â¿ÂÃ¨Â­Â·Ã¤Â¸Â­Ã¯Â¼ÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">作動後の表示:</b> 本体インジケータは赤色の点滅（保護中）になります。</div>
                             </div>
                         </div>
                          <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mb-4">
-                            <p class="font-bold text-yellow-800">Ã£ÂÂÃ©ÂÂÃ¨Â¦ÂÃ£ÂÂÃ§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³LEDÃ£ÂÂ®Ã¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂ§Ã¥Â¿ÂÃ£ÂÂÃ¦ÂÂ¼Ã£ÂÂÃ§Â¶ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ«Ã©ÂÂ¢Ã£ÂÂÃ£ÂÂ¨Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¥Â±ÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <p class="font-bold text-yellow-800">【重要】緊急停止ボタンは、リモコンLEDの表示が変わるまで必ず押し続けてください。すぐに離すと信号が届かない場合があります。</p>
                         </div>
                         <div class="p-3 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg space-y-1">
-                            <p class="text-sm">Ã°ÂÂÂ¡ Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®LEDÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂ®Ã¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯Ã£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=remote]').click()">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³</a>Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ§Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
-                            <p class="text-sm">Ã°ÂÂÂ¡ Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®Ã¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂ¯Ã£ÂÂ<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿</a>Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ§Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                            <p class="text-sm">💡 リモコンのLED表示の詳細は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=remote]').click()">リモコン</a>のページで確認できます。</p>
+                            <p class="text-sm">💡 本体インジケータの表示は、<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=indicator]').click()">インジケータ</a>のページで確認できます。</p>
                         </div>
                     </div>
                 </div>
@@ -873,27 +877,27 @@
 
                 <div class="bg-white rounded-lg shadow-md">
                     <button class="accordion-toggle w-full text-left p-6 font-bold text-xl flex justify-between items-center">
-                        <span>Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</span>
-                        <span class="transform transition-transform duration-300">Ã¢ÂÂ¼</span>
+                        <span>通信テストモード</span>
+                        <span class="transform transition-transform duration-300">▼</span>
                     </button>
                     <div class="accordion-content px-6 pb-6">
-                         <p class="mb-2">Ã¦ÂÂÃ§Â¿ÂÃ©ÂÂÃ¥Â§ÂÃ¥ÂÂÃ£ÂÂªÃ£ÂÂ©Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¨Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ¦Â­Â£Ã¥Â¸Â¸Ã£ÂÂ«Ã¨Â¡ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂÃ¦Â©ÂÃ¨ÂÂ½Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ</p>
+                         <p class="mb-2">教習開始前などに、エンジンを停止させることなくリモコンと本体の通信が正常に行えるかを確認する機能です。</p>
                          <div class="space-y-4">
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">1</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ§ÂÂ¡Ã¥ÂÂ¹Ã£ÂÂ«:</b> Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®Ã¦ÂÂÃ¥ÂÂ¹/Ã§ÂÂ¡Ã¥ÂÂ¹Ã£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ£ÂÂOFFÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®LED1,2,3Ã£ÂÂÃ¦Â¶ÂÃ§ÂÂ¯Ã£ÂÂÃ£ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã¦Â©ÂÃ¨ÂÂ½Ã£ÂÂÃ§ÂÂ¡Ã¥ÂÂ¹Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂ£Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">システムを無効に:</b> インジケータの有効/無効スイッチをOFFにします。インジケータのLED1,2,3が消灯し、安全機能が無効状態になったことを確認します。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">2</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂÃ¦ÂÂÃ¤Â½Â:</b> Ã£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ§ÂÂ¡Ã¥ÂÂ¹Ã£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ©ÂÂ·Ã¦ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">リモコンを操作:</b> システムが無効の状態で、リモコンの緊急停止ボタンを長押しします。</div>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 flex items-center justify-center w-7 h-7 bg-blue-500 text-white rounded-full font-bold text-sm">3</div>
-                                <div class="pt-0.5"><b class="font-semibold">Ã§ÂµÂÃ¦ÂÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂ:</b> Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®LEDÃ£ÂÂÃ©ÂÂÃ¨ÂÂ²Ã£ÂÂ«1Ã§Â§ÂÃ©ÂÂÃ§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂ°Ã£ÂÂÃ©ÂÂÃ¤Â¿Â¡Ã£ÂÂ¯Ã¦Â­Â£Ã¥Â¸Â¸Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¦Â­Â£Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ§Â¤ÂºÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂ§Ã£ÂÂ¯Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ¯Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ</div>
+                                <div class="pt-0.5"><b class="font-semibold">結果を確認:</b> リモコンのLEDが青色に1秒間点灯すれば、通信は正常です。これは、本体がリモコンからの信号を正しく受信したことを示します。この操作ではエンジンは停止しません。</div>
                             </div>
                         </div>
                          <div class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg mt-4">
-                            <p class="font-bold text-blue-800">Ã£ÂÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ¦ÂÂÃ§Â¿ÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ®Ã©ÂÂ»Ã¦Â³Â¢Ã§ÂÂ¶Ã¦Â³ÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã¥ÂÂÃ¤Â½ÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ¨Â¡ÂÃ£ÂÂ£Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã£ÂÂ«Ã¤Â¾Â¿Ã¥ÂÂ©Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ</p>
+                            <p class="font-bold text-blue-800">このテストモードは、教習エリアの電波状況を確認したり、リモコンの動作確認を行ったりするのに便利です。</p>
                         </div>
                     </div>
                 </div>
@@ -901,14 +905,14 @@
 
             <section id="indicator-content" class="content-section space-y-6">
                  <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ·Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼</h2>
-                    <p class="mb-4">Ã¤Â¸ÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ¥Â¯Â¾Ã¥Â¿ÂÃ£ÂÂÃ£ÂÂLEDÃ£ÂÂÃ§ÂÂ¹Ã§ÂÂ¯Ã¯Â¼ÂÃ§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ£ÂÂÃ¦Â©ÂÃ¨ÂÂ½Ã£ÂÂ®Ã¨ÂªÂ¬Ã¦ÂÂÃ£ÂÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4">インジケータシミュレーター</h2>
+                    <p class="mb-4">下のボタンをクリックすると、対応するLEDが点灯／点滅し、機能の説明が表示されます。</p>
                      <div class="flex flex-col lg:flex-row gap-6">
                          <div id="indicator-controls" class="w-full lg:w-1/3 space-y-4">
                         </div>
                          <div class="w-full lg:w-2/3">
                              <div class="sticky top-6">
-                                 <p class="text-center mb-2 text-sm text-gray-500">Ã¯Â¼ÂÃ©ÂÂÃ§Â·ÂÃ¥ÂÂ´Ã¯Â¼Â Ã¢ÂÂ Ã¯Â¼ÂÃ£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ¥ÂÂ´Ã¯Â¼Â</p>
+                                 <p class="text-center mb-2 text-sm text-gray-500">（配線側） ⇔ （スイッチ側）</p>
                                 <div id="indicator-led-bar" class="interactive-led-bar justify-center"></div>
                                 <div id="indicator-info-panel" class="mt-4 p-4 bg-gray-100 rounded-lg min-h-[150px]">
                                     <h4 id="indicator-info-title" class="font-bold text-lg text-gray-900 mb-2"></h4>
@@ -922,18 +926,18 @@
 
             <section id="preview-content" class="content-section space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</h2>
-                    <p class="mb-4">Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥Â®ÂÃ©ÂÂÃ£ÂÂ«Ã©Â«ÂÃ¥ÂÂÃ¨Â»Â¢Ã£ÂÂ¾Ã£ÂÂ§Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ£ÂÂ©Ã£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¨Â¦ÂÃ¨Â¦ÂÃ§ÂÂÃ£ÂÂ«Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¦Â©ÂÃ¨ÂÂ½Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¤Â¸ÂÃ£ÂÂ®Ã£ÂÂ¹Ã£ÂÂ©Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ¥Â¤ÂÃ¦ÂÂ´Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ£ÂÂ®LEDÃ£ÂÂ®Ã£ÂÂ¬Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼Ã¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4">プレビューモード</h2>
+                    <p class="mb-4">プレビューモードは、エンジンを実際に高回転まで回すことなく、設定したエンジン停止回転数がどのくらいかを視覚的に確認するための機能です。下のスライダーを動かして、エンジン停止回転数を変更した際のLEDのレベルメーター表示を確認できます。</p>
 
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
                         <div class="w-full lg:w-1/3">
-                             <label for="rpm-slider" class="block mb-2 font-semibold">Ã¨ÂªÂ¿Ã¦ÂÂ´Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ  (4000-8000 RPM)</label>
+                             <label for="rpm-slider" class="block mb-2 font-semibold">調整ボリューム (4000-8000 RPM)</label>
                              <input id="rpm-slider" type="range" min="4000" max="8000" value="6000" step="100" class="w-full">
                              <div class="text-center font-semibold mt-2" id="rpm-slider-value">6000 RPM</div>
                         </div>
                         <div class="w-full lg:w-2/3">
                             <div class="mt-4">
-                                <p class="text-center mb-2 text-sm text-gray-500">Ã¯Â¼ÂÃ©ÂÂÃ§Â·ÂÃ¥ÂÂ´Ã¯Â¼Â Ã¢ÂÂ Ã¯Â¼ÂÃ£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ¥ÂÂ´Ã¯Â¼Â</p>
+                                <p class="text-center mb-2 text-sm text-gray-500">（配線側） ⇔ （スイッチ側）</p>
                                 <div id="preview-led-bar" class="interactive-led-bar justify-center"></div>
                                 <div id="preview-info-panel" class="mt-4 p-4 bg-gray-100 rounded-lg min-h-[100px]">
                                     <h4 id="preview-info-title" class="font-bold text-lg text-gray-900 mb-2"></h4>
@@ -944,17 +948,17 @@
                     </div>
                      <div class="mt-6 space-y-4">
                         <div>
-                            <h3 class="text-xl font-bold mb-3 border-b pb-2">Ã¦ÂÂÃ¤Â½ÂÃ¦ÂÂ¹Ã¦Â³Â</h3>
+                            <h3 class="text-xl font-bold mb-3 border-b pb-2">操作方法</h3>
                             <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                                <li>Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂONÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
-                                <li>ACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã¨ÂÂÃ£ÂÂÃ©ÂÂÃ£ÂÂÃ£ÂÂÃ¨ÂªÂ¿Ã¦ÂÂ´Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
-                                <li>Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®LED1Ã£ÂÂ8Ã£ÂÂÃ£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ¤Â¸Â­Ã£ÂÂ®Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ«Ã¥Â¿ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂ¬Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼Ã£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂ«Ã§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂÃ£ÂÂ·Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼Ã£ÂÂ®Ã£ÂÂ¹Ã£ÂÂ©Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ«Ã§ÂÂ¸Ã¥Â½ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ¯Â¼Â</li>
-                                <li>Ã¥ÂÂLEDÃ£ÂÂ¯500 RPMÃ£ÂÂ®Ã§Â¯ÂÃ¥ÂÂ²Ã£ÂÂÃ¨Â¡Â¨Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã§Â¯ÂÃ¥ÂÂ²Ã¥ÂÂÃ£ÂÂ§Ã£ÂÂ¯Ã¨Â¼ÂÃ¥ÂºÂ¦Ã£ÂÂÃ¥Â¤ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</li>
+                                <li>バイクのイグニッションをONにします。</li>
+                                <li>ACSM本体の蓋を開け、調整ボリュームをゆっくり回します。</li>
+                                <li>インジケータのLED1〜8が、設定中のエンジン停止回転数に応じてレベルメーターのように点灯します。（シミュレーターのスライダーがこれに相当します）</li>
+                                <li>各LEDは500 RPMの範囲を表し、その範囲内では輝度が変化します。</li>
                             </ol>
                         </div>
 
                         <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg mt-4">
-                            <p class="font-bold text-yellow-800">Ã£ÂÂÃ©ÂÂÃ¨Â¦ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ¯Ã¨Â¨Â­Ã¥Â®ÂÃ§Â¢ÂºÃ¨ÂªÂÃ§ÂÂ¨Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¨Â¨Â­Ã¥Â®ÂÃ¥Â¾ÂÃ£ÂÂ¯Ã¥Â¿ÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥Â§ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ¨ÂÂªÃ¥ÂÂÃ¥ÂÂ¤Ã¥Â®ÂÃ£ÂÂÃ¥Â®ÂÃ¤ÂºÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ§ÂÂ£Ã¨Â¦ÂÃ¤Â¸Â­Ã¯Â¼ÂÃ§Â·ÂÃ§ÂÂ¹Ã¦Â»ÂÃ¯Â¼ÂÃ£ÂÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                            <p class="font-bold text-yellow-800">【重要】プレビューモードは設定確認用です。設定後は必ずエンジンを始動し、自動判定が完了して「監視中（緑点滅）」になることを確認してください。</p>
                         </div>
                     </div>
                 </div>
@@ -962,8 +966,8 @@
             
             <section id="remote-content" class="content-section space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ·Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼</h2>
-                    <p class="mb-4">Ã¤Â¸ÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®LEDÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ£ÂÂ·Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ§ÂÂ¶Ã¦ÂÂÃ£ÂÂ®Ã¨ÂªÂ¬Ã¦ÂÂÃ£ÂÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4">リモコンシミュレーター</h2>
+                    <p class="mb-4">下のボタンをクリックすると、リモコンのLED表示がシミュレートされ、各状態の説明が表示されます。</p>
                     <div class="flex flex-col lg:flex-row gap-6">
                         <div id="remote-controls" class="w-full lg:w-1/3 space-y-4">
                         </div>
@@ -972,11 +976,11 @@
                                  <div class="p-4 bg-gray-700 rounded-lg">
                                      <div class="flex items-center mb-4">
                                          <div id="remote-led-2" class="interactive-led"></div>
-                                         <span class="remote-led-label">LED 2 (Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«)</span>
+                                         <span class="remote-led-label">LED 2 (チャンネル)</span>
                                      </div>
                                      <div class="flex items-center">
                                          <div id="remote-led-1" class="interactive-led"></div>
-                                         <span class="remote-led-label">LED 1 (Ã§ÂÂ¶Ã¦ÂÂ)</span>
+                                         <span class="remote-led-label">LED 1 (状態)</span>
                                      </div>
                                  </div>
                                 <div id="remote-info-panel" class="w-full mt-4 p-4 bg-gray-100 rounded-lg min-h-[150px]">
@@ -988,89 +992,89 @@
                     </div>
                 </div>
                 <div class="text-center text-sm text-gray-500 px-6 mt-4">
-                    <p><b>Ã¨Â£ÂÃ¨Â¶Â³:</b> Ã£ÂÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ®Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂ·Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ¯Ã¨ÂªÂ¬Ã¦ÂÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â®ÂÃ©ÂÂÃ£ÂÂ®Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ§Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ§ÂÂ­Ã£ÂÂÃ§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂ©Ã£ÂÂÃ£ÂÂ·Ã£ÂÂ¥Ã£ÂÂÃ£ÂÂ§Ã¨Â¡Â¨Ã§ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <p><b>補足:</b> このページの点滅シミュレーションは説明のためであり、実際のリモコンではより短い点灯の「フラッシュ」で表現されます。</p>
                 </div>
             </section>
 
             <section id="technical-content" class="content-section space-y-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂ®Ã¤Â»ÂÃ§ÂµÂÃ£ÂÂ¿</h2>
-                    <p class="mb-4 text-gray-600">ACSMÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂ¯Ã£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂ¨Ã¥ÂÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¨Â£ÂÃ§Â½Â®Ã£ÂÂÃ¥ÂÂ©Ã§ÂÂ¨Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¦ÂÂ¹Ã¦Â³ÂÃ£ÂÂ¯Ã£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ®Ã§Â´ÂÃ¦Â­Â£Ã£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ¥ÂÂ©Ã§ÂÂ¨Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ«Ã¨Â²Â Ã¦ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ«Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">エンジン停止の仕組み</h2>
+                    <p class="mb-4 text-gray-600">ACSMシステムは、車両にもともと備わっているサイドスタンドの安全装置を利用してエンジンを停止させます。この方法は、車両の純正システムを利用するため、エンジンに負担をかけることなく安全に停止させることができます。</p>
                     <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
                         <div class="flex flex-col items-center">
                             <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
-                            <p class="mt-2 text-sm font-semibold">1. Ã¥ÂÂÃ¦Â­Â¢Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¦Â¤ÂÃ¥ÂÂº</p>
-                            <p class="text-xs text-gray-500">(Ã©Â«ÂÃ¥ÂÂÃ¨Â»Â¢ or Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³)</p>
+                            <p class="mt-2 text-sm font-semibold">1. 停止信号を検出</p>
+                            <p class="text-xs text-gray-500">(高回転 or リモコン)</p>
                         </div>
                         <div class="text-gray-300 transform rotate-90 md:rotate-0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg></div>
-                            <p class="mt-2 text-sm font-semibold">2. Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¦ÂÂ¬Ã¤Â¼Â¼Ã§ÂÂÃ¦ÂÂ</p>
-                            <p class="text-xs text-gray-500">(ACSMÃ¥ÂÂÃ©ÂÂ¨Ã£ÂÂªÃ£ÂÂ¬Ã£ÂÂ¼Ã¤Â½ÂÃ¥ÂÂ)</p>
+                            <p class="mt-2 text-sm font-semibold">2. サイドスタンド信号を擬似生成</p>
+                            <p class="text-xs text-gray-500">(ACSM内部リレー作動)</p>
                         </div>
                         <div class="text-gray-300 transform rotate-90 md:rotate-0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01" /></svg></div>
-                            <p class="mt-2 text-sm font-semibold">3. ECUÃ£ÂÂÃ§ÂÂ¹Ã§ÂÂ«Ã£ÂÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ</p>
-                            <p class="text-xs text-gray-500">(Ã¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¦Â©ÂÃ¨ÂÂ½)</p>
+                            <p class="mt-2 text-sm font-semibold">3. ECUが点火をカット</p>
+                            <p class="text-xs text-gray-500">(車両の安全機能)</p>
                         </div>
                          <div class="text-gray-300 transform rotate-90 md:rotate-0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
-                            <p class="mt-2 text-sm font-semibold">4. Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ«Ã¥ÂÂÃ¦Â­Â¢</p>
-                            <p class="text-xs text-gray-500">(Ã¥Â®ÂÃ¤ÂºÂ)</p>
+                            <p class="mt-2 text-sm font-semibold">4. エンジンが安全に停止</p>
+                            <p class="text-xs text-gray-500">(完了)</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ®Ã¦Â¤ÂÃ¥ÂÂºÃ¦ÂÂ¹Ã¦Â³Â</h2>
-                    <p class="mb-6 text-gray-600">ACSMÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ®Ã§ÂÂ¹Ã§ÂÂ«Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ«Ã£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ£Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¨Â»Â¢Ã£ÂÂ«Ã¥ÂÂÃ¦ÂÂÃ£ÂÂÃ£ÂÂÃ©ÂÂ»Ã¦Â°ÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¨ÂªÂ­Ã£ÂÂ¿Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ§Ã£ÂÂÃ¦Â­Â£Ã§Â¢ÂºÃ£ÂÂªÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ¦Â¸Â¬Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¦Â¤ÂÃ¥ÂÂºÃ¦ÂÂ¹Ã¦Â³ÂÃ£ÂÂ¯Ã¤Â¸Â»Ã£ÂÂ«2Ã§Â¨Â®Ã©Â¡ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ®Ã¦Â§ÂÃ©ÂÂ Ã£ÂÂ«Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã©ÂÂ©Ã¥ÂÂÃ£ÂÂªÃ¦ÂÂ¹Ã¥Â¼ÂÃ£ÂÂÃ©ÂÂ¸Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">エンジン回転数の検出方法</h2>
+                    <p class="mb-6 text-gray-600">ACSMは、エンジンの点火サイクルまたはクランクシャフトの回転に同期した電気信号を読み取ることで、正確なエンジン回転数を測定します。検出方法は主に2種類あり、車両の構造に合わせて適切な方式を選択します。</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-gray-50 p-6 rounded-lg border">
                              <div class="flex items-center mb-3">
                                 <svg class="w-8 h-8 text-gray-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
-                                <h3 class="font-bold text-lg">Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¤Ã£ÂÂ«Ã¦ÂÂ¹Ã¥Â¼Â</h3>
+                                <h3 class="font-bold text-lg">イグニッションコイル方式</h3>
                             </div>
-                            <p class="text-gray-700">Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¤Ã£ÂÂ«Ã£ÂÂ®Ã¤Â¸ÂÃ¦Â¬Â¡Ã¥ÂÂ´Ã¯Â¼ÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ®Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ©ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ¥ÂÂ´Ã¯Â¼ÂÃ£ÂÂ®Ã©ÂÂ»Ã¥ÂÂ§Ã¥Â¤ÂÃ¥ÂÂÃ£ÂÂÃ¦Â¤ÂÃ¥ÂÂºÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ©Ã£ÂÂ°Ã£ÂÂÃ§ÂÂ¹Ã§ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ³Ã£ÂÂ«Ã§ÂÂºÃ§ÂÂÃ£ÂÂÃ£ÂÂÃ©ÂÂ»Ã¦Â°ÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¦Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ§Â®ÂÃ¥ÂÂºÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¦Â¯ÂÃ¨Â¼ÂÃ§ÂÂÃ£ÂÂ¢Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ©ÂÂÃ§Â·ÂÃ£ÂÂÃ£ÂÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¥ÂÂÃ¥Â¾ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂÃ¥ÂÂ©Ã§ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂCB400Ã£ÂÂªÃ£ÂÂ©Ã£ÂÂ§Ã¦ÂÂ¡Ã§ÂÂ¨Ã¯Â¼Â</p>
+                            <p class="text-gray-700">イグニッションコイルの一次側（エンジンのコンピューターから信号が送られてくる側）の電圧変化を検出します。プラグが点火するたびに発生する電気信号をカウントすることで、エンジン回転数を算出します。比較的アクセスしやすい配線から信号を取得できるという利点があります。（CB400などで採用）</p>
                         </div>
                         <div class="bg-gray-50 p-6 rounded-lg border">
                              <div class="flex items-center mb-3">
                                 <svg class="w-8 h-8 text-gray-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
-                                <h3 class="font-bold text-lg">Ã£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¯Â¼ÂCKPÃ¯Â¼ÂÃ¦ÂÂ¹Ã¥Â¼Â</h3>
+                                <h3 class="font-bold text-lg">クランクセンサー（CKP）方式</h3>
                             </div>
-                            <p class="text-gray-700">Ã£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ£Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¨Â»Â¢Ã£ÂÂÃ§ÂÂ£Ã¨Â¦ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂ®Ã¤Â¿Â¡Ã¥ÂÂ·Ã§Â·ÂÃ£ÂÂÃ§ÂÂ´Ã¦ÂÂ¥Ã¨ÂªÂ­Ã£ÂÂ¿Ã¥ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ®Ã¥ÂÂÃ¨Â»Â¢Ã£ÂÂ¨Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ«Ã¥ÂÂÃ¦ÂÂÃ£ÂÂÃ£ÂÂÃ©ÂÂÃ¥Â¸Â¸Ã£ÂÂ«Ã¦Â­Â£Ã§Â¢ÂºÃ£ÂÂªÃ©ÂÂ»Ã¦Â°ÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¥Â¾ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ©Â«ÂÃ§Â²Â¾Ã¥ÂºÂ¦Ã£ÂÂªÃ¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã¦Â¸Â¬Ã¥Â®ÂÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¨Â¿ÂÃ¥Â¹Â´Ã£ÂÂ®FIÃ¨Â»ÂÃ£ÂÂ§Ã¥Â¤ÂÃ£ÂÂÃ¦ÂÂ¡Ã§ÂÂ¨Ã£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂNX400Ã£ÂÂªÃ£ÂÂ©Ã£ÂÂ§Ã¦ÂÂ¡Ã§ÂÂ¨Ã¯Â¼Â</p>
+                            <p class="text-gray-700">クランクシャフトの回転を監視しているクランクセンサーの信号線を直接読み取ります。エンジンの回転と完全に同期した非常に正確な電気信号が得られるため、高精度な回転数測定が可能です。近年のFI車で多く採用されています。（NX400などで採用）</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">Ã¥Â°ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ¸Ã£ÂÂ®Ã¥ÂÂÃ¤Â»ÂÃ¯Â¼ÂÃ¥ÂÂÃ¨ÂÂÃ¯Â¼Â</h2>
+                    <h2 class="text-2xl font-bold mb-4 border-b pb-3">専用ハーネスがない車両への取付（参考）</h2>
                     <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg space-y-2 mb-6">
-                        <h3 class="font-bold text-red-800">Ã£ÂÂÃ¨Â­Â¦Ã¥ÂÂÃ£ÂÂ</h3>
-                        <p class="text-red-700">Ã¤Â»Â¥Ã¤Â¸ÂÃ£ÂÂ®Ã¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ¯Ã£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ®Ã©ÂÂ»Ã¦Â°ÂÃ§Â³Â»Ã§ÂµÂ±Ã£ÂÂ«Ã©ÂÂ¢Ã£ÂÂÃ£ÂÂÃ©Â«ÂÃ¥ÂºÂ¦Ã£ÂÂªÃ§ÂÂ¥Ã¨Â­ÂÃ£ÂÂ¨Ã¦ÂÂÃ¨Â¡ÂÃ£ÂÂÃ¨Â¦ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ§Â·ÂÃ£ÂÂÃ¨ÂªÂ¤Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã£ÂÂ®Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼Ã£ÂÂªÃ£ÂÂ©Ã£ÂÂÃ§Â Â´Ã¦ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ©ÂÂÃ¥Â¤Â§Ã£ÂÂªÃ¦ÂÂÃ©ÂÂÃ£ÂÂ«Ã£ÂÂ¤Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ¥ÂÂ±Ã©ÂÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ<br><b>CB400/NX400Ã£ÂÂ¯Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã£ÂÂÃ§ÂÂÃ¨Â§Â£Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¦ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â»Â¥Ã¥Â¤ÂÃ£ÂÂ®Ã¨Â»ÂÃ§Â¨Â®Ã£ÂÂ¯Ã¥Â°ÂÃ©ÂÂÃ£ÂÂ®Ã¦ÂÂ´Ã¥ÂÂÃ¥Â£Â«Ã£ÂÂ®Ã¥ÂÂ©Ã¥ÂÂÃ£ÂÂÃ¥Â¾ÂÃ£ÂÂ¦Ã¥ÂÂÃ¤Â»ÂÃ£ÂÂÃ¨Â¡ÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</b></p>
+                        <h3 class="font-bold text-red-800">【警告】</h3>
+                        <p class="text-red-700">以下の作業は、車両の電気系統に関する高度な知識と技術を要します。配線を誤ると、車両のコンピューターなどを破損させ、重大な故障につながる危険があります。<br><b>CB400/NX400はサービスマニュアルを理解できる方が、それ以外の車種は専門の整備士の助力を得て取付を行ってください。</b></p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h3 class="text-xl font-bold mb-3">Ã¥ÂÂÃ¤Â»ÂÃ£ÂÂ®Ã¥ÂÂºÃ¦ÂÂ¬Ã¦ÂÂ¹Ã©ÂÂ</h3>
+                            <h3 class="text-xl font-bold mb-3">取付の基本方針</h3>
                             <ul class="space-y-3">
-                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">1</span> <div><b class="font-semibold">Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂ®Ã§Â¢ÂºÃ¤Â¿Â:</b> Ã£ÂÂ­Ã£ÂÂ¼ONÃ£ÂÂ§12VÃ£ÂÂÃ¤Â¾ÂÃ§ÂµÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¢Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂµÃ£ÂÂªÃ£ÂÂ¼Ã©ÂÂ»Ã¦ÂºÂÃ¯Â¼ÂACCÃ¯Â¼ÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã¯Â¼ÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ¹Ã¯Â¼ÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div></li>
-                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">2</span> <div><b class="font-semibold">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂ®Ã¥ÂÂÃ¥Â¾Â:</b> Ã¤Â¸ÂÃ¨Â¨ÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¤Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ®Ã¤Â¿Â¡Ã¥ÂÂ·Ã§Â·ÂÃ£ÂÂÃ¦ÂÂ¢Ã£ÂÂÃ£ÂÂACSMÃ£ÂÂ®Ã¥ÂÂ¥Ã¥ÂÂÃ§Â·ÂÃ£ÂÂ«Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div></li>
-                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">3</span> <div><b class="font-semibold">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂ®Ã©ÂÂÃ§Â·Â:</b> Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¨Â£ÂÃ§Â½Â®Ã¯Â¼ÂÃ£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂÃ£ÂÂ®Ã¥ÂÂÃ¨Â·Â¯Ã£ÂÂ«ACSMÃ£ÂÂÃ¥ÂÂ²Ã£ÂÂÃ¨Â¾Â¼Ã£ÂÂ¾Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div></li>
+                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">1</span> <div><b class="font-semibold">電源の確保:</b> キーONで12Vが供給されるアクセサリー電源（ACC）と、バッテリーマイナス（アース）に接続します。</div></li>
+                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">2</span> <div><b class="font-semibold">エンジン回転信号の取得:</b> 上記の「イグニッションコイル」または「クランクセンサー」の信号線を探し、ACSMの入力線に接続します。</div></li>
+                                <li class="flex items-start"><span class="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gray-600 text-white rounded-full font-bold text-xs mr-3 mt-0.5">3</span> <div><b class="font-semibold">エンジン停止の配線:</b> サイドスタンドの安全装置（サイドスタンドスイッチ）の回路にACSMを割り込ませます。</div></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold mb-3">Ã¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ</h3>
+                            <h3 class="text-xl font-bold mb-3">作業のポイント</h3>
                             <ul class="space-y-3">
-                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">Ã©ÂÂÃ§Â·ÂÃ£ÂÂ®Ã§ÂÂ¹Ã¥Â®Â:</b> Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã£ÂÂ®Ã©ÂÂÃ§Â·ÂÃ¥ÂÂ³Ã£ÂÂ¨Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ¼Ã£ÂÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ©ÂÂÃ§Â·ÂÃ£ÂÂÃ¦Â­Â£Ã§Â¢ÂºÃ£ÂÂ«Ã§ÂÂ¹Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div></li>
-                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">Ã§Â¢ÂºÃ¥Â®ÂÃ£ÂÂªÃ¦ÂÂ¥Ã§Â¶Â:</b> Ã£ÂÂ¨Ã£ÂÂ¬Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂ­Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã¦ÂÂ¥Ã¨Â§Â¦Ã¤Â¸ÂÃ¨ÂÂ¯Ã£ÂÂ®Ã¥ÂÂÃ¥ÂÂ Ã£ÂÂ¨Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã£ÂÂªÃ©ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ³Ã£ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂ®Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ¦ÂÂ¨Ã¥Â¥Â¨Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div></li>
-                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">Ã©ÂÂ©Ã¥ÂÂÃ£ÂÂªÃ§ÂµÂ¶Ã§Â¸ÂÃ£ÂÂ¨Ã¤Â¿ÂÃ¨Â­Â·:</b> Ã¦ÂÂ¥Ã§Â¶ÂÃ©ÂÂ¨Ã£ÂÂ¯Ã§ÂÂ±Ã¥ÂÂÃ§Â¸Â®Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂªÃ£ÂÂ©Ã£ÂÂ§Ã§Â¢ÂºÃ¥Â®ÂÃ£ÂÂ«Ã§ÂµÂ¶Ã§Â¸ÂÃ£ÂÂÃ£ÂÂÃ©ÂÂÃ§Â·ÂÃ£ÂÂ¯Ã£ÂÂ³Ã£ÂÂ«Ã£ÂÂ²Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ§Ã¤Â¿ÂÃ¨Â­Â·Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</div></li>
+                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">配線の特定:</b> サービスマニュアルの配線図とテスターを用いて、接続すべき配線を正確に特定します。</div></li>
+                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">確実な接続:</b> エレクトロタップは接触不良の原因となりやすいため、可能な限りハンダ付けでの接続を推奨します。</div></li>
+                                <li class="flex items-start"><svg class="flex-shrink-0 h-6 w-6 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> <div><b class="font-semibold">適切な絶縁と保護:</b> 接続部は熱収縮チューブなどで確実に絶縁し、配線はコルゲートチューブで保護します。</div></li>
                             </ul>
                         </div>
                     </div>
@@ -1082,237 +1086,237 @@
                     <h2 class="text-2xl font-bold mb-4">Q&A</h2>
                     <div class="space-y-4">
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã©ÂÂ¨Ã£ÂÂ®Ã¦ÂÂ¥Ã£ÂÂ§Ã£ÂÂÃ¤Â½Â¿Ã§ÂÂ¨Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</summary>
+                            <summary class="font-semibold cursor-pointer">雨の日でも使用できますか？</summary>
                             <div class="mt-3 text-gray-700">
-                                <p>Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ»Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¨Ã£ÂÂÃ£ÂÂ«Ã©ÂÂ²Ã¦Â»Â´Ã¦Â§ÂÃ©ÂÂ Ã£ÂÂ«Ã£ÂÂªÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ®Ã£ÂÂ§Ã£ÂÂÃ©ÂÂÃ¥Â¸Â¸Ã£ÂÂ®Ã©ÂÂ¨Ã¥Â¤Â©Ã¨ÂµÂ°Ã¨Â¡ÂÃ£ÂÂ§Ã£ÂÂ¯Ã¥ÂÂÃ©Â¡ÂÃ£ÂÂªÃ£ÂÂÃ¤Â½Â¿Ã§ÂÂ¨Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ©Â«ÂÃ¥ÂÂ§Ã¦Â´ÂÃ¦ÂµÂÃ¦Â©ÂÃ£ÂÂÃ§ÂÂ´Ã¦ÂÂ¥Ã¥Â½ÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¦Â°Â´Ã¦Â²Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p>本体・リモコンともに防滴構造になっていますので、通常の雨天走行では問題なく使用できます。ただし、高圧洗浄機を直接当てたり、水没させたりすることはおやめください。</p>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã©ÂÂ»Ã¦Â±Â Ã£ÂÂ¯Ã¤Â½ÂÃ£ÂÂÃ¤Â½Â¿Ã£ÂÂÃ£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</summary>
+                            <summary class="font-semibold cursor-pointer">リモコンの電池は何を使えばよいですか？</summary>
                             <div class="mt-3 text-gray-700">
-                                <p>Ã¥ÂÂ3Ã¥Â½Â¢Ã£ÂÂ®Ã¥ÂÂÃ©ÂÂ»Ã¦Â±Â Ã¯Â¼ÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂªÃ£ÂÂ©Ã¯Â¼ÂÃ£ÂÂÃ¦ÂÂ¨Ã¥Â¥Â¨Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ¢Ã£ÂÂ«Ã£ÂÂ«Ã£ÂÂªÃ¤Â¹Â¾Ã©ÂÂ»Ã¦Â±Â Ã£ÂÂ¯Ã©ÂÂ»Ã¥ÂÂ§Ã£ÂÂ®Ã§ÂÂ¹Ã¦ÂÂ§Ã¤Â¸ÂÃ£ÂÂÃ©ÂÂ»Ã¦Â±Â Ã¦Â®ÂÃ©ÂÂÃ£ÂÂÃ¦Â­Â£Ã£ÂÂÃ£ÂÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                <p>単3形の充電池（エネループなど）を推奨しています。アルカリ乾電池は電圧の特性上、電池残量が正しく表示されない場合があります。</p>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã¥ÂÂÃ¤Â»ÂÃ¦ÂÂÃ©ÂÂÃ£ÂÂ®Ã§ÂÂ®Ã¥Â®ÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</summary>
+                            <summary class="font-semibold cursor-pointer">取付時間の目安はどのくらいですか？</summary>
                              <div class="mt-3 text-gray-700">
-                                <p>Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ®Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂ«Ã§Â´Â10Ã¥ÂÂÃ£ÂÂÃ©ÂÂÃ§Â·ÂÃ£ÂÂ®Ã¥ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂºÃ¥Â®ÂÃ£ÂÂ«Ã§Â´Â20Ã¥ÂÂÃ£ÂÂÃ¥ÂÂÃ¨Â¨ÂÃ£ÂÂ§30Ã¥ÂÂÃ§Â¨ÂÃ¥ÂºÂ¦Ã£ÂÂÃ§ÂÂ®Ã¥Â®ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ¨Â»ÂÃ§Â¨Â®Ã£ÂÂÃ¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ®Ã§Â¿ÂÃ§ÂÂÃ¥ÂºÂ¦Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã¦ÂÂÃ©ÂÂÃ£ÂÂ¯Ã¥Â¤ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                <p>ハーネスの接続に約10分、配線の取り回しや固定に約20分、合計で30分程度が目安です。ただし、車種や作業の習熟度によって時間は変動します。</p>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">CB400Ã£ÂÂ§Ã¤Â½Â¿Ã§ÂÂ¨Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ£ÂÂNX400Ã£ÂÂ«Ã¨Â¼ÂÃ£ÂÂÃ¦ÂÂ¿Ã£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</summary>
+                            <summary class="font-semibold cursor-pointer">CB400で使用していた本体を、NX400に載せ替えできますか？</summary>
                              <div class="mt-3 text-gray-700">
-                                <p>Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã£ÂÂ§Ã£ÂÂÃ£ÂÂACSMÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¯Ã¥ÂÂ±Ã©ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¨Â»ÂÃ§Â¨Â®Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂ®Ã¥ÂÂÃ¥Â¾ÂÃ¦ÂÂ¹Ã¦Â³ÂÃ£ÂÂÃ§ÂÂ°Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â¿ÂÃ£ÂÂNX400Ã§ÂÂ¨Ã£ÂÂ®Ã¥Â°ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ«Ã¤ÂºÂ¤Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p>はい、可能です。ACSM本体は共通ですが、車種によってエンジンからの信号の取得方法が異なるため、必ずNX400用の専用ハーネスに交換してください。</p>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">CKPÃ£ÂÂ¨Ã£ÂÂ¯Ã£ÂÂªÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</summary>
+                            <summary class="font-semibold cursor-pointer">CKPとはなんですか？</summary>
                              <div class="mt-3 text-gray-700">
-                                <p>CKPÃ£ÂÂ¯Ã£ÂÂCrankshaft Position SensorÃ¯Â¼ÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ£Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¸Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã¯Â¼ÂÃ£ÂÂÃ£ÂÂ®Ã§ÂÂ¥Ã£ÂÂ§Ã£ÂÂÃ¤Â¸ÂÃ¨ÂÂ¬Ã§ÂÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¨Ã¥ÂÂ¼Ã£ÂÂ°Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ®Ã£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ£Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¨Â»Â¢Ã£ÂÂÃ§ÂÂ£Ã¨Â¦ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂ§Ã£ÂÂACSMÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ®Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¨ÂªÂ­Ã£ÂÂ¿Ã¥ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã¦Â­Â£Ã§Â¢ÂºÃ£ÂÂªÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ¦Â¸Â¬Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
-                                <p class="mt-2 text-sm">Ã¨Â©Â³Ã§Â´Â°Ã£ÂÂ¯<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=technical]').click()">Ã¦ÂÂÃ¨Â¡ÂÃ§ÂÂÃ£ÂÂªÃ¤Â»ÂÃ§ÂµÂÃ£ÂÂ¿</a>Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ§ÂÂ§Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p>CKPは「Crankshaft Position Sensor（クランクシャフトポジションセンサー）」の略で、一般的に「クランクセンサー」と呼ばれます。エンジンのクランクシャフトの回転を監視しているセンサーで、ACSMはこのセンサーからの信号を読み取って正確なエンジン回転数を測定します。</p>
+                                <p class="mt-2 text-sm">詳細は<a href="#" class="font-bold underline" onclick="event.preventDefault(); document.querySelector('[data-target=technical]').click()">技術的な仕組み</a>のページをご参照ください。</p>
                             </div>
                         </details>
                     </div>
                 </div>
                  <div class="bg-white rounded-lg shadow-md p-6">
-                    <h2 class="text-2xl font-bold mb-4">Ã£ÂÂÃ£ÂÂ©Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ·Ã£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂ°</h2>
+                    <h2 class="text-2xl font-bold mb-4">トラブルシューティング</h2>
                     <div class="space-y-4">
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ®Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ¥ÂÂ¥Ã£ÂÂÃ£ÂÂªÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">本体の電源が入らない</summary>
                             <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</b> Ã¦ÂÂ¬Ã¤Â½ÂÃ¥ÂÂÃ©ÂÂ¨Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ2AÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂºÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p><b class="font-semibold">対処法:</b> 本体内部にある2Aのヒューズが切れていないか確認してください。</p>
                             </div>
                         </details>
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³LEDÃ£ÂÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã¨ÂÂ²Ã£ÂÂ§Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">リモコンLEDがチャンネル色で点滅している</summary>
                             <div class="mt-3 text-gray-700">
-                                <p class="font-semibold">Ã¨ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥ÂÂ :</p>
+                                <p class="font-semibold">考えられる原因:</p>
                                 <ul class="list-disc list-inside ml-4">
-                                    <li>Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂÃ©ÂÂÃ£ÂÂ</li>
-                                    <li>Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ¨Ã£ÂÂ®Ã¨Â·ÂÃ©ÂÂ¢Ã£ÂÂÃ©ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</li>
-                                    <li>Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã©ÂÂ»Ã¦ÂºÂÃ£ÂÂÃ¥ÂÂ¥Ã£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂªÃ£ÂÂ</li>
+                                    <li>本体とリモコンのチャンネルが違う</li>
+                                    <li>バイクとの距離が遠すぎる</li>
+                                    <li>バイクの電源が入っていない</li>
                                 </ul>
-                                <p class="font-semibold mt-2">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</p>
+                                <p class="font-semibold mt-2">対処法:</p>
                                 <ul class="list-disc list-inside ml-4">
-                                    <li>Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</li>
-                                    <li>Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ«Ã¨Â¿ÂÃ£ÂÂ¥Ã£ÂÂÃ£ÂÂ¦Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ¥ÂÂÃ¥Â¾Â©Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</li>
-                                    <li>Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ­Ã£ÂÂ¼Ã£ÂÂONÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</li>
+                                    <li>本体とリモコンのチャンネルを合わせてください。</li>
+                                    <li>バイクに近づいて通信が回復するか確認してください。</li>
+                                    <li>バイクのイグニッションキーがONになっているか確認してください。</li>
                                 </ul>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥Â¾ÂÃ£ÂÂÃ¥Â¾Â©Ã¥Â¸Â°Ã£ÂÂ§Ã£ÂÂÃ£ÂÂªÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">エンジン停止後、復帰できない</summary>
                             <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">Ã¥ÂÂÃ¥ÂÂ :</b> Ã¤Â¿ÂÃ¨Â­Â·Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
-                                <p><b class="font-semibold">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</b> Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ®Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ­Ã£ÂÂ¼Ã£ÂÂOFFÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ5Ã§Â§ÂÃ£ÂÂ»Ã£ÂÂ©Ã¥Â¾ÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥ÂºÂ¦ONÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p><b class="font-semibold">原因:</b> 保護状態になっています。</p>
+                                <p><b class="font-semibold">対処法:</b> バイクのイグニッションキーをOFFにし、5秒ほど待ってから再度ONにしてください。</p>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ¦ÂÂ¼Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ¥ÂÂÃ¥Â¿ÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">緊急停止ボタンを押しても反応しない</summary>
                              <div class="mt-3 text-gray-700">
-                                <p class="font-semibold">Ã¨ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥ÂÂ :</p>
+                                <p class="font-semibold">考えられる原因:</p>
                                 <ul class="list-disc list-inside ml-4">
-                                    <li>Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ«Ã©ÂÂ¢Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂ£Ã£ÂÂ</li>
-                                    <li>Ã©ÂÂÃ¤Â¿Â¡Ã§Â¯ÂÃ¥ÂÂ²Ã¥Â¤ÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã©ÂÂ»Ã¦Â³Â¢Ã©ÂÂÃ¥Â®Â³</li>
+                                    <li>ボタンをすぐに離してしまった</li>
+                                    <li>通信範囲外または電波障害</li>
                                 </ul>
-                                <p class="font-semibold mt-2">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</p>
+                                <p class="font-semibold mt-2">対処法:</p>
                                 <ul class="list-disc list-inside ml-4">
-                                    <li>Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³LEDÃ£ÂÂ®Ã¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ¦ÂÂ¼Ã£ÂÂÃ§Â¶ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</li>
-                                    <li>Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂ«Ã¨Â¿ÂÃ£ÂÂ¥Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ¥Â®Â³Ã§ÂÂ©Ã£ÂÂ®Ã£ÂÂªÃ£ÂÂÃ¥Â Â´Ã¦ÂÂÃ£ÂÂ§Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</li>
+                                    <li>リモコンLEDの表示が変わるまでボタンを押し続けてください。</li>
+                                    <li>バイクに近づき、障害物のない場所で操作してください。</li>
                                 </ul>
                             </div>
                         </details>
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã¦ÂÂ¬Ã¤Â½ÂLEDÃ£ÂÂÃ©Â»ÂÃ¨ÂÂ²Ã£ÂÂ§Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">本体LEDが黄色で点滅している</summary>
                             <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">Ã¥ÂÂÃ¥ÂÂ :</b> Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¯Â¼ÂCKPÃ¦ÂÂ¹Ã¥Â¼ÂÃ£ÂÂ®Ã¨Â»ÂÃ§Â¨Â®Ã£ÂÂ®Ã£ÂÂ¿Ã§ÂÂºÃ§ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ¯Â¼Â</p>
-                                <p><b class="font-semibold">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</b> Ã¦Â­Â£Ã¥Â¸Â¸Ã£ÂÂªÃ¥ÂÂÃ¤Â½ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¥Â§ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
-                                <p class="text-sm text-gray-500 mt-1">Ã¢ÂÂ»CB400Ã£ÂÂ»NC750Ã¯Â¼ÂÃ¦ÂÂ§Ã¥ÂÂÃ¯Â¼ÂÃ£ÂÂ¯Ã£ÂÂ¤Ã£ÂÂ°Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ¤Ã£ÂÂ«Ã¯Â¼ÂIGNÃ¯Â¼ÂÃ¦ÂÂ¹Ã¥Â¼ÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ«Ã£ÂÂ¯Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p><b class="font-semibold">原因:</b> エンジンがストールしました。（CKP方式の車種のみ発生します）</p>
+                                <p><b class="font-semibold">対処法:</b> 正常な動作です。エンジンを再始動してください。</p>
+                                <p class="text-sm text-gray-500 mt-1">※CB400・NC750（旧型）はイグニッションコイル（IGN）方式のため、この状態にはなりません。</p>
                             </div>
                         </details>
                          <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂ®Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ©ÂÂÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">リモコンの点滅が速い</summary>
                              <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">Ã¥ÂÂÃ¥ÂÂ :</b> Ã©ÂÂ»Ã¦Â±Â Ã¦Â®ÂÃ©ÂÂÃ£ÂÂÃ¤Â½ÂÃ¤Â¸ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
-                                <p><b class="font-semibold">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</b> Ã¦ÂÂ°Ã¥ÂÂÃ£ÂÂ®Ã¥ÂÂ3Ã©ÂÂ»Ã¦Â±Â Ã£ÂÂ«Ã¤ÂºÂ¤Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p><b class="font-semibold">原因:</b> 電池残量が低下しています。</p>
+                                <p><b class="font-semibold">対処法:</b> 新品の単3電池に交換してください。</p>
                             </div>
                         </details>
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã£ÂÂNX400Ã£ÂÂÃ£ÂÂ©Ã£ÂÂ¤Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂªÃ£ÂÂ£Ã£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">【NX400】ライセンス灯が点灯しなくなった</summary>
                              <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</b> ACSMÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¦Ã¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã¥ÂÂ´Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂºÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂºÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¤Â¸ÂÃ¨ÂÂ¯Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã¦ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                <p><b class="font-semibold">対処法:</b> ACSMのハーネスをすべて取り外した状態で、バイク側のヒューズを確認してください。ヒューズが切れている場合は、ハーネスが不良である可能性があります。</p>
                             </div>
                         </details>
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã£ÂÂNX400Ã£ÂÂACSMÃ£ÂÂÃ¤Â½ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã£ÂÂ«Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¦Â­Â¢Ã£ÂÂ¾Ã£ÂÂÃ£ÂÂªÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">【NX400】ACSMが作動しているのにエンジンが止まらない</summary>
                              <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">Ã¥ÂÂÃ¥ÂÂ :</b> Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã¥ÂÂÃ©ÂÂ¨Ã£ÂÂ®Ã§Â«Â¯Ã¥Â­ÂÃ£ÂÂÃ¦Â­ÂªÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã¦ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ¯Ã¦Â­Â£Ã¥Â¸Â¸Ã£ÂÂ«Ã¥ÂÂºÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ«Ã¨Â¦ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ§Â«Â¯Ã¥Â­ÂÃ£ÂÂ®Ã¦ÂÂ²Ã£ÂÂÃ£ÂÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂÃ¥Â°ÂÃ©ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
-                                <p class="mt-2"><b class="font-semibold">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</b> Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ®Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ©ÂÂ¨Ã£ÂÂ®Ã§Â«Â¯Ã¥Â­ÂÃ£ÂÂ«Ã¦ÂÂ²Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¦Â­ÂªÃ£ÂÂ¿Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§Â«Â¯Ã¥Â­ÂÃ£ÂÂÃ¦ÂÂ²Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂ¯Ã£ÂÂÃ¦ÂÂÃ©ÂÂÃ£ÂÂ«Ã¤Â¿Â®Ã¦Â­Â£Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¤ÂºÂ¤Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p><b class="font-semibold">原因:</b> サイドスタンドコネクタ内部の端子が歪んでいる可能性があります。コネクタは正常に刺さっているように見えても、端子の曲がりにより導通しないことがあります。</p>
+                                <p class="mt-2"><b class="font-semibold">対処法:</b> サイドスタンドハーネスのコネクタを取り外し、内部の端子に曲がりや歪みがないか確認してください。端子が曲がっている場合は、慎重に修正するか、ハーネスを交換してください。</p>
                             </div>
                         </details>
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã£ÂÂCB400Ã£ÂÂÃ£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ¼Ã£ÂÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ§ÂÂ¯Ã£ÂÂÃ§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂªÃ£ÂÂ£Ã£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">【CB400】メーターや表示灯が点灯しなくなった</summary>
                              <div class="mt-3 text-gray-700">
-                                <p><b class="font-semibold">Ã¥Â¯Â¾Ã¥ÂÂ¦Ã¦Â³Â:</b> Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã¥ÂÂ´Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂºÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂºÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂÃ¤Â¸ÂÃ¨ÂÂ¯Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¥ÂÂ¯Ã¨ÂÂ½Ã¦ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                                <p><b class="font-semibold">対処法:</b> バイク側のヒューズを確認してください。ヒューズが切れている場合は、ハーネスが不良である可能性があります。</p>
                             </div>
                         </details>
                         <details class="p-4 border border-gray-200 rounded-lg">
-                            <summary class="font-semibold cursor-pointer">Ã¥ÂÂÃ£ÂÂÃ¤Â»ÂÃ£ÂÂÃ¥Â¾ÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</summary>
+                            <summary class="font-semibold cursor-pointer">取り付け後、エンジンがかからなくなりました</summary>
                              <div class="mt-3 text-gray-700">
-                                <p>Ã£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¦Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ®Ã¦ÂÂ¥Ã§Â¶ÂÃ£ÂÂÃ§Â¢ÂºÃ¥Â®ÂÃ£ÂÂ«Ã¨Â¡ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥ÂºÂ¦Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ¹Ã£ÂÂ«Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã£ÂÂ®Ã¦ÂÂ¿Ã£ÂÂÃ¨Â¾Â¼Ã£ÂÂ¿Ã£ÂÂÃ§ÂÂÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ¨Â§Â£Ã¦Â±ÂºÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂ¯Ã£ÂÂÃ¤Â¸ÂÃ¦ÂÂ¦ACSMÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥Â¤ÂÃ£ÂÂÃ£ÂÂÃ¨Â»ÂÃ¤Â¸Â¡Ã¥ÂÂÃ¤Â½ÂÃ£ÂÂ§Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥Â§ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                                <p>まず、すべてのハーネスの接続が確実に行われているか再度確認してください。特にコネクタの挿し込みが甘い場合があります。それでも解決しない場合は、一旦ACSMシステムを取り外し、車両単体でエンジンが始動するかを確認してください。</p>
                             </div>
                         </details>
                     </div>
                 </div>
                  <div class="bg-white rounded-lg shadow-md p-6">
-                    <h2 class="text-2xl font-bold mb-4">Ã¤Â»ÂÃ¦Â§ÂÃ¤Â¸ÂÃ¨Â¦Â§</h2>
+                    <h2 class="text-2xl font-bold mb-4">仕様一覧</h2>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <h3 class="text-xl font-bold mb-2">ACSMÃ¦ÂÂ¬Ã¤Â½Â</h3>
+                            <h3 class="text-xl font-bold mb-2">ACSM本体</h3>
                              <table class="w-full text-left">
                                 <tbody class="divide-y divide-gray-200">
-                                    <tr><td class="py-2 font-semibold">Ã©ÂÂ»Ã¦ÂºÂÃ©ÂÂ»Ã¥ÂÂ§</td><td class="py-2">DC 12V (Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ¤Â¾ÂÃ§ÂµÂ¦)</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã¦Â¸Â¬Ã¥Â®ÂÃ§Â¯ÂÃ¥ÂÂ²</td><td class="py-2">0Ã¯Â½Â12,000 RPM</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã¨Â¨Â­Ã¥Â®ÂÃ§Â¯ÂÃ¥ÂÂ²</td><td class="py-2">4,000Ã¯Â½Â8,000 RPM</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã©ÂÂÃ¤Â¿Â¡Ã¦ÂÂ¹Ã¥Â¼Â</td><td class="py-2">Ã©ÂÂ·Ã¨Â·ÂÃ©ÂÂ¢Ã§ÂÂ¡Ã§Â·ÂÃ©ÂÂÃ¤Â¿Â¡ (920MHzÃ¥Â¸Â¯)</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã¥ÂÂÃ¤Â½ÂÃ¦Â¸Â©Ã¥ÂºÂ¦</td><td class="py-2">-10Ã¢ÂÂ Ã¯Â½Â +50Ã¢ÂÂ</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã©ÂÂ²Ã¦Â°Â´Ã¦ÂÂ§Ã¨ÂÂ½</td><td class="py-2">Ã©ÂÂ²Ã¦Â»Â´Ã¦Â§ÂÃ©ÂÂ Ã¯Â¼ÂIPX4Ã§ÂÂ¸Ã¥Â½ÂÃ£ÂÂÃ¦Â°Â´Ã¦Â²Â¡Ã¤Â¸ÂÃ¥ÂÂ¯Ã¯Â¼Â</td></tr>
+                                    <tr><td class="py-2 font-semibold">電源電圧</td><td class="py-2">DC 12V (バイクバッテリーから供給)</td></tr>
+                                    <tr><td class="py-2 font-semibold">エンジン回転数測定範囲</td><td class="py-2">0～12,000 RPM</td></tr>
+                                    <tr><td class="py-2 font-semibold">エンジン停止回転数設定範囲</td><td class="py-2">4,000～8,000 RPM</td></tr>
+                                    <tr><td class="py-2 font-semibold">通信方式</td><td class="py-2">長距離無線通信 (920MHz帯)</td></tr>
+                                    <tr><td class="py-2 font-semibold">動作温度</td><td class="py-2">-10℃ ～ +50℃</td></tr>
+                                    <tr><td class="py-2 font-semibold">防水性能</td><td class="py-2">防滴構造（IPX4相当、水没不可）</td></tr>
                                 </tbody>
                             </table>
                         </div>
                          <div>
-                            <h3 class="text-xl font-bold mb-2">Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³</h3>
+                            <h3 class="text-xl font-bold mb-2">リモコン</h3>
                              <table class="w-full text-left">
                                 <tbody class="divide-y divide-gray-200">
-                                    <tr><td class="py-2 font-semibold">Ã©ÂÂ»Ã¦ÂºÂ</td><td class="py-2">Ã¥ÂÂ3Ã¥Â½Â¢Ã¥ÂÂÃ©ÂÂ»Ã¦Â±Â Ã¯Â¼ÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂªÃ£ÂÂ©Ã¯Â¼Â ÃÂ 1Ã¦ÂÂ¬</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã©ÂÂ»Ã¦Â±Â Ã¥Â¯Â¿Ã¥ÂÂ½</td><td class="py-2">Ã§Â´Â50Ã¦ÂÂÃ©ÂÂÃ¯Â¼ÂÃ¤Â½Â¿Ã§ÂÂ¨Ã§ÂÂ¶Ã¦Â³ÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂÃ¥Â¤ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ¯Â¼Â</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã©ÂÂ·Ã¦ÂÂ¼Ã£ÂÂ</td><td class="py-2">100ms</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã¥ÂÂÃ¦ÂÂ¿Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã©ÂÂ·Ã¦ÂÂ¼Ã£ÂÂ</td><td class="py-2">500ms</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã¤Â¿Â¡Ã¥ÂÂ·Ã©ÂÂÃ¤Â¿Â¡Ã©ÂÂÃ©ÂÂ</td><td class="py-2">300ms</td></tr>
-                                    <tr><td class="py-2 font-semibold">Ã©ÂÂ²Ã¦Â°Â´Ã¦ÂÂ§Ã¨ÂÂ½</td><td class="py-2">Ã©ÂÂ²Ã¦Â»Â´Ã¦Â§ÂÃ©ÂÂ Ã¯Â¼ÂIPX4Ã§ÂÂ¸Ã¥Â½ÂÃ£ÂÂÃ¦Â°Â´Ã¦Â²Â¡Ã¤Â¸ÂÃ¥ÂÂ¯Ã¯Â¼Â</td></tr>
+                                    <tr><td class="py-2 font-semibold">電源</td><td class="py-2">単3形充電池（エネループなど） × 1本</td></tr>
+                                    <tr><td class="py-2 font-semibold">電池寿命</td><td class="py-2">約50時間（使用状況により変動します）</td></tr>
+                                    <tr><td class="py-2 font-semibold">緊急停止ボタン長押し</td><td class="py-2">100ms</td></tr>
+                                    <tr><td class="py-2 font-semibold">チャンネル切替ボタン長押し</td><td class="py-2">500ms</td></tr>
+                                    <tr><td class="py-2 font-semibold">緊急停止信号送信間隔</td><td class="py-2">300ms</td></tr>
+                                    <tr><td class="py-2 font-semibold">防水性能</td><td class="py-2">防滴構造（IPX4相当、水没不可）</td></tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h2 class="text-2xl font-bold mb-4">Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ</h2>
-                    <p>Ã¨Â£Â½Ã¥ÂÂÃ£ÂÂ«Ã©ÂÂ¢Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â¸ÂÃ¦ÂÂÃ£ÂÂªÃ§ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â¸ÂÃ¨Â¨ÂÃ£ÂÂ¾Ã£ÂÂ§Ã£ÂÂÃ©ÂÂ£Ã§ÂµÂ¡Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</p>
+                    <h2 class="text-2xl font-bold mb-4">お問い合わせ</h2>
+                    <p>製品に関するご不明な点がございましたら、下記までご連絡ください。</p>
                     <div class="mt-4 bg-gray-100 p-4 rounded-lg">
-                        <p class="font-semibold">Ã¨Â£Â½Ã©ÂÂ Ã¥ÂÂÃ¨Â²Â¬Ã¤Â»Â»Ã¨ÂÂ:</p>
-                        <p>Ã¦ÂÂ³Ã©ÂÂ Ã¥Â·Â¥Ã¦ÂÂ¿Ã£ÂÂ¢Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¨<br>Ã§Â¬Â Ã¥Â·Â Ã§ÂÂ¥Ã¦Â´ÂÃ¯Â¼ÂÃ£ÂÂ«Ã£ÂÂµÃ£ÂÂ«Ã£ÂÂ¯ Ã£ÂÂÃ£ÂÂ¢Ã£ÂÂÃ£ÂÂ­Ã¯Â¼Â</p>
-                        <p class="font-semibold mt-2">Ã¤Â½ÂÃ¦ÂÂ:</p>
-                        <p>Ã£ÂÂ399-4601<br>Ã©ÂÂ·Ã©ÂÂÃ§ÂÂÃ¤Â¸ÂÃ¤Â¼ÂÃ©ÂÂ£Ã©ÂÂ¡Ã§Â®ÂÃ¨Â¼ÂªÃ§ÂÂºÃ¤Â¸Â­Ã§Â®ÂÃ¨Â¼Âª13275-1</p>
-                        <p class="font-semibold mt-2">Ã©ÂÂ£Ã§ÂµÂ¡Ã¥ÂÂÃ£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ¢Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂ¹:</p>
+                        <p class="font-semibold">製造元責任者:</p>
+                        <p>想造工房モノリエ<br>笠川 知洋（カサカワ トモヒロ）</p>
+                        <p class="font-semibold mt-2">住所:</p>
+                        <p>〒399-4601<br>長野県上伊那郡箕輪町中箕輪13275-1</p>
+                        <p class="font-semibold mt-2">連絡先メールアドレス:</p>
                         <a href="/cdn-cgi/l/email-protection#523b3c343d123f3d3c3d3e3b37207c3822" class="text-blue-600 hover:underline"><span class="__cf_email__" data-cfemail="aac3c4ccc5eac7c5c4c5c6c3cfd884c0da">[email&#160;protected]</span></a>
-                        <p class="text-sm text-gray-600 mt-2">Ã¢ÂÂ»Ã¥ÂÂÃ¥ÂÂÃ£ÂÂ¨Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ«Ã£ÂÂ¦Ã£ÂÂÃ©Â¡ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p>
+                        <p class="text-sm text-gray-600 mt-2">※原則として、お問い合わせはメールにてお願いいたします。</p>
                     </div>
                 </div>
             </section>
 
             <section id="history-content" class="content-section space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold mb-4">Ã¦ÂÂ¹Ã¨Â¨ÂÃ¥Â±Â¥Ã¦Â­Â´</h2>
+                    <h2 class="text-2xl font-bold mb-4">改訂履歴</h2>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left">
                             <thead class="bg-gray-100">
                                 <tr>
-                                    <th class="px-4 py-2">Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¸Ã£ÂÂ§Ã£ÂÂ³</th>
-                                    <th class="px-4 py-2">Ã¦ÂÂ¹Ã¨Â¨ÂÃ¦ÂÂ¥</th>
-                                    <th class="px-4 py-2">Ã¦ÂÂ¹Ã¨Â¨ÂÃ¥ÂÂÃ¥Â®Â¹</th>
+                                    <th class="px-4 py-2">リビジョン</th>
+                                    <th class="px-4 py-2">改訂日</th>
+                                    <th class="px-4 py-2">改訂内容</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.5</td>
-                                    <td class="px-4 py-2 align-top">2025Ã¥Â¹Â´2Ã¦ÂÂ9Ã¦ÂÂ¥</td>
+                                    <td class="px-4 py-2 align-top">2025年2月9日</td>
                                     <td class="px-4 py-2">
                                         <ul class="list-disc list-inside space-y-1">
-                                            <li>DIOÃ¥Â¯Â¾Ã¥Â¿ÂÃ¯Â¼ÂÃ¥ÂÂÃ¤Â»ÂÃ¦ÂÂÃ©Â ÂÃ£ÂÂÃ¥Â°ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂÃ¥Â Â±Ã£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
-                                            <li>NC750Ã¯Â¼ÂÃ¦ÂÂ§Ã¥ÂÂ~2020Ã¯Â¼Â/ NC750Ã¯Â¼ÂÃ¦ÂÂ°Ã¥ÂÂ2021~Ã¯Â¼ÂÃ£ÂÂ®Ã¥Â°ÂÃ§ÂÂ¨Ã¦ÂÂ Ã£ÂÂÃ¨Â¿Â½Ã¥ÂÂ Ã¯Â¼ÂÃ¦ÂºÂÃ¥ÂÂÃ¤Â¸Â­Ã¯Â¼Â</li>
-                                            <li>CB400 / NC750Ã¯Â¼ÂÃ¦ÂÂ§Ã¥ÂÂÃ¯Â¼ÂÃ£ÂÂ®Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¹Ã£ÂÂÃ¦Â¤ÂÃ§ÂÂ¥Ã©ÂÂÃ¥Â¯Â¾Ã¥Â¿ÂÃ£ÂÂ«Ã©ÂÂ¢Ã£ÂÂÃ£ÂÂÃ¦Â³Â¨Ã¨Â¨ÂÃ£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
-                                            <li>Ã£ÂÂÃ£ÂÂ©Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ·Ã£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ®Ã©Â»ÂÃ¨ÂÂ²LEDÃ¨ÂªÂ¬Ã¦ÂÂÃ£ÂÂCKPÃ¨Â»ÂÃ§Â¨Â®Ã©ÂÂÃ¥Â®ÂÃ£ÂÂ«Ã¤Â¿Â®Ã¦Â­Â£</li>
+                                            <li>DIO対応：取付手順、専用ハーネス情報を追加</li>
+                                            <li>NC750（旧型~2020）/ NC750（新型2021~）の専用枠を追加（準備中）</li>
+                                            <li>CB400 / NC750（旧型）のエンスト検知非対応に関する注記を追加</li>
+                                            <li>トラブルシューティングの黄色LED説明をCKP車種限定に修正</li>
                                         </ul>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.4</td>
-                                    <td class="px-4 py-2 align-top">2025Ã¥Â¹Â´12Ã¦ÂÂ4Ã¦ÂÂ¥</td>
+                                    <td class="px-4 py-2 align-top">2025年12月4日</td>
                                     <td class="px-4 py-2">
                                         <ul class="list-disc list-inside space-y-1">
-                                            <li>GROMÃ¥Â¯Â¾Ã¥Â¿ÂÃ¯Â¼ÂÃ¥ÂÂÃ¤Â»ÂÃ¦ÂÂÃ©Â ÂÃ£ÂÂÃ¥Â°ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹Ã¦ÂÂÃ¥Â Â±Ã£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
-                                            <li>Ã£ÂÂÃ¥ÂÂÃ¤Â»ÂÃ¦ÂÂ¹Ã¦Â³ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ«Ã¨Â»ÂÃ§Â¨Â®Ã¥ÂÂ¥Ã£ÂÂ¸Ã£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂªÃ£ÂÂ³Ã£ÂÂ¯Ã£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
-                                            <li>Ã£ÂÂÃ¤Â½Â¿Ã£ÂÂÃ¦ÂÂ¹Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ«Ã¨ÂªÂ¬Ã¦ÂÂÃ¥ÂÂÃ§ÂÂ»Ã£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
-                                            <li>Ã§ÂÂ»Ã¥ÂÂÃ£ÂÂ¯Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ§Ã¦ÂÂ¡Ã¥Â¤Â§Ã¨Â¡Â¨Ã§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂ©Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ¹Ã¦Â©ÂÃ¨ÂÂ½Ã£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
-                                            <li>Ã£ÂÂÃ£ÂÂ©Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ·Ã£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«NX400Ã£ÂÂ®Ã£ÂÂµÃ£ÂÂ¤Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¿Ã§Â«Â¯Ã¥Â­ÂÃ¦Â­ÂªÃ£ÂÂ¿Ã¤ÂºÂÃ¤Â¾ÂÃ£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
+                                            <li>GROM対応：取付手順、専用ハーネス情報を追加</li>
+                                            <li>「取付方法」ページに車種別ジャンプリンクを追加</li>
+                                            <li>「使い方」ページに説明動画を追加</li>
+                                            <li>画像クリックで拡大表示するライトボックス機能を追加</li>
+                                            <li>トラブルシューティングにNX400のサイドスタンドコネクタ端子歪み事例を追加</li>
                                         </ul>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.3</td>
-                                    <td class="px-4 py-2 align-top">2025Ã¥Â¹Â´10Ã¦ÂÂ20Ã¦ÂÂ¥</td>
+                                    <td class="px-4 py-2 align-top">2025年10月20日</td>
                                     <td class="px-4 py-2">
                                         <ul class="list-disc list-inside space-y-1">
-                                            <li>Ã£ÂÂÃ¥ÂÂÃ¤Â»ÂÃ¦ÂÂ¹Ã¦Â³ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂ¥Ã£ÂÂ¢Ã£ÂÂ«Ã£ÂÂ®Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂ³Ã£ÂÂ­Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ¨Â¿Â½Ã¥ÂÂ </li>
+                                            <li>「取付方法」ページにマニュアルのダウンロードボタンを追加</li>
                                         </ul>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.1</td>
-                                    <td class="px-4 py-2 align-top">2025Ã¥Â¹Â´9Ã¦ÂÂ16Ã¦ÂÂ¥</td>
+                                    <td class="px-4 py-2 align-top">2025年9月16日</td>
                                     <td class="px-4 py-2">
                                         <ul class="list-disc list-inside space-y-1">
-                                            <li>Ã£ÂÂÃ¦Â¦ÂÃ¨Â¦ÂÃ£ÂÂÃ£ÂÂ»Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ®Ã¨Â¦ÂÃ¨ÂªÂÃ¦ÂÂ§Ã£ÂÂÃ¥ÂÂÃ¤Â¸ÂÃ£ÂÂ</li>
-                                            <li>Ã£ÂÂÃ¥ÂÂÃ¤Â»ÂÃ¦ÂÂ¹Ã¦Â³ÂÃ£ÂÂÃ£ÂÂ»Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ®Ã¨Â»ÂÃ§Â¨Â®Ã¥ÂÂ¥Ã¦ÂÂÃ©Â ÂÃ£ÂÂÃ¦ÂÂ´Ã¦ÂÂ°Ã£ÂÂ</li>
-                                            <li>Ã£ÂÂÃ¤Â½Â¿Ã£ÂÂÃ¦ÂÂ¹Ã£ÂÂÃ£ÂÂ»Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ®Ã¦Â§ÂÃ¦ÂÂÃ£ÂÂÃ¨Â¦ÂÃ§ÂÂ´Ã£ÂÂÃ£ÂÂÃ¨ÂªÂ¬Ã¦ÂÂÃ£ÂÂÃ¨Â¿Â½Ã¨Â¨ÂÃ£ÂÂ»Ã¤Â¿Â®Ã¦Â­Â£Ã£ÂÂ</li>
-                                            <li>Ã£ÂÂÃ£ÂÂµÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ»Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ©Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ·Ã£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂQ&AÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥Â®Â¹Ã£ÂÂÃ¥Â¤Â§Ã¥Â¹ÂÃ£ÂÂ«Ã¦ÂÂ¡Ã¥ÂÂÃ£ÂÂ</li>
+                                            <li>「概要」セクションの視認性を向上。</li>
+                                            <li>「取付方法」セクションの車種別手順を更新。</li>
+                                            <li>「使い方」セクションの構成を見直し、説明を追記・修正。</li>
+                                            <li>「サポート」セクションにトラブルシューティング、Q&A、お問い合わせ先を追加し、内容を大幅に拡充。</li>
                                         </ul>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.0</td>
-                                    <td class="px-4 py-2 align-top">2025Ã¥Â¹Â´9Ã¦ÂÂ16Ã¦ÂÂ¥</td>
-                                    <td class="px-4 py-2">Ã¦ÂÂ°Ã¨Â¦ÂÃ¤Â½ÂÃ¦ÂÂ</td>
+                                    <td class="px-4 py-2 align-top">2025年9月16日</td>
+                                    <td class="px-4 py-2">新規作成</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1363,7 +1367,7 @@
         };
         
         const channelNames = {
-            1: "Ã©ÂÂ", 2: "Ã£ÂÂ·Ã£ÂÂ¢Ã£ÂÂ³", 3: "Ã§Â·Â", 4: "Ã©Â»Â", 5: "Ã£ÂÂªÃ£ÂÂ¬Ã£ÂÂ³Ã£ÂÂ¸", 6: "Ã¨ÂµÂ¤", 7: "Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ³Ã£ÂÂ¿", 8: "Ã§ÂÂ½"
+            1: "青", 2: "シアン", 3: "緑", 4: "黄", 5: "オレンジ", 6: "赤", 7: "マゼンタ", 8: "白"
         };
 
         const getRpmColor = (rpm) => {
@@ -1401,47 +1405,47 @@
 
         const indicatorData = {
             state: {
-                title: 'Ã£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ Ã§ÂÂ¶Ã¦ÂÂ',
+                title: 'システム状態',
                 controls: {
-                    idle: { name: 'Ã¥Â¾ÂÃ¦Â©ÂÃ¤Â¸Â­', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥Â§ÂÃ¥ÂÂÃ¥Â¾ÂÃ£ÂÂ¡Ã£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', leds: [{ i:0, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
-                    stabilizing: { name: 'Ã¥Â®ÂÃ¥Â®ÂÃ¥Â¾ÂÃ£ÂÂ¡', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥Â§ÂÃ¥ÂÂÃ§ÂÂ´Ã¥Â¾ÂÃ£ÂÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¥Â®ÂÃ¥Â®ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã£ÂÂÃ¥Â¾ÂÃ£ÂÂ£Ã£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', leds: [{ i:0, c:'white' }, { i:1, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
-                    detecting: { name: 'Ã¥ÂÂ¤Ã¥Â®ÂÃ¤Â¸Â­', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ®Ã¤Â¿Â¡Ã¥ÂÂ·Ã§ÂÂ¹Ã¦ÂÂ§Ã£ÂÂÃ¨ÂÂªÃ¥ÂÂÃ£ÂÂ§Ã¥ÂÂ¤Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂÃ§Â´Â3Ã¯Â½Â5Ã§Â§ÂÃ¯Â¼Â', leds: [{ i:0, c:'white' }, { i:1, c:'white' }, { i:2, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
-                    running: { name: 'Ã§ÂÂ£Ã¨Â¦ÂÃ¤Â¸Â­', desc: 'Ã¦Â­Â£Ã¥Â¸Â¸Ã£ÂÂ«Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂÃ§ÂÂ£Ã¨Â¦ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', leds: [{ i:0, c:'green', b:'slow' }, { i:1, c:'green', b:'slow' }, { i:2, c:'green', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
-                    stalled: { name: 'Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ«', desc: 'Ã¨ÂµÂ°Ã¨Â¡ÂÃ¤Â¸Â­Ã£ÂÂ«Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ§Â¤ÂºÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂCKPÃ¦ÂÂ¹Ã¥Â¼ÂÃ£ÂÂ®Ã¨Â»ÂÃ§Â¨Â®Ã£ÂÂ®Ã£ÂÂ¿Ã£ÂÂCB400/NC750Ã¦ÂÂ§Ã¥ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ«Ã£ÂÂªÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼Â', leds: [{ i:0, c:'yellow', b:'slow' }, { i:1, c:'yellow', b:'slow' }, { i:2, c:'yellow', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
-                    protected: { name: 'Ã¤Â¿ÂÃ¨Â­Â·Ã¤Â¸Â­', desc: 'Ã©Â«ÂÃ¥ÂÂÃ¨Â»Â¢Ã£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ³Ã£ÂÂ³Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ', leds: [{ i:0, c:'red', b:'slow' }, { i:1, c:'red', b:'slow' }, { i:2, c:'red', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
-                    disabled: { name: 'Ã§ÂÂ¡Ã¥ÂÂ¹', desc: 'Ã£ÂÂ¹Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂÃ£ÂÂOFFÃ£ÂÂ§Ã£ÂÂÃ£ÂÂLED1Ã¯Â½Â3Ã£ÂÂ®Ã£ÂÂ¿Ã¦Â¶ÂÃ§ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', leds: [], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    idle: { name: '待機中', desc: 'エンジン始動待ちの状態です。', leds: [{ i:0, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    stabilizing: { name: '安定待ち', desc: 'エンジン始動直後、信号が安定するのを待っています。', leds: [{ i:0, c:'white' }, { i:1, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    detecting: { name: '判定中', desc: 'エンジンの信号特性を自動で判定しています。（約3～5秒）', leds: [{ i:0, c:'white' }, { i:1, c:'white' }, { i:2, c:'white', b:'slow' }], fixed: { 4: { c: 'off' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    running: { name: '監視中', desc: '正常にエンジン回転数を監視している状態です。', leds: [{ i:0, c:'green', b:'slow' }, { i:1, c:'green', b:'slow' }, { i:2, c:'green', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    stalled: { name: 'ストール', desc: '走行中にエンジンが停止したことを示します。（CKP方式の車種のみ。CB400/NC750旧型はこの状態になりません）', leds: [{ i:0, c:'yellow', b:'slow' }, { i:1, c:'yellow', b:'slow' }, { i:2, c:'yellow', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    protected: { name: '保護中', desc: '高回転またはリモコン操作によりエンジンが停止されました。', leds: [{ i:0, c:'red', b:'slow' }, { i:1, c:'red', b:'slow' }, { i:2, c:'red', b:'slow' }], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
+                    disabled: { name: '無効', desc: 'スイッチがOFFです。LED1～3のみ消灯します。', leds: [], fixed: { 4: { c: 'yellow' }, 5: { c: getRpmColor(6000) }, 7: { c: channelColors[1] } } },
                 }
             },
             sensor: {
-                title: 'Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ (LED5)',
+                title: 'センサーモード (LED5)',
                 controls: {
-                    off: { name: 'Ã¦Â¶ÂÃ§ÂÂ¯', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥Â§ÂÃ¥ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ¯Ã¥ÂÂ¤Ã¥Â®ÂÃ¤Â¸Â­Ã£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', ledIndex: 4, color: colorMap.off },
-                    ckp: { name: 'CKP', desc: 'Ã£ÂÂ¯Ã£ÂÂ©Ã£ÂÂ³Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂ¸Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ»Ã£ÂÂ¨Ã£ÂÂÃ£ÂÂ©Ã£ÂÂ®Ã¨Â»ÂÃ§Â¨Â®Ã£ÂÂ«Ã¥Â¯Â¾Ã¥Â¿ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 4, color: colorMap.yellow },
-                    cb400: { name: 'CB400', desc: 'Ã§ÂÂ¹Ã§ÂÂ«Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ£ÂÂÃ¦Â¤ÂÃ¥ÂÂºÃ£ÂÂÃ£ÂÂÃ¦ÂÂ¹Ã¥Â¼ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', ledIndex: 4, color: colorMap.blue },
-                    nx400: { name: 'NX400', desc: 'Ã§ÂÂ¹Ã§ÂÂ«Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ£ÂÂÃ¦Â¤ÂÃ¥ÂÂºÃ£ÂÂÃ£ÂÂÃ¦ÂÂ¹Ã¥Â¼ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', ledIndex: 4, color: colorMap.green },
+                    off: { name: '消灯', desc: 'エンジン始動前、または判定中の状態です。', ledIndex: 4, color: colorMap.off },
+                    ckp: { name: 'CKP', desc: 'クランクポジションセンサー。ほとんどの車種に対応します。', ledIndex: 4, color: colorMap.yellow },
+                    cb400: { name: 'CB400', desc: '点火信号から検出する方式です。', ledIndex: 4, color: colorMap.blue },
+                    nx400: { name: 'NX400', desc: '点火信号から検出する方式です。', ledIndex: 4, color: colorMap.green },
                 }
             },
             rpm: {
-                title: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ° (LED6)',
+                title: 'エンジン停止回転数 (LED6)',
                 controls: {
-                    4000: { name: '4000 RPM', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ4000 RPMÃ£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 5, color: getRpmColor(4000) },
-                    5000: { name: '5000 RPM', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ5000 RPMÃ£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 5, color: getRpmColor(5000) },
-                    6000: { name: '6000 RPM', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ6000 RPMÃ£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 5, color: getRpmColor(6000) },
-                    7000: { name: '7000 RPM', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ7000 RPMÃ£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 5, color: getRpmColor(7000) },
-                    8000: { name: '8000 RPM', desc: 'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°Ã£ÂÂ8000 RPMÃ£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 5, color: getRpmColor(8000) },
+                    4000: { name: '4000 RPM', desc: 'エンジン停止回転数を4000 RPMに設定します。', ledIndex: 5, color: getRpmColor(4000) },
+                    5000: { name: '5000 RPM', desc: 'エンジン停止回転数を5000 RPMに設定します。', ledIndex: 5, color: getRpmColor(5000) },
+                    6000: { name: '6000 RPM', desc: 'エンジン停止回転数を6000 RPMに設定します。', ledIndex: 5, color: getRpmColor(6000) },
+                    7000: { name: '7000 RPM', desc: 'エンジン停止回転数を7000 RPMに設定します。', ledIndex: 5, color: getRpmColor(7000) },
+                    8000: { name: '8000 RPM', desc: 'エンジン停止回転数を8000 RPMに設定します。', ledIndex: 5, color: getRpmColor(8000) },
                 }
             },
             channel: {
-                title: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ« (LED8)',
+                title: '通信チャンネル (LED8)',
                 controls: {
-                    1: { name: 'CH 1', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ1Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[1] },
-                    2: { name: 'CH 2', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ2Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[2] },
-                    3: { name: 'CH 3', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ3Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[3] },
-                    4: { name: 'CH 4', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ4Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[4] },
-                    5: { name: 'CH 5', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ5Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[5] },
-                    6: { name: 'CH 6', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ6Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[6] },
-                    7: { name: 'CH 7', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ7Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[7] },
-                    8: { name: 'CH 8', desc: 'Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ8Ã£ÂÂ«Ã¨Â¨Â­Ã¥Â®ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', ledIndex: 7, color: channelColors[8] },
+                    1: { name: 'CH 1', desc: '通信チャンネルを1に設定します。', ledIndex: 7, color: channelColors[1] },
+                    2: { name: 'CH 2', desc: '通信チャンネルを2に設定します。', ledIndex: 7, color: channelColors[2] },
+                    3: { name: 'CH 3', desc: '通信チャンネルを3に設定します。', ledIndex: 7, color: channelColors[3] },
+                    4: { name: 'CH 4', desc: '通信チャンネルを4に設定します。', ledIndex: 7, color: channelColors[4] },
+                    5: { name: 'CH 5', desc: '通信チャンネルを5に設定します。', ledIndex: 7, color: channelColors[5] },
+                    6: { name: 'CH 6', desc: '通信チャンネルを6に設定します。', ledIndex: 7, color: channelColors[6] },
+                    7: { name: 'CH 7', desc: '通信チャンネルを7に設定します。', ledIndex: 7, color: channelColors[7] },
+                    8: { name: 'CH 8', desc: '通信チャンネルを8に設定します。', ledIndex: 7, color: channelColors[8] },
                 }
             }
         };
@@ -1449,28 +1453,28 @@
         const remoteData = {
             groups: {
                 startup: {
-                    title: 'Ã¨ÂµÂ·Ã¥ÂÂÃ¦ÂÂ',
+                    title: '起動時',
                     controls: {
-                        ok: { name: 'Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¼Ã¦Â­Â£Ã¥Â¸Â¸', desc: 'Ã©ÂÂ»Ã¦ÂºÂONÃ¥Â¾Â1Ã§Â§ÂÃ©ÂÂÃ£ÂÂÃ©ÂÂ»Ã¦Â±Â Ã¦Â®ÂÃ©ÂÂÃ£ÂÂÃ¥ÂÂÃ¥ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂÃ§Â¤ÂºÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ<br>Ã¢ÂÂ»LED1Ã£ÂÂ¨LED2Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¨ÂÂ²Ã£ÂÂ§Ã§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', led1:{c:'green'}, led2:{c:'green'}},
-                        warn: { name: 'Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¼Ã¦Â³Â¨Ã¦ÂÂ', desc: 'Ã©ÂÂ»Ã¦ÂºÂONÃ¥Â¾Â1Ã§Â§ÂÃ©ÂÂÃ£ÂÂÃ©ÂÂ»Ã¦Â±Â Ã¦Â®ÂÃ©ÂÂÃ£ÂÂÃ¤Â¸Â­Ã§Â¨ÂÃ¥ÂºÂ¦Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ<br>Ã¢ÂÂ»LED1Ã£ÂÂ¨LED2Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¨ÂÂ²Ã£ÂÂ§Ã§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', led1:{c:'orange'}, led2:{c:'orange'}},
-                        low: { name: 'Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ¼Ã¤Â½ÂÃ¤Â¸Â', desc: 'Ã©ÂÂ»Ã¦ÂºÂONÃ¥Â¾Â1Ã§Â§ÂÃ©ÂÂÃ£ÂÂÃ©ÂÂ»Ã¦Â±Â Ã¤ÂºÂ¤Ã¦ÂÂÃ£ÂÂÃ¥Â¿ÂÃ¨Â¦ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ<br>Ã¢ÂÂ»LED1Ã£ÂÂ¨LED2Ã£ÂÂÃ¥ÂÂÃ£ÂÂÃ¨ÂÂ²Ã£ÂÂ§Ã§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', led1:{c:'red'}, led2:{c:'red'}},
+                        ok: { name: 'バッテリー正常', desc: '電源ON後1秒間、電池残量が十分なことを示します。<br>※LED1とLED2が同じ色で点灯します。', led1:{c:'green'}, led2:{c:'green'}},
+                        warn: { name: 'バッテリー注意', desc: '電源ON後1秒間、電池残量が中程度です。<br>※LED1とLED2が同じ色で点灯します。', led1:{c:'orange'}, led2:{c:'orange'}},
+                        low: { name: 'バッテリー低下', desc: '電源ON後1秒間、電池交換が必要です。<br>※LED1とLED2が同じ色で点灯します。', led1:{c:'red'}, led2:{c:'red'}},
                     }
                 },
                 normal: {
-                    title: 'Ã©ÂÂÃ¥Â¸Â¸Ã¦ÂÂ',
+                    title: '通常時',
                     controls: {
-                        ok_enabled: { name: 'Ã©ÂÂÃ¤Â¿Â¡Ã¦Â­Â£Ã¥Â¸Â¸ (Ã¦ÂÂÃ¥ÂÂ¹)', desc: 'Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¨Ã¦Â­Â£Ã¥Â¸Â¸Ã£ÂÂ«Ã©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã¦Â©ÂÃ¨ÂÂ½Ã£ÂÂONÃ£ÂÂ®Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', led1:{c:'green', b:'slow'}, led2:{channel: true, b:'slow'}},
-                        ok_disabled: { name: 'Ã©ÂÂÃ¤Â¿Â¡Ã¦Â­Â£Ã¥Â¸Â¸ (Ã§ÂÂ¡Ã¥ÂÂ¹)', desc: 'Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂ¨Ã©ÂÂÃ¤Â¿Â¡Ã¤Â¸Â­Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã¦Â©ÂÃ¨ÂÂ½Ã£ÂÂOFFÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', led1:{c:'blue', b:'slow'}, led2:{channel: true, b:'slow'}},
-                        ok_protected: { name: 'Ã©ÂÂÃ¤Â¿Â¡Ã¦Â­Â£Ã¥Â¸Â¸ (Ã¤Â¿ÂÃ¨Â­Â·Ã¤Â¸Â­)', desc: 'Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ¤Â¿ÂÃ¨Â­Â·Ã§ÂÂ¶Ã¦ÂÂÃ¯Â¼ÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥Â¾ÂÃ¯Â¼ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ', led1:{c:'red', b:'slow'}, led2:{channel: true, b:'slow'}},
-                        lost: { name: 'Ã©ÂÂÃ¤Â¿Â¡Ã¦ÂÂ­Ã§ÂµÂ¶', desc: '5Ã§Â§ÂÃ¤Â»Â¥Ã¤Â¸ÂÃ¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ©ÂÂÃ§ÂµÂ¶Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂLED1Ã£ÂÂ¯Ã¦Â¶ÂÃ§ÂÂ¯Ã£ÂÂÃ£ÂÂLED2Ã£ÂÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã¨ÂÂ²Ã£ÂÂ§Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', led1:{c:'off'}, led2:{channel: true, b:'slow'}},
+                        ok_enabled: { name: '通信正常 (有効)', desc: '本体と正常に通信しており、安全機能がONの状態です。', led1:{c:'green', b:'slow'}, led2:{channel: true, b:'slow'}},
+                        ok_disabled: { name: '通信正常 (無効)', desc: '本体と通信中ですが、安全機能がOFFです。', led1:{c:'blue', b:'slow'}, led2:{channel: true, b:'slow'}},
+                        ok_protected: { name: '通信正常 (保護中)', desc: '本体が保護状態（エンジン停止後）です。', led1:{c:'red', b:'slow'}, led2:{channel: true, b:'slow'}},
+                        lost: { name: '通信断絶', desc: '5秒以上本体からの信号が途絶えています。LED1は消灯し、LED2がチャンネル色で点滅します。', led1:{c:'off'}, led2:{channel: true, b:'slow'}},
                     }
                 },
                 emergency: {
-                    title: 'Ã§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã¦ÂÂ',
+                    title: '緊急停止時',
                     controls: {
-                        sending: { name: 'Ã©ÂÂÃ¤Â¿Â¡Ã¤Â¸Â­', desc: 'Ã§Â·ÂÃ¦ÂÂ¥Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ¦ÂÂ¼Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ£ÂÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ©ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ', led1:{c:'white'}, led2:{c:'white'}},
-                        success_normal: { name: 'Ã¦ÂÂÃ¥ÂÂ (Ã©ÂÂÃ¥Â¸Â¸)', desc: 'Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¥ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂÃ¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ(1Ã§Â§ÂÃ©ÂÂÃ§ÂÂ¹Ã§ÂÂ¯)', led1:{c:'red'}, led2:{c:'red'}},
-                        success_test: { name: 'Ã¦ÂÂÃ¥ÂÂ (Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ)', desc: 'Ã¦ÂÂ¬Ã¤Â½ÂÃ£ÂÂÃ§ÂÂ¡Ã¥ÂÂ¹Ã§ÂÂ¶Ã¦ÂÂÃ£ÂÂ§Ã¤Â¿Â¡Ã¥ÂÂ·Ã£ÂÂÃ¥ÂÂÃ¤Â¿Â¡Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ¯Ã¥ÂÂÃ¦Â­Â¢Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ(1Ã§Â§ÂÃ©ÂÂÃ§ÂÂ¹Ã§ÂÂ¯)', led1:{c:'blue'}, led2:{c:'blue'}},
+                        sending: { name: '送信中', desc: '緊急停止ボタンを押している間、信号を送信しています。', led1:{c:'white'}, led2:{c:'white'}},
+                        success_normal: { name: '成功 (通常)', desc: '本体が信号を受信し、エンジンを停止させました。(1秒間点灯)', led1:{c:'red'}, led2:{c:'red'}},
+                        success_test: { name: '成功 (テスト)', desc: '本体が無効状態で信号を受信しました。エンジンは停止しません。(1秒間点灯)', led1:{c:'blue'}, led2:{c:'blue'}},
                     }
                 }
             }
@@ -1656,11 +1660,11 @@
             }
 
             let descText = state.desc;
-            const channelInfo = `Ã¢ÂÂ»LED2Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ«Ã¨ÂÂ²(CH:${currentRemoteChannel} ${channelNames[currentRemoteChannel]})Ã£ÂÂ§`;
+            const channelInfo = `※LED2はチャンネル色(CH:${currentRemoteChannel} ${channelNames[currentRemoteChannel]})で`;
             if (controlKey.startsWith('ok_')) {
-                 descText += `<br>${channelInfo}Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ`;
+                 descText += `<br>${channelInfo}点滅します。`;
             } else if (controlKey === 'lost') {
-                 descText += `<br>${channelInfo}Ã§ÂÂ¹Ã¦Â»ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ`;
+                 descText += `<br>${channelInfo}点滅します。`;
             }
 
             remoteInfoTitle.textContent = state.name;
@@ -1695,8 +1699,8 @@
                     led.style.boxShadow = 'none';
                  });
                  previewLeds[0].style.backgroundColor = interpolateColor(colorMap.off, colorMap.blue, 0.2); // Dim blue
-                 previewInfoTitle.textContent = `Ã¨Â¨Â­Ã¥Â®ÂÃ¤Â¸Â­Ã£ÂÂ®Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°: ${settingRpm} RPM`;
-                 previewInfoDesc.textContent = '4000 RPMÃ¦ÂÂªÃ¦ÂºÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂLED1Ã£ÂÂÃ©ÂÂÃ¨ÂÂ²Ã£ÂÂ§Ã£ÂÂÃ£ÂÂ£Ã£ÂÂÃ£ÂÂÃ§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ';
+                 previewInfoTitle.textContent = `設定中のエンジン停止回転数: ${settingRpm} RPM`;
+                 previewInfoDesc.textContent = '4000 RPM未満です。LED1が青色でうっすら点灯します。';
                  return;
             }
             
@@ -1738,11 +1742,11 @@
                 led.style.boxShadow = boxShadow;
             });
             
-            previewInfoTitle.textContent = `Ã¨Â¨Â­Ã¥Â®ÂÃ¤Â¸Â­Ã£ÂÂ®Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã¥ÂÂÃ¦Â­Â¢Ã¥ÂÂÃ¨Â»Â¢Ã¦ÂÂ°: ${settingRpm} RPM`;
+            previewInfoTitle.textContent = `設定中のエンジン停止回転数: ${settingRpm} RPM`;
             if (settingRpm >= 8000) {
-                 previewInfoDesc.innerHTML = `LED8Ã£ÂÂ100%Ã£ÂÂ®Ã¨Â¼ÂÃ¥ÂºÂ¦Ã£ÂÂ§Ã§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ`;
+                 previewInfoDesc.innerHTML = `LED8が100%の輝度で点灯しています。`;
             } else {
-                 previewInfoDesc.innerHTML = `LED${activeLedIndex + 1}Ã£ÂÂ${brightnessLevel * 20}%Ã£ÂÂ®Ã¨Â¼ÂÃ¥ÂºÂ¦Ã£ÂÂ§Ã§ÂÂ¹Ã§ÂÂ¯Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ`;
+                 previewInfoDesc.innerHTML = `LED${activeLedIndex + 1}が${brightnessLevel * 20}%の輝度で点灯しています。`;
             }
         }
 
