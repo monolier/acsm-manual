@@ -77,7 +77,7 @@
 
     <div id="app" class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
         <header class="mb-6 pb-4 border-b border-gray-300">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.6</span></h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">ACSMマニュアル <span class="text-2xl font-normal text-gray-500">Rev. 1.7</span></h1>
         </header>
 
         <nav class="flex flex-wrap gap-2 mb-6">
@@ -694,6 +694,20 @@
                                                     <p class="text-sm text-center mt-2 text-gray-600">CKPケーブルの端子に結線</p>
                                                 </div>
                                              </div>
+                                             <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg mt-4">
+                                                 <p class="font-bold text-red-800">【重要】CKP接続部の防水対策をお願いします</p>
+                                                 <p class="text-sm text-red-700 mt-2">CKPの結線部は防水仕様ではありません。水分が入ると端子や電線の芯線が少しずつ腐食（サビ）し、接触不良が起きるおそれがあります。</p>
+                                                 <ul class="list-disc list-inside text-sm text-red-700 mt-2 space-y-1">
+                                                     <li>CKPの信号は車両側のエンジン制御にも使われています。接触不良が起きると、エンジンがかかりにくくなる・走行中にエンストする、といった症状が出る場合があります。</li>
+                                                     <li>ACSMが回転数を正しく検出できず、高回転暴走防止機能が正常に作動しなくなるおそれがあります。</li>
+                                                     <li>取付直後は問題がなくても、使い続けるうちに症状が出てくることがあります。</li>
+                                                 </ul>
+                                                 <p class="text-sm text-red-800 font-semibold mt-3">お取り付けの際は、次の処置をしてから車両へ固定してください。</p>
+                                                 <ul class="list-disc list-inside text-sm text-red-700 mt-1 space-y-1">
+                                                     <li><strong>テープによる保護・密閉</strong>：結線部全体と配線の根元を覆うように、防水性のあるビニールテープや自己融着テープをしっかり巻き付け、隙間を塞いでください。</li>
+                                                     <li><strong>配置・向きの工夫</strong>：配線を伝って水滴が入り込まないよう、配線の差し込み口が上を向かない向きに配置・固定してください。</li>
+                                                 </ul>
+                                             </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
@@ -760,6 +774,15 @@
                                                  <img src="nc750old_main_connect.jpg" alt="NC750 Old Main Harness Connect" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                  <p class="text-sm text-center mt-2 text-gray-600">メインハーネスを間に接続します。</p>
                                              </div>
+                                             <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg mt-4">
+                                                 <p class="font-bold text-red-800">【重要】電源コネクタ接続部の防水対策をお願いします</p>
+                                                 <p class="text-sm text-red-700 mt-2">電源を分岐させるウインカー／ハザードリレーのコネクタ（カプラ）に雨水や洗車時の水分が入ると、端子間でわずかな漏電が起き、車両側のリレーが球切れと誤認して<strong>ハイフラ現象</strong>（ウインカーが極端に速く点滅する）が起きるおそれがあります。</p>
+                                                 <p class="text-sm text-red-800 font-semibold mt-3">お取り付けの際は、次の処置をしてから車両へ固定してください。</p>
+                                                 <ul class="list-disc list-inside text-sm text-red-700 mt-1 space-y-1">
+                                                     <li><strong>テープによる保護・密閉</strong>：コネクタの嵌合（かんごう）部と配線の根元を覆うように、防水性のあるビニールテープや自己融着テープをしっかり巻き付け、隙間を塞いでください。</li>
+                                                     <li><strong>配置・向きの工夫</strong>：配線を伝って水滴が入り込まないよう、コネクタの差し込み口が上を向かない向きに配置・固定してください。</li>
+                                                 </ul>
+                                             </div>
                                          </div>
                                          <div>
                                              <ul class="list-disc list-inside text-gray-700">
@@ -820,6 +843,15 @@
                                                      <img src="nc750new_power_connect.jpg" alt="NC750 New Power Connect" class="w-full h-auto rounded-lg placeholder clickable-img" onerror="handleImgError(this)" onclick="openLightbox(this)">
                                                      <p class="text-sm text-center mt-2 text-gray-600">電源ハーネスを接続します。</p>
                                                  </div>
+                                             </div>
+                                             <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg mt-4">
+                                                 <p class="font-bold text-red-800">【重要】電源コネクタ接続部の防水対策をお願いします</p>
+                                                 <p class="text-sm text-red-700 mt-2">電源を分岐させるウインカー／ハザードリレーのコネクタ（カプラ）に雨水や洗車時の水分が入ると、端子間でわずかな漏電が起き、車両側のリレーが球切れと誤認して<strong>ハイフラ現象</strong>（ウインカーが極端に速く点滅する）が起きるおそれがあります。</p>
+                                                 <p class="text-sm text-red-800 font-semibold mt-3">お取り付けの際は、次の処置をしてから車両へ固定してください。</p>
+                                                 <ul class="list-disc list-inside text-sm text-red-700 mt-1 space-y-1">
+                                                     <li><strong>テープによる保護・密閉</strong>：コネクタの嵌合（かんごう）部と配線の根元を覆うように、防水性のあるビニールテープや自己融着テープをしっかり巻き付け、隙間を塞いでください。</li>
+                                                     <li><strong>配置・向きの工夫</strong>：配線を伝って水滴が入り込まないよう、コネクタの差し込み口が上を向かない向きに配置・固定してください。</li>
+                                                 </ul>
                                              </div>
                                          </div>
                                          <div>
@@ -1439,6 +1471,16 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-2 align-top">1.7</td>
+                                    <td class="px-4 py-2 align-top">2026年11月26日</td>
+                                    <td class="px-4 py-2">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>NC750（旧型~2020・新型2021~）取付手順に、電源コネクタ接続部の防水対策（ハイフラ現象の防止）を追加</li>
+                                            <li>DIO取付手順に、CKP接続部の防水対策を追加</li>
+                                        </ul>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td class="px-4 py-2 align-top">1.6</td>
                                     <td class="px-4 py-2 align-top">2026年2月26日</td>
